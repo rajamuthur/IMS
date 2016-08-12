@@ -1,0 +1,311 @@
+<style>
+	.form-control {
+		height: 30px;
+	}
+</style>
+<div id="addCampaignSettingDiv" class="col-sm-12">
+	<form class="form-horizontal" role="form">
+		<div class="">
+			<div class="card-header">
+				<h2>Calling Options</h2>
+			</div>
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="form-group fg-line col-sm-6">
+						<label for="ssl" class="control-label col-sm-4">Caller ID</label>
+						<div class="col-sm-6">
+							<div class="fg-line ng-binding">
+								<input type="text" placeholder="Phone" id="phone" class="form-control input-sm">
+							</div>
+						</div>
+					</div>
+					<div class="form-group col-sm-6">
+						<label for="auth" class="control-label col-sm-4">Enable Auto Pause</label>
+						<div class="col-sm-8">
+							<div class="fg-line ng-binding">
+								<label class="checkbox checkbox-inline m-r-20">
+									<input type="checkbox" name="autopause" id="autopause" value="1">
+									<i class="input-helper"></i>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="hostname" class="control-label col-sm-4">Number of Lines</label>
+						<div class="col-sm-6">
+							<div class="select">
+								<select class="form-control" name='ccalls' id='ccalls'>
+									<option >1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="form-group col-sm-6">
+						<label for="auth" class="control-label col-sm-4">Call Recording</label>
+						<div class="col-sm-8">
+							<div class="fg-line ng-binding">
+								<label class="checkbox checkbox-inline m-r-20">
+									<input type="checkbox" name="isRecording" id="isRecording" value="1" tabindex="14">
+									<i class="input-helper"></i>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="hostname" class="control-label col-sm-4">Phone Ring time</label>
+						<div class="col-sm-6">
+							<div class="select">
+								<select class="form-control" name='ringTime' id='ringTime' tabindex='19'>
+									<option>3 Rings</option>
+									<option>4 Rings</option>
+									<option>5 Rings</option>
+									<option>6 Rings</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="form-group col-sm-6 m-b-20">
+						<div class="toggle-switch" data-ts-color="green">
+							<label for="ts4" class="ts-label control-label col-sm-4">Make calls to DNC numbers</label>
+							<input id="ts4" type="checkbox" hidden="hidden" name="allowDnc">
+							<label for="ts4" class="ts-helper"></label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="">
+			<div class="card-header">
+				<h2>On-hold Recordings</h2>
+			</div>
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="hostname" class="control-label col-sm-4">On-hold Recording1</label>
+						<div class="col-sm-6">
+							<div class="select">
+								<select class="form-control" id='ringTime' tabindex='19'>
+									<option>Select Recording</option>
+									<option>Recording1</option>
+									<option>Recording2</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="form-group col-sm-6">
+						<label for="hostname" class="control-label col-sm-4">On-hold Recording2</label>
+						<div class="col-sm-6">
+							<div class="select">
+								<select class="form-control">
+									<option>Select Recording</option>
+									<option>Recording1</option>
+									<option>Recording2</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="hostname" class="control-label col-sm-4">On-hold Recording3</label>
+						<div class="col-sm-6">
+							<div class="select">
+								<select class="form-control">
+									<option>Select Recording</option>
+									<option>Recording1</option>
+									<option>Recording2</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="">
+			<div class="card-header">
+				<h2>Answering Machine Options</h2>
+			</div>
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="hostname" class="control-label col-sm-4">Answering Machine Recording</label>
+						<div class="col-sm-6">
+							<div class="select">
+								<select class="form-control">
+									<option>Select Recording</option>
+									<option>Recording1</option>
+									<option>Recording2</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="auth" class="control-label col-sm-4">Automatically send email when leaving voicemail.</label>
+						<div class="col-sm-8">
+							<div class="fg-line ng-binding">
+								<label class="checkbox checkbox-inline m-t-10 m-r-20">
+									<input type="checkbox" name="access_level" value="option1">
+									<i class="input-helper"></i>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="hostname" class="control-label col-sm-4">Choose Email Template</label>
+						<div class="col-sm-6">
+							<div class="select">
+								<select class="form-control">
+									<option>Template 1</option>
+									<option>Template 2</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="">
+			<div class="card-header">
+				<h2>Email Options</h2>
+			</div>
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="form-group col-sm-12 m-b-20">
+						<div data-ts-color="green">
+							<label for="ts5" class="ts-label control-label col-sm-2 ">Choose Email Type</label>
+							<label class="m-b-20 radio radio-inline">
+								<input type="radio" name="inlineRadioOptions" value="option1">
+								<i class="input-helper"></i>
+								None
+							</label>
+							<label class="m-b-20 radio radio-inline">
+								<input type="radio" name="inlineRadioOptions" value="option1">
+								<i class="input-helper"></i>
+								Single Email
+							</label>
+
+							<label class="m-b-20 radio radio-inline">
+								<input type="radio" name="inlineRadioOptions" value="option2">
+								<i class="input-helper"></i>
+								Automatic Follow-up Emails
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="hostname" class="col-sm-4 control-label">Choose Email Template</label>
+						<div class="col-sm-6">
+							<div class="select">
+								<select class="form-control">
+									<option>Template 1</option>
+									<option>Template 2</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="">
+			<div class="card-header">
+				<h2>Search Options</h2>
+			</div>
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="form-group col-sm-4">
+						<label for="auth" class="col-sm-6 control-label">Zillow Search</label>
+						<div class="col-sm-1">
+							<div class="fg-line ng-binding">
+								<label class="checkbox checkbox-inline m-r-20">
+									<input type="checkbox" name="access_level" value="option1">
+									<i class="input-helper"></i>
+								</label>
+							</div>
+						</div>
+
+					</div>
+					<div class="form-group col-sm-4">
+						<label for="auth" class="col-sm-6 control-label">Trulia Search</label>
+						<div class="col-sm-1">
+							<div class="fg-line ng-binding">
+								<label class="checkbox checkbox-inline m-r-20">
+									<input type="checkbox" name="access_level" value="option1">
+									<i class="input-helper"></i>
+								</label>
+							</div>
+						</div>
+
+					</div>
+					<div class="form-group col-sm-4">
+						<label for="auth" class="col-sm-6 control-label">Google Maps</label>
+						<div class="col-sm-1">
+							<div class="fg-line ng-binding">
+								<label class="checkbox checkbox-inline m-r-20">
+									<input type="checkbox" name="access_level" value="option1">
+									<i class="input-helper"></i>
+								</label>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="">
+			<div class="card-header">
+				<h2>Other Options</h2>
+			</div>
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="hostname" class="col-sm-4 control-label">Promotional Message Recording</label>
+						<div class="col-sm-6">
+							<div class="select">
+								<select class="form-control">
+									<option>Select Recording</option>
+									<option>Recording1</option>
+									<option>Recording2</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="form-group fg-line col-sm-6">
+						<label for="ssl" class="col-sm-4 control-label">Call Transfer Number</label>
+						<div class="col-sm-6">
+							<div class="fg-line ng-binding">
+								<input type="text" placeholder="Number" id="fname" class="form-control input-sm">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="auth" class="col-sm-4 control-label">Call Script</label>
+						<div class="col-sm-6">
+							<div class="fg-line ng-binding">
+								<textarea class="form-control" data-auto-size  placeholder="call script...." ></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="m-10 col-sm-10">
+				<button class="btn btn-primary btn-sm waves-effect" data-ui-sref="campaign.uploadcontact.uploadcontact-mapping" type="submit">Next</button>
+			</div>
+	</form>
+</div>

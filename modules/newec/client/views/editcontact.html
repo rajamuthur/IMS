@@ -1,0 +1,315 @@
+<div class="container" data-ng-controller="contactCtrl as tctrl" ng-init="getContactsDetailsById()">
+    <div class="block-header">
+        <h2>Edit Contact</h2>
+
+        <ul class="actions">
+            <li>
+                <a href="">
+                    <i class="zmdi zmdi-trending-up"></i>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="zmdi zmdi-check-all"></i>
+                </a>
+            </li>
+            <li class="dropdown" dropdown>
+                <a href="" dropdown-toggle>
+                    <i class="zmdi zmdi-more-vert"></i>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li>
+                        <a href="">Refresh</a>
+                    </li>
+                    <li>
+                        <a href="">Manage Widgets</a>
+                    </li>
+                    <li>
+                        <a href="">Widgets Settings</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+	<form role="form">
+		<div class="card">
+			<div class="card-header">
+				<h2>Basic Information<small>Contact details</small></h2>
+			</div>
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="form-group fg-line col-sm-6">
+						<label class="col-sm-3" for="inputEmail3">Lead Source</label>
+						<div class="col-sm-9">
+							<div class="fg-line">
+								<input data-ng-model="data.leadSource" type="text" class="form-control" value="{{ data.leadSource}}" placeholder="eg. Impiger">
+							</div>
+						</div>
+					</div>
+					<div class="form-group fg-line col-sm-6">
+						<label class="col-sm-3" for="company">Company</label>
+						<div class="col-sm-9">
+							<div class="fg-line">
+								<input data-ng-model="data.company" type="text" class="form-control" value="{{ data.company}}" placeholder="eg. Impiger">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group fg-line col-sm-6">
+						<label class="col-sm-3" for="title">Title</label>
+						<div class="col-sm-9">
+							<div class="fg-line">
+								<select name="title" ng-model="data.title" class="form-control">
+									<option value="Mr">Mr</option>
+									<option value="miss" selected>Miss</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="form-group fg-line col-sm-6">
+						<label class="col-sm-3" for="name">Name</label>
+						<div class="col-sm-9">
+							<div class="fg-line">
+								<input data-ng-model="data.name" type="text" class="form-control" value="{{ data.name}}" placeholder="eg. Impiger">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group fg-line col-sm-6">
+						<label class="col-sm-3" for="gender">Gender</label>
+						<div class="col-sm-9">
+							<div class="fg-line">
+								<select name="gender" ng-model="data.gender" class="form-control">
+									<option value="male">Male</option>
+									<option value="female">Female</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="form-group fg-line col-sm-6">
+						<label class="col-sm-3" for="age">Age</label>
+						<div class="col-sm-9">
+							<div class="fg-line">
+								<input data-ng-model="data.age" type="text" class="form-control" value="{{ data.age}}" placeholder="eg. 25">
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-header">
+				<h2>Contact Information <small>Select an user ID and password</small></h2>
+			</div>
+
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="form-group fg-line col-sm-6">
+						<label class="col-sm-3" for="primaryPhone">Primary Phone</label>
+						<div class="col-sm-9">
+							<div class="fg-line">
+								<input data-ng-model="data.primaryPhone" type="text" class="form-control" value="{{ data.primaryPhone}}" placeholder="eg. 123123123123">
+							</div>
+						</div>
+					</div>
+					<div class="form-group fg-line col-sm-6">
+						<label class="col-sm-3" for="secondaryPhone">Secondary Phone</label>
+						<div class="col-sm-9">
+							<div class="fg-line">
+								<input data-ng-model="data.secondaryPhone" type="text" class="form-control" value="{{ data.secondaryPhone}}" placeholder="eg. 123123123123">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group fg-line col-sm-6">
+						<label class="col-sm-3" for="extension">Extension</label>
+						<div class="col-sm-9">
+							<div class="fg-line">
+								<input data-ng-model="data.extension" type="text" class="form-control" value="{{ data.extension}}" placeholder="eg. 123">
+							</div>
+						</div>
+					</div>
+					<div class="form-group fg-line col-sm-6">
+						<label class="col-sm-3" for="email">Email</label>
+						<div class="col-sm-9">
+							<div class="fg-line">
+								<input data-ng-model="data.email" type="text" class="form-control" value="{{ data.email}}" placeholder="eg. letsdance@arthurmurraymemorial.com">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group fg-line col-sm-6">
+						<label class="col-sm-3" for="fax">Fax</label>
+						<div class="col-sm-9">
+							<div class="fg-line">
+								<input data-ng-model="data.fax" type="text" class="form-control" value="{{ data.fax}}" placeholder="eg. 123123">
+							</div>
+						</div>
+					</div>
+					<div class="form-group fg-line col-sm-6">
+						<label class="col-sm-3" for="website">Website</label>
+						<div class="col-sm-9">
+							<div class="fg-line">
+								<input data-ng-model="data.website" type="text" class="form-control" value="{{ data.website}}" placeholder="eg. http://www.arthurmurraymemorial.com/">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--				<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group fg-float">
+											<div class="fg-line fg-toggled">
+												<input type="text" class="form-control fg-input" id="primaryphone">
+											</div>
+											<label class="fg-label">Primary Phone</label>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group fg-float">
+											<div class="fg-line fg-toggled">
+												<input type="text" class="form-control fg-input" id="secondaryphone">
+											</div>
+											<label class="fg-label">Secondary Phone</label>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group fg-float">
+											<div class="fg-line fg-toggled">
+												<input type="text" class="form-control fg-input" id="extension">
+											</div>
+											<label class="fg-label">Extension</label>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group fg-float">
+											<div class="fg-line fg-toggled">
+												<input type="text" class="form-control fg-input" id="email">
+											</div>
+											<label class="fg-label">Email</label>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group fg-float">
+											<div class="fg-line fg-toggled">
+												<input type="text" class="form-control fg-input" id="fax">
+											</div>
+											<label class="fg-label">Fax</label>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group fg-float">
+											<div class="fg-line fg-toggled">
+												<input type="text" class="form-control fg-input" id="website">
+											</div>
+											<label class="fg-label">Website</label>
+										</div>
+									</div>
+								</div>-->
+				<!--				<div class="row">
+									<div class="col-sm-12">
+										<p class="c-black f-500 m-t-20 m-b-20">Address</p>
+				
+										<div class="form-group">
+											<div class="fg-line fg-toggled">
+												<textarea class="form-control" data-auto-size placeholder="Enter your address..."></textarea>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<div class="fg-line fg-toggled">
+												<div class="select">
+													<select class="form-control">
+														<option>Select an Country</option>
+														<option>India</option>
+														<option>US</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>-->
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-header">
+				<h2>Address Information<small>Address Information</small></h2>
+			</div>
+
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="form-group fg-line col-sm-6">
+						<label class="col-sm-3" for="street">Street</label>
+						<div class="col-sm-9">
+							<div class="fg-line">
+								<input data-ng-model="data.street" type="text" class="form-control" value="{{ data.street}}" placeholder="eg. 9746 Katy Fwy">
+							</div>
+						</div>
+					</div>
+					<div class="form-group fg-line col-sm-6">
+						<label class="col-sm-3" for="city">City</label>
+						<div class="col-sm-9">
+							<div class="fg-line">
+								<input data-ng-model="data.city" type="text" class="form-control" value="{{ data.city}}" placeholder="eg. Hacienda Heights">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group fg-line col-sm-6">
+						<label class="col-sm-3" for="state">State</label>
+						<div class="col-sm-9">
+							<div class="fg-line">
+								<input data-ng-model="data.state" type="text" class="form-control" value="{{ data.state}}" placeholder="eg. Ca">
+							</div>
+						</div>
+					</div>
+					<div class="form-group fg-line col-sm-6">
+						<label class="col-sm-3" for="country">Country</label>
+						<div class="col-sm-9">
+							<div class="fg-line">
+<!--								<select name="country" ng-model="country" class="form-control">
+									<option value="I">US</option>
+									<option>Select an Country</option>
+									<option>India</option>
+								</select>-->
+								<input data-ng-model="data.country" type="text" class="form-control" value="{{ data.country}}" placeholder="eg. United States">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group fg-line col-sm-6">
+						<label class="col-sm-3" for="zipCode">Zip Code</label>
+						<div class="col-sm-9">
+							<div class="fg-line">
+								<input data-ng-model="data.zipCode" type="text" class="form-control" value="{{ data.zipCode}}" placeholder="eg. 123123">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--<a class="btn btn-primary btn-sm m-t-5 btnMargin" data-ui-sref-active="active" data-ui-sref="contacts.listContacts" data-ng-click="updateContactById()">Update<span  aria-hidden="true"></span></a>-->
+		<!--<a class="btn bgm-red btn-sm m-t-5 btnMargin" data-ui-sref-active="active" data-ui-sref="contacts.listContacts">Cancel<span  aria-hidden="true"></span></a>-->
+		<button class="btn btn-primary btn-sm m-t-5 btnMargin"  data-ui-sref="contact.listcontact" data-swal-update data-ng-click="updateContactById()">Update Contact</button>
+		<button class="btn bgm-red btn-sm m-t-5 btnMargin" data-ui-sref="contact.listcontact">Cancel</button>
+	</form>
+</div>

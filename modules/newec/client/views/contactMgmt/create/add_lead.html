@@ -1,0 +1,267 @@
+<div class="container">
+    <div class="block-header">
+        <h2>Add Lead<small>Leads created using this form will affect the campaign only in the next new run. </small></h2>
+
+        <ul class="actions">
+            <li>
+                <a href="">
+                    <i class="zmdi zmdi-trending-up"></i>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="zmdi zmdi-check-all"></i>
+                </a>
+            </li>
+            <li class="dropdown">
+                <a href="" dropdown-toggle>
+                    <i class="zmdi zmdi-more-vert"></i>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li>
+                        <a href="">Refresh</a>
+                    </li>
+                    <li>
+                        <a href="">Manage Widgets</a>
+                    </li>
+                    <li>
+                        <a href="">Widgets Settings</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+	<form role="form" >
+		<div class="card">
+			<div class="card-header">
+				<h2>Lead Information</h2>
+			</div>
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<div class="select">
+									<select class="form-control" name="campaign">
+										<option>Select a Campaign</option>
+										<option>My Campaign</option>
+										<option>India Campaign</option>
+									</select>
+								</div>
+							</div>
+							<small>Select the campaign</small>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="name">
+							</div>
+							<label class="fg-label">Name</label>
+							<small>Enter the Lead's Salutation</small>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="phone">
+							</div>
+							<label class="fg-label">Primary Phone</label>
+							<small>Enter without country code (eg.4696540050)</small>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="alternate1">
+							</div>
+							<label class="fg-label">Alternate Number 1</label>
+							<small>Enter without country code (eg.4696540050)</small>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="alternate2">
+							</div>
+							<label class="fg-label">Alternate Number 2</label>
+							<small>Enter without country code (eg.4696540050)</small>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="campany">
+							</div>
+							<label class="fg-label">Company Name</label>
+							<small>Enter the lead's Company</small>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						
+						<label class="radio radio-inline m-r-20">
+							<input type="radio" name="gender" value="male">
+							<i class="input-helper"></i>
+							Female
+						</label>
+
+						<label class="radio radio-inline m-r-20">
+							<input type="radio" name="gender" value="female">
+							<i class="input-helper"></i>
+							Male
+						</label>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="extension">
+							</div>
+							<label class="fg-label"> Extension </label>
+							<small>Enter the Extension</small>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="fax">
+							</div>
+							<label class="fg-label">Fax</label>
+							<small>Enter the Fax number</small>
+						</div>
+					</div>
+					
+					<div class="col-sm-4">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="email">
+							</div>
+							<label class="fg-label">email</label>
+							<small>Enter lead's Email</small>
+						</div>
+					</div>
+				</div>
+				
+
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-header">
+				<h2>Address Details</h2>
+			</div>
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="c-black f-500 m-t-20 m-b-20">Address</p>
+						<div class="form-group">
+							<div class="fg-line">
+								<textarea class="form-control" name="address" data-auto-size placeholder="Enter your address..."></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="city">
+							</div>
+							<label class="fg-label">City</label>
+							<small>Enter the lead's City</small>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="state">
+							</div>
+							<label class="fg-label">State</label>
+							<small>Enter the lead's State</small>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="postalcode">
+							</div>
+							<label class="fg-label">Zip Code</label>
+							<small>Enter the lead's Postal/Zip code</small>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="web">
+							</div>
+							<label class="fg-label">Web</label>
+							<small>Enter the web address</small>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-header">
+				<h2>Lead Status</h2>
+			</div>
+
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<div class="select">
+									<select class="form-control" name="campaign">
+										<option>Select a lead Status</option>
+										<option>Hot Lead</option>
+										<option>Warm Lead</option>
+										<option>Cold Lead</option>
+										<option>Call Back</option>
+										<option>DNC</option>
+									</select>
+								</div>
+								<!--<input type="text" class="form-control fg-input" id="lstatus">-->
+							</div>
+							<!--<label class="fg-label">Lead Status</label>-->
+							<!--<small>Select the lead's Status</small>-->
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<textarea class="form-control" id="notes" data-auto-size placeholder="Enter your notes..."></textarea>
+							</div>
+							<label class="fg-label">Notes</label>
+							<small>Enter the Notes about the lead</small>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--<button type="submit" class="btn btn-primary btn-sm m-t-5">Add Lead</button>-->
+		
+		<button class="btn btn-info" data-swal-update>Add</button>
+<!--		<button class="btn btn-info" data-swal-img-update>Update</button>
+		<button class="btn btn-info" data-growl-update data-type="inverse" data-from="top" data-align="center" data-icon="fa fa-comments">Update</button>-->
+		
+		<!--<a href="" class="btn btn-info" data-growl-update data-type="inverse"  data-from="top" data-align="center" data-icon="fa fa-comments">Update</a>-->
+	</form>
+</div>

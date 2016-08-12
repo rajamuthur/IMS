@@ -1,0 +1,39 @@
+<div class="container" data-ng-controller="followupEmailsCtrl as tctrl" ng-init="getSchdTemplate()" >
+	<div class="block-header">
+		<h2>View Follow-up Email Templates </h2>
+		<h2><small>Please make sure that you have configured SMTP, otherwise emails will not be delivered.</small></h2>
+	</div>
+    <div class="card">
+        <div class="card-header">
+			<button class="btn bgm-blue btn-icon waves-effect waves-circle pull-right"  data-ui-sref="email.addschedule" title="More"><i class="zmdi zmdi-plus"></i></button>
+        </div>
+		<br/><br/>
+        <div class="card-body">
+			
+			<br/>
+            <div class="table-responsive">
+                <table ng-table="followEdit" class="table table-vmiddle table-hover">
+                    <tr ng-repeat="w in $data"  ng-class="{ 'active': w.$edit }">
+                        <td data-title="'Schedule Name'">
+                            <span ng-if="!w.$edit">{{ w.name}}</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.name" /></div>
+                        </td>
+                        <td data-title="'Created On'">
+                            <span ng-if="!w.$edit">{{w.created_on}}</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="email" ng-model="w.created_on" /></div>
+                        </td>
+						<td data-title="'Modified On'">
+                            <span ng-if="!w.$edit">{{w.updated_on}}</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="text" value="w.updated_on" /></div>
+                        </td>
+                        <td data-title="'Actions'">
+                            <button type="button" class="btn btn-default" data-swal-preference data-ng-click="deleteSchdTemplate(w.id)"><i class="zmdi zmdi-delete zmdi-hc-fw"></i></button>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>        
+</div>
+
+

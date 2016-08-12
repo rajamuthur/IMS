@@ -1,0 +1,15 @@
+<ul id="" class="cfields" dnd-list="list.people" 
+    dnd-allowed-types="list.allowedTypes"
+    dnd-disable-if="list.people.length >= list.max">
+	<li class="symbol source ellipsis bgm-blue">{{list.label}}</li>
+	<li class="symbol source droparea  z-depth-1-bottom"><i class="zmdi zmdi-square-down zmdi-hc-fw"></i> Drop Here</li>
+	<!--<span class="droparea"><i class="zmdi zmdi-square-down zmdi-hc-fw"></i></span>-->
+	<li class="symbol target"  ng-repeat="person in list.people"
+        dnd-draggable="person"
+        dnd-type="person.type"
+        dnd-disable-if="person.type == 'unknown'"
+        dnd-moved="list.people.splice($index, 1)"
+        dnd-effect-allowed="move"
+        class="background-{{person.type}}">{{person.name}}
+	</li>
+</ul>

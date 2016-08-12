@@ -1,0 +1,293 @@
+<div class="container">
+    <div class="block-header">
+        <h2>Create New User<small>This page provides you with an "easy-form" to add new users to the system.</br>
+You cannot assign roles and privileges to the added users from this page.  </small></h2>
+
+        <ul class="actions">
+            <li>
+                <a href="">
+                    <i class="zmdi zmdi-trending-up"></i>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="zmdi zmdi-check-all"></i>
+                </a>
+            </li>
+            <li class="dropdown">
+                <a href="" dropdown-toggle>
+                    <i class="zmdi zmdi-more-vert"></i>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li>
+                        <a href="">Refresh</a>
+                    </li>
+                    <li>
+                        <a href="">Manage Widgets</a>
+                    </li>
+                    <li>
+                        <a href="">Widgets Settings</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+	<form role="form" >
+		<div class="card">
+			<div class="card-header">
+				<h2>Basic Information</h2>
+			</div>
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="fname">
+							</div>
+							<label class="fg-label">First Name</label>
+							<small>Enter new user's first name</small>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="mname">
+							</div>
+							<label class="fg-label">Middle Name</label>
+							<small>Enter new user's middle name</small>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="lname">
+							</div>
+							<label class="fg-label">Last Name</label>
+							<small>Enter new user's last name</small>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+				<div class="card">
+					<div class="card-header">
+						<h2>Address Details</h2>
+					</div>
+					<div class="card-body card-padding">
+						<div class="row">
+							<div class="col-sm-12">
+								<p class="c-black f-500 m-t-20 m-b-20">Address</p>
+								<div class="form-group">
+									<div class="fg-line">
+										<textarea class="form-control" name="address" data-auto-size placeholder="Enter your address..."></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<div class="card">
+			<div class="card-header">
+				<h2>Contact Details</h2>
+			</div>
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="email">
+							</div>
+							<label class="fg-label">email</label>
+							<small>Email for all notifications</small>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="phone">
+							</div>
+							<label class="fg-label">Caller Id</label>
+							<small>This number will be used as a caller ID for outgoing calls.</small>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+				<div class="card">
+					<div class="card-header">
+						<h2>Select an user ID and password</h2>
+					</div>
+					<div class="card-body card-padding">
+						<div class="row">
+							<div class="col-sm-4">
+								<div class="form-group fg-float">
+									<div class="fg-line">
+										<input type="text" class="form-control fg-input" id="username">
+									</div>
+									<label class="fg-label"> Username </label>
+									<small>Username for this user's account</small>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="form-group fg-float">
+									<div class="fg-line">
+										<input type="text" class="form-control fg-input" id="password">
+									</div>
+									<label class="fg-label">Password</label>
+									<small>Password for this user's account</small>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="form-group fg-float">
+									<div class="fg-line">
+										<input type="text" class="form-control fg-input" id="cpassword">
+									</div>
+									<label class="fg-label">Confirm Password</label>
+									<small>Re-type the password</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header">
+						<h2>Select the Trial Mode</h2>
+					</div>
+					<div class="card-body card-padding">
+						<div class="row">
+							<div class="col-sm-4">
+								<div class="col-sm-4 m-b-20">
+									<div class="toggle-switch">
+										<label for="trialMode" class="ts-label">Trial Mode</label>
+										<input id="trialMode" type="checkbox" hidden="hidden">
+										<label for="trialMode" class="ts-helper"></label>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="form-group fg-float">
+									<div class="fg-line">
+										<input type="text" class="form-control fg-input" id="enddate" value="">
+									</div>
+									<label class="fg-label">End Date</label>
+									<small>Trial End Date</small>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="form-group fg-float">
+									<div class="fg-line">
+										<input type="text" class="form-control fg-input" id="endtime" value="">
+									</div>
+									<label class="fg-label">End Time</label>
+									<small>Trial End time</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		<div class="card">
+			<div class="card-header">
+				<h2>Select the basic role of the user</h2>
+			</div>
+
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<div class="select">
+									<select class="form-control" name="role">
+										<option>Select a basic role</option>
+										<option>Customers</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<label class="checkbox checkbox-inline m-r-20">
+							<input type="checkbox" name="access_level" value="option1">
+							<i class="input-helper"></i>
+							Customers
+						</label>
+						<label class="checkbox checkbox-inline m-r-20">
+							<input type="checkbox" name="access_level" value="option3">
+							<i class="input-helper"></i>
+							Customer Administrator
+						</label>
+						<label class="checkbox checkbox-inline m-r-20">
+							<input type="checkbox" name="access_level" value="option2">
+							<i class="input-helper"></i>
+							Agents
+						</label>
+						<label class="checkbox checkbox-inline m-r-20">
+							<input type="checkbox" name="access_level" value="option3">
+							<i class="input-helper"></i>
+							Closer Agent
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+			<div class="card">
+				<div class="card-header">
+					<h2>Server Options</h2>
+				</div>
+				<div class="card-body card-padding">
+					<div class="row">
+						<div class="col-sm-6">
+							<label class="radio radio-inline m-r-20">
+								<input type="radio" name="cluster" value="eastern" >
+								<i class="input-helper"></i>
+								Eastern
+							</label>
+
+							<label class="radio radio-inline m-r-20">
+								<input type="radio" name="cluster" value="central" >
+								<i class="input-helper"></i>
+								Central
+							</label>
+
+							<label class="radio radio-inline m-r-20">
+								<input type="radio" name="cluster" value="amazon" checked="checked">
+								<i class="input-helper"></i>
+								Amazon
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					<h2>Billing Options</h2>
+				</div>
+				<div class="card-body card-padding">
+					<div class="row">
+						<div class="col-sm-6">
+							<label class="radio radio-inline m-r-20">
+								<input type="radio" name="billing" value="unlimited" >
+								<i class="input-helper"></i>
+								Unlimited
+							</label>
+
+							<label class="radio radio-inline m-r-20">
+								<input type="radio" name="billing" value="ppm" >
+								<i class="input-helper"></i>
+								Pay-Per-Minute
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		<!--<button type="submit" class="btn btn-primary btn-sm m-t-5">Add Lead</button>-->
+		
+		<button class="btn btn-info" data-swal-update>Add User</button>
+<!--		<button class="btn btn-info" data-swal-img-update>Update</button>
+		<button class="btn btn-info" data-growl-update data-type="inverse" data-from="top" data-align="center" data-icon="fa fa-comments">Update</button>-->
+		
+		<!--<a href="" class="btn btn-info" data-growl-update data-type="inverse"  data-from="top" data-align="center" data-icon="fa fa-comments">Update</a>-->
+	</form>
+</div>

@@ -1,0 +1,35 @@
+<div class="container">
+	<div class="block-header"> 
+		<h2>Create New Account</h2>
+		<h2><small>This page provides you with an "easy-form" to add new users to the system.</br>
+				You cannot assign roles and privileges to the added users from this page.  </small></h2>
+	</div>
+    <div class="card" id="profile-main" data-ng-controller="userprofileCtrl as pctrl">
+        <div class="pm-overview c-overflow">
+            <div class="pmo-pic">
+                <div class="p-relative">
+                    <a href="">
+                        <img class="img-responsive" src="modules/newec/client/assets/img/profile-pics/Add-Male-User.png" alt="">
+                    </a>
+					<div class="col-sm-7 fileinput fileinput-new pmop-edit" data-provides="fileinput">
+						<span class="btn-file m-r-10">
+							<i class="zmdi zmdi-camera"></i><span class="hidden-xs fileinput-new">Update Profile Picture</span>
+							<span class="fileinput-exists">Change</span>
+							<input type="file" name="...">
+						</span>
+						<span class="fileinput-filename"></span>
+						<a href="#" class="close fileinput-exists" data-dismiss="fileinput">&times;</a>
+					</div>
+                </div>
+            </div>
+        </div>
+        <div class="pm-body clearfix">
+            <ul class="tab-nav tn-justified" data-ng-include="'modules/newec/client/views/template/adduserprofile-menu.html'"></ul>
+            <data ui-view></data>
+        </div>
+    </div>
+	<div>
+		<button class="btn btn-info btn-sm m-r-10" data-ui-sref="user.listUsersProfile" data-swal-update>Create</button>
+		<button class="btn bgm-red btn-sm" data-ui-sref="user.listUsersProfile">Cancel</button>
+	</div>
+</div>

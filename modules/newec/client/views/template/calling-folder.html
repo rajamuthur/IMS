@@ -1,0 +1,2157 @@
+<!--<aside id="folder-list-right" class="ng-scope toggled col-sm-2">-->
+	<div class="chat-search ng-scope">
+		<div class="fg-line">
+			<input type="text" placeholder="Search Folder" class="form-control">
+		</div>
+	</div>
+
+	<div class="listview ng-scope">
+		<div class="tree dndDragover" dnd-drop="drop($event)"  dnd-list="contactsList1" dnd-moved="">
+			<ul>
+				<li class="parent1 active">
+					<a class="folder-parent"  ng-mouseover="" dnd-dragover="dragoverCallback()">
+						<div class="media"> 				
+							<div class="pull-right"> 					
+								<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+							</div> 				
+							<div class="media-body"> 					
+								<div class="lv-title">Folder Folder Folder 1</div>  				
+							</div> 			
+						</div>
+					</a>
+					<ul style="display: block;">
+						<li class="active">
+							<a class="folder-child">
+								<div class="media">
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 1</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+						<li class="active">
+							<a class="folder-child">
+								<div class="media">
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 2</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+						<li class="active">
+							<a class="folder-child">
+								<div class="media">
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 3</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="parent active">
+					<a class="folder-parent">
+						<div class="media"> 				
+							<div class="pull-right"> 					
+								<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+							</div> 				
+							<div class="media-body"> 					
+								<div class="lv-title">Folder Folder Folder 2</div>  				
+							</div> 			
+						</div>
+					</a>
+					<ul style="display: block;">
+						<li class="active">
+							<a class="folder-child">
+								<div class="media"> 				
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 1</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="parent active">
+					<a class="folder-parent">
+						<div class="media"> 				
+							<div class="pull-right"> 					
+								<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+							</div> 				
+							<div class="media-body"> 					
+								<div class="lv-title">Folder Folder Folder 3</div>  				
+							</div> 			
+						</div>
+					</a>
+					<ul style="display: block;">
+						<li class="active">
+							<a class="folder-child">
+								<div class="media"> 				
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 1</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="parent active">
+					<a class="folder-parent">
+						<div class="media"> 				
+							<div class="pull-right"> 					
+								<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+							</div> 				
+							<div class="media-body"> 					
+								<div class="lv-title">Folder Folder Folder 3</div>  				
+							</div> 			
+						</div>
+					</a>
+					<ul style="display: block;">
+						<li class="active">
+							<a class="folder-child">
+								<div class="media"> 				
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 1</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="parent active">
+					<a class="folder-parent">
+						<div class="media"> 				
+							<div class="pull-right"> 					
+								<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+							</div> 				
+							<div class="media-body"> 					
+								<div class="lv-title">Folder Folder Folder 1</div>  				
+							</div> 			
+						</div>
+					</a>
+					<ul style="display: block;">
+						<li class="active">
+							<a class="folder-child">
+								<div class="media">
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 1</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+						<li class="active">
+							<a class="folder-child">
+								<div class="media">
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 2</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+						<li class="active">
+							<a class="folder-child">
+								<div class="media">
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 3</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="parent active">
+					<a class="folder-parent">
+						<div class="media"> 				
+							<div class="pull-right"> 					
+								<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+							</div> 				
+							<div class="media-body"> 					
+								<div class="lv-title">Folder Folder Folder 1</div>  				
+							</div> 			
+						</div>
+					</a>
+					<ul style="display: block;">
+						<li class="active">
+							<a class="folder-child">
+								<div class="media">
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 1</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+						<li class="active">
+							<a class="folder-child">
+								<div class="media">
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 2</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+						<li class="active">
+							<a class="folder-child">
+								<div class="media">
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 3</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="parent active">
+					<a class="folder-parent">
+						<div class="media"> 				
+							<div class="pull-right"> 					
+								<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+							</div> 				
+							<div class="media-body"> 					
+								<div class="lv-title">Folder Folder Folder 1</div>  				
+							</div> 			
+						</div>
+					</a>
+					<ul style="display: block;">
+						<li class="active">
+							<a class="folder-child">
+								<div class="media">
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 1</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+						<li class="active">
+							<a class="folder-child">
+								<div class="media">
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 2</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+						<li class="active">
+							<a class="folder-child">
+								<div class="media">
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 3</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="parent active">
+					<a class="folder-parent">
+						<div class="media"> 				
+							<div class="pull-right"> 					
+								<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+							</div> 				
+							<div class="media-body"> 					
+								<div class="lv-title">Folder Folder Folder 1</div>  				
+							</div> 			
+						</div>
+					</a>
+					<ul style="display: block;">
+						<li class="active">
+							<a class="folder-child">
+								<div class="media">
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 1</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+						<li class="active">
+							<a class="folder-child">
+								<div class="media">
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 2</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+						<li class="active">
+							<a class="folder-child">
+								<div class="media">
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 3</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="parent active">
+					<a class="folder-parent">
+						<div class="media"> 				
+							<div class="pull-right"> 					
+								<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+							</div> 				
+							<div class="media-body"> 					
+								<div class="lv-title">Folder Folder Folder 3</div>  				
+							</div> 			
+						</div>
+					</a>
+					<ul style="display: block;">
+						<li class="active">
+							<a class="folder-child">
+								<div class="media"> 				
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 1</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="parent active">
+					<a class="folder-parent">
+						<div class="media"> 				
+							<div class="pull-right"> 					
+								<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+							</div> 				
+							<div class="media-body"> 					
+								<div class="lv-title">Folder Folder Folder 1</div>  				
+							</div> 			
+						</div>
+					</a>
+					<ul style="display: block;">
+						<li class="active">
+							<a class="folder-child">
+								<div class="media">
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 1</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+						<li class="active">
+							<a class="folder-child">
+								<div class="media">
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 2</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+						<li class="active">
+							<a class="folder-child">
+								<div class="media">
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 3</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="parent active">
+					<a class="folder-parent">
+						<div class="media"> 				
+							<div class="pull-right"> 					
+								<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+							</div> 				
+							<div class="media-body"> 					
+								<div class="lv-title">Folder Folder Folder 3</div>  				
+							</div> 			
+						</div>
+					</a>
+					<ul style="display: block;">
+						<li class="active">
+							<a class="folder-child">
+								<div class="media"> 				
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 1</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="parent active">
+					<a class="folder-parent">
+						<div class="media"> 				
+							<div class="pull-right"> 					
+								<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+							</div> 				
+							<div class="media-body"> 					
+								<div class="lv-title">Folder Folder Folder 3</div>  				
+							</div> 			
+						</div>
+					</a>
+					<ul style="display: block;">
+						<li class="active">
+							<a class="folder-child">
+								<div class="media"> 				
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 1</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="parent active">
+					<a class="folder-parent">
+						<div class="media"> 				
+							<div class="pull-right"> 					
+								<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+							</div> 				
+							<div class="media-body"> 					
+								<div class="lv-title">Folder Folder Folder 1</div>  				
+							</div> 			
+						</div>
+					</a>
+					<ul style="display: block;">
+						<li class="active">
+							<a class="folder-child">
+								<div class="media">
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 1</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+						<li class="active">
+							<a class="folder-child">
+								<div class="media">
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 2</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+						<li class="active">
+							<a class="folder-child">
+								<div class="media">
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 3</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="parent active">
+					<a class="folder-parent">
+						<div class="media"> 				
+							<div class="pull-right"> 					
+								<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+							</div> 				
+							<div class="media-body"> 					
+								<div class="lv-title">Folder Folder Folder 3</div>  				
+							</div> 			
+						</div>
+					</a>
+					<ul style="display: block;">
+						<li class="active">
+							<a class="folder-child">
+								<div class="media"> 				
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 1</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="parent active">
+					<a class="folder-parent">
+						<div class="media"> 				
+							<div class="pull-right"> 					
+								<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+							</div> 				
+							<div class="media-body"> 					
+								<div class="lv-title">Folder Folder Folder 3</div>  				
+							</div> 			
+						</div>
+					</a>
+					<ul style="display: block;">
+						<li class="active">
+							<a class="folder-child">
+								<div class="media"> 				
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 1</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="parent active">
+					<a class="folder-parent">
+						<div class="media"> 				
+							<div class="pull-right"> 					
+								<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+							</div> 				
+							<div class="media-body"> 					
+								<div class="lv-title">Folder Folder Folder 3</div>  				
+							</div> 			
+						</div>
+					</a>
+					<ul style="display: block;">
+						<li class="active">
+							<a class="folder-child">
+								<div class="media"> 				
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 1</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="parent active">
+					<a class="folder-parent">
+						<div class="media"> 				
+							<div class="pull-right"> 					
+								<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+							</div> 				
+							<div class="media-body"> 					
+								<div class="lv-title">Folder Folder Folder 3</div>  				
+							</div> 			
+						</div>
+					</a>
+					<ul style="display: block;">
+						<li class="active">
+							<a class="folder-child">
+								<div class="media"> 				
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 1</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="parent active">
+					<a class="folder-parent">
+						<div class="media"> 				
+							<div class="pull-right"> 					
+								<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+							</div> 				
+							<div class="media-body"> 					
+								<div class="lv-title">Folder Folder Folder 3</div>  				
+							</div> 			
+						</div>
+					</a>
+					<ul style="display: block;">
+						<li class="active">
+							<a class="folder-child">
+								<div class="media"> 				
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 1</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="parent active">
+					<a class="folder-parent">
+						<div class="media"> 				
+							<div class="pull-right"> 					
+								<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+							</div> 				
+							<div class="media-body"> 					
+								<div class="lv-title">Folder Folder Folder 3</div>  				
+							</div> 			
+						</div>
+					</a>
+					<ul style="display: block;">
+						<li class="active">
+							<a class="folder-child">
+								<div class="media"> 				
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 1</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="parent active">
+					<a class="folder-parent">
+						<div class="media"> 				
+							<div class="pull-right"> 					
+								<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+							</div> 				
+							<div class="media-body"> 					
+								<div class="lv-title">Folder Folder Folder 3</div>  				
+							</div> 			
+						</div>
+					</a>
+					<ul style="display: block;">
+						<li class="active">
+							<a class="folder-child">
+								<div class="media"> 				
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 1</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="parent active">
+					<a class="folder-parent">
+						<div class="media"> 				
+							<div class="pull-right"> 					
+								<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+							</div> 				
+							<div class="media-body"> 					
+								<div class="lv-title">Folder Folder Folder 3</div>  				
+							</div> 			
+						</div>
+					</a>
+					<ul style="display: block;">
+						<li class="active">
+							<a class="folder-child">
+								<div class="media"> 				
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 1</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="parent active">
+					<a class="folder-parent">
+						<div class="media"> 				
+							<div class="pull-right"> 					
+								<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+							</div> 				
+							<div class="media-body"> 					
+								<div class="lv-title">Folder Folder Folder 3</div>  				
+							</div> 			
+						</div>
+					</a>
+					<ul style="display: block;">
+						<li class="active">
+							<a class="folder-child">
+								<div class="media"> 				
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 1</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="parent active">
+					<a class="folder-parent">
+						<div class="media"> 				
+							<div class="pull-right"> 					
+								<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+							</div> 				
+							<div class="media-body"> 					
+								<div class="lv-title">Folder Folder Folder 3</div>  				
+							</div> 			
+						</div>
+					</a>
+					<ul style="display: block;">
+						<li class="active">
+							<a class="folder-child">
+								<div class="media"> 				
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 1</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="parent active">
+					<a class="folder-parent">
+						<div class="media"> 				
+							<div class="pull-right"> 					
+								<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+							</div> 				
+							<div class="media-body"> 					
+								<div class="lv-title">Folder Folder Folder 3</div>  				
+							</div> 			
+						</div>
+					</a>
+					<ul style="display: block;">
+						<li class="active">
+							<a class="folder-child">
+								<div class="media"> 				
+									<div class="pull-right"> 					
+										<i class="zmdi zmdi-settings zmdi-hc-fw c-blue"></i> 				
+									</div> 				
+									<div class="media-body"> 					
+										<div class="lv-title">Sub Folder Folder 1</div>  				
+									</div> 			
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+<!--		<a class="lv-item odd c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item even c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item odd c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item even c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item odd c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item even c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item odd c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item even c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item odd c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item even c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item odd c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item even c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item odd c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item even c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item odd c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item even c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item odd c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item even c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item odd c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item even c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item odd c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item even c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item odd c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item even c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item odd c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item even c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item odd c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item even c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item odd c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item even c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item odd c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item even c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item odd c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item even c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item odd c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item even c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item odd c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item even c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item odd c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item even c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item odd c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item even c-white" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title c-white">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a href="" class="lv-item">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div style="font-size: 15px;" class="pull-left">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a href="" class="lv-item">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div style="font-size: 15px;" class="pull-left">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a href="" class="lv-item">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div style="font-size: 15px;" class="pull-left">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a href="" class="lv-item">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div style="font-size: 15px;" class="pull-left">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a href="" class="lv-item">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div style="font-size: 15px;" class="pull-left">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a href="" class="lv-item">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div style="font-size: 15px;" class="pull-left">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a href="" class="lv-item">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div style="font-size: 15px;" class="pull-left">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a href="" class="lv-item">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div style="font-size: 15px;" class="pull-left">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a href="" class="lv-item">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div style="font-size: 15px;" class="pull-left">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a href="" class="lv-item">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div style="font-size: 15px;" class="pull-left">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a href="" class="lv-item">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div style="font-size: 15px;" class="pull-left">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a href="" class="lv-item">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div style="font-size: 15px;" class="pull-left">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a href="" class="lv-item">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div style="font-size: 15px;" class="pull-left">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a href="" class="lv-item">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div style="font-size: 15px;" class="pull-left">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a href="" class="lv-item">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div style="font-size: 15px;" class="pull-left">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a href="" class="lv-item">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div style="font-size: 15px;" class="pull-left">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a href="" class="lv-item">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div style="font-size: 15px;" class="pull-left">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a href="" class="lv-item">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div style="font-size: 15px;" class="pull-left">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a href="" class="lv-item">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div style="font-size: 15px;" class="pull-left">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div class="pull-left" style="font-size: 15px;">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div class="pull-left" style="font-size: 15px;">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div class="pull-left" style="font-size: 15px;">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div class="pull-left" style="font-size: 15px;">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div class="pull-left" style="font-size: 15px;">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div class="pull-left" style="font-size: 15px;">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div class="pull-left" style="font-size: 15px;">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div class="pull-left" style="font-size: 15px;">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div class="pull-left" style="font-size: 15px;">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div class="pull-left" style="font-size: 15px;">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div class="pull-left" style="font-size: 15px;">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div><div class="pull-left" style="font-size: 15px;">
+					<i class="zmdi zmdi-folder zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">Folder Folder Folder 1</div>
+
+				</div>
+			</div>
+		</a>
+		<a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a><a class="lv-item" href="">
+			<div class="media">
+				<div class="pull-right">
+					<i class="zmdi zmdi-settings zmdi-hc-fw"></i>
+				</div>
+				<div class="media-body">
+					<div class="lv-title">David Belle</div>
+					<small class="lv-small">Last seen 3 hours ago</small>
+				</div>
+			</div>
+		</a>-->
+	</div>
+<!--</aside>-->
+<script>
+	
+	$(document).ready(function ( ) {
+		$('.tree li').each(function () {
+			if ($(this).children('ul').length > 0) {
+				$(this).addClass('parent');
+			}
+		});
+
+		$('.tree li.parent > a').click(function ( ) {
+			$(this).parent().toggleClass('active');
+			$(this).parent().children('ul').slideToggle('fast');
+		});
+
+		$('#all').click(function () {
+
+			$('.tree li').each(function () {
+				$(this).toggleClass('active');
+				$(this).children('ul').slideToggle('fast');
+			});
+		});
+
+		$('.tree li').each(function () {
+			$(this).toggleClass('active');
+			$(this).children('ul').slideToggle('fast');
+		});
+
+	});
+</script>

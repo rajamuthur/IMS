@@ -1,0 +1,333 @@
+<style>
+	.form-control {
+		height: 30px;
+	}
+</style>
+<div id="addCampaignSettingDiv" class="container" ng-controller="campaignsettingsCtrl">
+	<form class="form-horizontal" role="form">
+		<div class="block-header">
+			<h2>Create Campaign Setting</h2>
+		</div>
+		<div class="card">
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="form-group fg-line col-sm-6">
+						<label for="cname" class="control-label col-sm-4">Campaign Setting Name</label>
+						<div class="col-sm-6">
+							<div class="fg-line ng-binding">
+								<!--<input type="text" placeholder="Name" id="name" class="form-control input-sm">-->
+								<input name="cname" maxlength="100" type="text" placeholder="Name" class="form-control input-sm" data-ng-model="cname">
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header">
+				<h2>Calling Options</h2>
+			</div>
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="form-group fg-line col-sm-6">
+						<label for="phone" class="control-label col-sm-4">Caller ID</label>
+						<div class="col-sm-6">
+							<div class="fg-line ng-binding">
+								<input type="text" placeholder="Phone" class="form-control input-sm" data-ng-model="phone">
+							</div>
+						</div>
+					</div>
+					<div class="form-group col-sm-6">
+						<label for="autopause" class="control-label col-sm-4">Enable Auto Pause</label>
+						<div class="col-sm-8">
+							<div class="fg-line ng-binding">
+								<label class="checkbox checkbox-inline m-r-20">
+									<input type="checkbox" name="autopause" id="autopause" value="1" data-ng-model="autopause">
+									<i class="input-helper"></i>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="ccalls" class="control-label col-sm-4">Number of Lines</label>
+						<div class="col-sm-6">
+							<div class="select">
+								<select class="form-control" data-ng-model="ccalls">
+									<option >1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="form-group col-sm-6">
+						<label for="isRecording" class="control-label col-sm-4">Call Recording</label>
+						<div class="col-sm-8">
+							<div class="fg-line ng-binding">
+								<label class="checkbox checkbox-inline m-r-20">
+									<input type="checkbox" value="1" tabindex="14" data-ng-model="isRecording">
+									<i class="input-helper"></i>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="ringTime" class="control-label col-sm-4">Phone Ring time</label>
+						<div class="col-sm-6">
+							<div class="select">
+								<select class="form-control" tabindex='19' data-ng-model="ringTime">
+									<option>3 Rings</option>
+									<option>4 Rings</option>
+									<option>5 Rings</option>
+									<option>6 Rings</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="form-group col-sm-6 m-b-20">
+						<div class="toggle-switch" data-ts-color="green">
+							<label for="ts4" class="ts-label control-label col-sm-4">Make calls to DNC numbers</label>
+							<!--<input type="checkbox" hidden="hidden" name="allowDnc" data-ng-model="allowDnc">-->
+							<input id="ts4" type="checkbox" hidden="hidden" name="allowDnc" data-ng-model="allowDnc">
+							<label for="ts4" class="ts-helper"></label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header">
+				<h2>On-hold Recordings</h2>
+			</div>
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="onhold1" class="control-label col-sm-4">On-hold Recording1</label>
+						<div class="col-sm-6">
+							<div class="select">
+								<select class="form-control" id='ringTime' tabindex='19' data-ng-model="onhold1">
+									<option>Select Recording</option>
+									<option>Recording1</option>
+									<option>Recording2</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="form-group col-sm-6">
+						<label for="onhold2" class="control-label col-sm-4">On-hold Recording2</label>
+						<div class="col-sm-6">
+							<div class="select">
+								<select class="form-control" data-ng-model="onhold2">
+									<option>Select Recording</option>
+									<option>Recording1</option>
+									<option>Recording2</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="onhold3" class="control-label col-sm-4">On-hold Recording3</label>
+						<div class="col-sm-6">
+							<div class="select">
+								<select class="form-control" data-ng-model="onhold3">
+									<option>Select Recording</option>
+									<option>Recording1</option>
+									<option>Recording2</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header">
+				<h2>Answering Machine Options</h2>
+			</div>
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="amRecording" class="control-label col-sm-4">Answering Machine Recording</label>
+						<div class="col-sm-6">
+							<div class="select">
+								<select class="form-control" data-ng-model="amRecording">
+									<option>Select Recording</option>
+									<option>Recording1</option>
+									<option>Recording2</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="emailTemplate" class="control-label col-sm-4">Automatically send email when leaving voicemail.</label>
+						<div class="col-sm-8">
+							<div class="fg-line ng-binding">
+								<label class="checkbox checkbox-inline m-t-10 m-r-20">
+									<input type="checkbox" name="access_level" value="option1" data-ng-model="emailTemplate">
+									<i class="input-helper"></i>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="emailTemplate" class="control-label col-sm-4">Choose Email Template</label>
+						<div class="col-sm-6">
+							<div class="select">
+								<select class="form-control" data-ng-model="emailTemplate">
+									<option>Template 1</option>
+									<option>Template 2</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header">
+				<h2>Email Options</h2>
+			</div>
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="form-group col-sm-12 m-b-20">
+						<div data-ts-color="green">
+							<label for="ts5" class="ts-label control-label col-sm-2 ">Choose Email Type</label>
+							<label class="m-b-20 radio radio-inline">
+								<input type="radio" name="inlineRadioOptions" value="option1" >
+								<i class="input-helper"></i>
+								None
+							</label>
+							<label class="m-b-20 radio radio-inline">
+								<input type="radio" name="inlineRadioOptions" value="option2">
+								<i class="input-helper"></i>
+								Single Email
+							</label>
+
+							<label class="m-b-20 radio radio-inline">
+								<input type="radio" name="inlineRadioOptions" value="option3">
+								<i class="input-helper"></i>
+								Automatic Follow-up Emails
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="emailTemplate" class="col-sm-4 control-label">Choose Email Template</label>
+						<div class="col-sm-6">
+							<div class="select">
+								<select class="form-control" data-ng-model="emailTemplate">
+									<option>Template 1</option>
+									<option>Template 2</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header">
+				<h2>Search Options</h2>
+			</div>
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="form-group col-sm-4">
+						<label for="zillow" class="col-sm-6 control-label">Zillow Search</label>
+						<div class="col-sm-1">
+							<div class="fg-line ng-binding">
+								<label class="checkbox checkbox-inline m-r-20">
+									<input type="checkbox" name="access_level" value="option1" data-ng-model="zillow">
+									<i class="input-helper"></i>
+								</label>
+							</div>
+						</div>
+
+					</div>
+					<div class="form-group col-sm-4">
+						<label for="trulia" class="col-sm-6 control-label">Trulia Search</label>
+						<div class="col-sm-1">
+							<div class="fg-line ng-binding">
+								<label class="checkbox checkbox-inline m-r-20">
+									<input type="checkbox" name="access_level" value="option1" data-ng-model="trulia">
+									<i class="input-helper"></i>
+								</label>
+							</div>
+						</div>
+
+					</div>
+					<div class="form-group col-sm-4">
+						<label for="auth" class="col-sm-6 control-label">Google Maps</label>
+						<div class="col-sm-1">
+							<div class="fg-line ng-binding">
+								<label class="checkbox checkbox-inline m-r-20">
+									<input type="checkbox" name="access_level" value="option1" data-ng-model="googleMap">
+									<i class="input-helper"></i>
+								</label>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header">
+				<h2>Other Options</h2>
+			</div>
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="precoding" class="col-sm-4 control-label">Promotional Message Recording</label>
+						<div class="col-sm-6">
+							<div class="select">
+								<select class="form-control" data-ng-model="precoding">
+									<option>Select Recording</option>
+									<option>Recording1</option>
+									<option>Recording2</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="form-group fg-line col-sm-6">
+						<label for="callTransNumber" class="col-sm-4 control-label">Call Transfer Number</label>
+						<div class="col-sm-6">
+							<div class="fg-line ng-binding">
+								<input type="text" placeholder="Number" id="fname" class="form-control input-sm" data-ng-model="callTransNumber">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="callScript" class="col-sm-4 control-label">Call Script</label>
+						<div class="col-sm-6">
+							<div class="fg-line ng-binding">
+								<textarea class="form-control" data-auto-size data-ng-model="callScript" placeholder="call script...." ></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<button class="btn btn-primary btn-sm btnMargin" data-ng-click="addCampaignSetting()">Create</button>
+			<!--<button class="btn btn-info btnMargin" data-swal-update data-ui-sref="preference.campaignsettings">Create</button>-->
+			<button class="btn bgm-red btn-sm btnMargin" data-ui-sref="preference.campaignsettings">Cancel</button>
+		</div>
+	</form>
+</div>

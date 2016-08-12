@@ -1,0 +1,114 @@
+
+<div class="pmb-block">
+	<!--    <div class="block-header">
+			<h2>Upload Contact<small>Details</small></h2>
+		</div>-->
+
+    <div class="pmbb-header">
+        <h2><i class="zmdi zmdi-collection-plus zmdi-hc-fw"></i> Upload Contacts</h2>
+    </div>
+    <div class="pmbb-body p-l-30">
+    </div>
+	<form role="form" class="form-horizontal ng-pristine ng-valid">
+
+		<div class="card-body card-padding">
+			<div class="form-group">
+				<label class="col-sm-2 control-label f-500" for="inputEmail3">Upload List</label>
+				<div class="col-sm-10">
+
+					<div class="fileinput fileinput-new" data-provides="fileinput">
+						<span class="btn bgm-cyan waves-effect btn-file m-r-10">
+							<i class="zmdi zmdi-attachment-alt zmdi-hc-fw"></i>
+							<span class="fileinput-new">Select file</span>
+							<span class="fileinput-exists">Change</span>
+							<input type="file" name="...">
+						</span>
+						<span class="fileinput-filename"></span>
+						<a href="#" class="close fileinput-exists" data-dismiss="fileinput">&times;</a>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label f-500" for="inputPassword3">Duplicate Option</label>
+				<div class="col-sm-10">
+
+					<div class="radio m-b-15">
+						<label class=" m-r-20">
+							<input type="radio" value="" name="sample">
+							<i class="input-helper"></i>
+							Overwrite
+						</label>
+						<label class=" m-r-20">
+							<input type="radio" value="" name="sample">
+							<i class="input-helper"></i>
+							Skip
+						</label>
+						<label class=" m-r-20">
+							<input type="radio" name="sample" value="">
+							<i class="input-helper"></i>
+							Clone
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label f-500" for="inputPassword3">Group</label>
+				<div class="col-sm-10">
+					<div class="col-sm-3 m-b-15">
+						<select chosen data-placeholder="Select a campaign group" class="w-100">
+							<option value="0">Select</option>
+							<option value="Group1">Group1</option>
+							<option value="Group2">Group2</option>
+							<option value="Group3">Group3</option>
+							<option value="Group4">Group4</option>
+							<option value="Group5">Group5</option>
+							<option value="Group6">Group6</option>
+							<option value="Campaign">Campaign</option>
+						</select>
+					</div>
+					<div class="col-sm-1 text-center">
+						OR
+					</div>
+					<div class="col-sm-3">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="input-sm form-control fg-input">
+							</div>
+							<label class="fg-label">Create New Group</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label f-500" for="inputPassword3">Tags</label>
+				<div class="col-sm-10">
+					<div class="col-sm-3 m-b-15">
+						<select chosen data-placeholder="Select a campaign group" class="w-100">
+							<option value="0">Select</option>
+							<option value="Tag1">Tag1</option>
+							<option value="Tag2">Tag1</option>
+							<option value="Tag3">Tag3</option>
+						</select>
+					</div>
+					<div class="col-sm-1 text-center">
+						OR
+					</div>
+					<div class="col-sm-3">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="input-sm form-control fg-input">
+							</div>
+							<label class="fg-label">Create New Tag</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="m-10 col-sm-10">
+					<button class="btn btn-primary btn-sm waves-effect" data-ui-sref="{{uploadcontactStep1Sref}}" type="submit"><i class="zmdi zmdi-upload zmdi-hc-fw"></i> Next</button>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+

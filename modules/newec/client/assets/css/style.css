@@ -1,0 +1,1051 @@
+
+#write {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #f9f9f9;
+    font: 1em/1.5 Verdana,sans-serif;
+    height: 200px;
+    margin: 0 0 5px;
+    padding: 5px;
+    width: 671px;
+}
+.map {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.map li {
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #e5e5e5;
+    border-radius: 7px;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 5px 5px 0;
+    text-align: center;
+    width: 70px;
+}
+.map li.source {
+    background: #03a9f4 none repeat scroll 0 0;
+    border: medium none;
+    color: #fff;
+}
+.map li.target {
+    background-color: #fff;
+    color: black;
+}
+.default li.target {
+    box-shadow: 0 0 10px #edecec inset;
+}
+.capslock, .tab, .left-shift {
+    clear: left;
+}
+.map .tab, .map .delete {
+    width: 70px;
+}
+.map .capslock {
+    width: 80px;
+}
+.map .return {
+    width: 77px;
+}
+.map .left-shift {
+    width: 95px;
+}
+.map .right-shift {
+    width: 109px;
+}
+.lastitem {
+    margin-right: 0;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.map .space {
+    clear: left;
+    width: 681px;
+}
+.on {
+    display: none;
+}
+.map li.target:hover {
+    border-color: #e5e5e5;
+    cursor: pointer;
+    left: 1px;
+    position: relative;
+    top: 1px;
+}
+.default li.target:hover {
+    cursor: move;
+}
+ul.cfields {
+    color: #fff;
+    float: left;
+    font-weight: 700;
+    height: 80px;
+    list-style-type: none;
+    margin: 0;
+    min-height: 46px;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.droparea {
+    background: #f7f7f7 none repeat scroll 0 0;
+    border-bottom: 1px dashed #e5e5e5;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-left: 1px dashed #e5e5e5;
+    border-right: 1px dashed #e5e5e5;
+    color: #797c80;
+    height: 40px;
+    left: 0;
+    line-height: 40px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    z-index: 1;
+}
+.shadow {
+    box-shadow: 0 0 10px 0 #ababab inset, 5px 5px 5px 1px #dddddd;
+}
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.dfields {
+    border-radius: 5px;
+    list-style: outside none none;
+    padding: 0;
+    width: 100%;
+}
+.dfieldslist, .cfieldslist {
+    height: 250px;
+    overflow-y: scroll;
+    resize: vertical;
+}
+.dfields li {
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 7px;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    padding: 0;
+    text-align: left;
+}
+.card.dfieldslistscroll.ui-scrollfix{
+    position: fixed;
+    top: 12%;
+    width: 18%;
+}
+.searchcontainer {
+    max-height: 200px;
+    overflow-y: scroll;
+}
+ul.dfields li.target:hover, ul.cfields li.target:hover {
+    cursor: move;
+}
+ul.cfields li.target {
+    background: #c3e0f7 none repeat scroll 0 0;
+    border-bottom: 1px dashed #e5e5e5;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-left: 1px dashed #e5e5e5;
+    border-right: 1px dashed #e5e5e5;
+    color: #526c93;
+    font-size: 14px;
+    left: 0;
+    line-height: 40px;
+    overflow: hidden;
+    position: absolute;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    z-index: 2;
+}
+.closefield {
+    font-size: 11px;
+    font-weight: bold;
+}
+ul.dndDragover span.droparea {
+    background-color: #90d6f4;
+}
+ul.cfields li.source {
+}
+.calling-content {
+    padding: 15px 0 0 !important;
+}
+.calling-header-inner {
+    list-style: outside none none;
+}
+.calling-header {
+    -moz-user-select: none;
+    background: #4285f4 none repeat scroll 0 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    height: 80px;;
+    left: 0;
+    padding-right: 10px;
+    position: fixed;
+    top: 0;
+    transition: all 200ms ease 0s;
+    width: 100%;
+    z-index: 11;
+}
+.calling-header-campaign .campaign-name {
+    font-size: 18px;
+}
+.calling-header-campaign .contact-name {
+    font-size: 15px;
+}
+.calling-header-number {
+    transform: translateY(28%);
+}
+.calling-header-button, .calling-header-ftc {
+    transform: translateY(15%);
+}
+.calling-header-play {
+    transform: translateY(10%);
+}
+.calling-header-number .phone-number {
+    font-size: 15px;
+}
+.calling-header-button {
+    text-align: center;
+}
+.calling-header-button button {
+    font-size: 16px;
+    margin-left: 10px;
+}
+.calling-header-inner li {
+    height: 80px;
+}
+.calling-header-play span {
+    background-color: rgba(219, 87, 5, 1);
+    border-radius: 8px;
+    box-shadow: 0 9px 0 rgba(219, 31, 5, 1), 0 9px 25px rgba(0, 0, 0, 0.7);
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    display: block;
+    font-weight: 700;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.1s ease 0s;
+    width: 60px;
+	height: 30px;
+}
+.calling-header-play span:active {
+    box-shadow: 0 3px 0 rgba(219, 31, 5, 1), 0 3px 6px rgba(0, 0, 0, 0.9);
+    position: relative;
+    top: 6px;
+}
+.calling-header-play span i {
+    font-size: 1em;
+    margin-top: 10px;
+    vertical-align: middle;
+}
+.contact-list:hover{
+	cursor: move;
+}
+.contact-list.pined {
+    background-color: rgba(0, 0, 0, 0.28) !important;
+}
+.folder-list {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+    color: #5e6265;
+    margin-top: 2px;
+    position: relative;
+}
+.chat-search {
+    border-radius: 3px !important;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+    color: #5e6265;
+    margin-bottom: 3px;
+    position: relative;
+}
+.contact-list {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+    color: #5e6265;
+    margin-top: 2px;
+    position: relative;
+}
+.folder-list div.f-name {
+    font-size: 18px;
+    text-align: center;
+}
+
+.contact-list div.c-number {
+    font-size: 12px;
+    text-align: center;
+}
+.contact-list span.closeicon.disabled {
+    color: #9a9898;
+}
+.contact-list span.pinicon.disabled {
+    color: #9a9898;
+}
+.contact-list span.pinicon {
+    font-size: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.folder-list span.favicon {
+    font-size: 15px;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.folder-list span {
+    cursor: pointer;
+}
+.folder-list span.closeicon {
+    font-size: 15px;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.folder-list span.settingscon {
+    bottom: 0;
+    font-size: 15px;
+    position: absolute;
+    right: 0;
+}
+.contact-list span.closeicon {
+    font-size: 15px;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.calling-contacts {
+    display: inline-block;
+    float: left;
+    position: relative;
+    width: 15%;
+}
+.folder-search-resp {
+}
+.call-script {
+    width: 100%;
+}
+.call-script i {
+    font-size: 18px;
+}
+.calling-callscript {
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+.calling-disposition {
+    text-align: center;
+}
+.callscript-content {
+    max-height: 75px;
+    overflow-y: scroll;
+    white-space: normal;
+}
+.contact-call-status {
+	top: 0;
+    font-size: 10px;
+    padding: 3px;
+    position: absolute;
+    right: 0;
+}
+.contact-status {
+    bottom: 16px;
+    font-size: 8px;
+    left: 0;
+    padding: 2px 3px;
+}
+.d-call {
+    bottom: 2px;
+    font-size: 9px;
+    padding: 3px;
+    position: absolute;
+    right: 2px;
+}
+/*.contact-status {
+    bottom: 0;
+    font-size: 9px;
+    padding: 3px;
+    position: absolute;
+    right: 0;
+}*/
+.calling-content .container {
+}
+.folder-list div.f-name {
+    font-size: 14px;
+    text-align: left;
+}
+.folder-list span.settingscon {
+    top: 0;
+}
+.contact-list div.c-name {
+    font-size: 14px;
+    text-align: left;
+	padding-left: 15px;
+}
+.contact-list div.c-number {
+    font-size: 12px;
+    text-align: left;
+	padding-left: 15px;
+}
+.contact-list span.closeicon {
+    font-size: 10px;
+}
+.calling-disposition.ui-scrollfix {
+    position: fixed;
+    width: 64.3%;
+    z-index: 3;
+}
+.calling-callscript.ui-scrollfix {
+    position: fixed;
+    width: 70%;
+    z-index: 12;
+}
+.folder-odd{
+	background-color: #70C0C1;
+}
+.folder-even{
+	background-color: #5F9EA0;
+}
+#folder-list-left .closeicon:hover {
+	cursor: pointer;
+}
+#folder-list-left {
+/*    height: calc(100% - 65px);
+    opacity: 1;
+    padding: 20px 0;
+    position: fixed;
+    top: 60px;
+    transition: all 300ms ease 0s;
+    width: 15%;
+    z-index: 2;*/
+	width: 100%;
+	position: fixed;
+    width: 15%;
+	z-index: 11;
+}
+#folder-list-right .listview{
+	overflow-y: scroll;
+	height: 97%;
+}
+.calling-header-inner a.tm-chat {
+     background-image: url("../img/icons/menu-2.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    color: white;
+    display: inline-block;
+    height: 35px;
+    margin-top: 5px;
+    min-width: 25px;
+    position: relative;
+    z-index: 1;
+}
+#folder-list-right.toggled {
+	opacity: 1;
+	right: 0;
+}
+#folder-list-right {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: 0 0 10px rgba(51, 51, 51, 0.38);
+    height: calc(100% - 65px);
+    opacity: 1;
+    padding: 20px 0;
+    position: fixed;
+    top: 60px;
+    transition: all 300ms ease 0s;
+    z-index: 10;
+	rightt:0;
+	width: 15%;
+	right: -400px;
+}
+#folder-list-right .chat-search {
+    padding: 5px 10px 10px;
+}
+#folder-list-right .chat-search .form-control:focus {
+	background-position: right center;
+	padding: 0 30px 0 0;
+}
+#folder-list-right .chat-search .form-control {
+    background-image: url("../img/icons/search-2.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    transition: all 300ms ease 0s;
+}
+
+.calling-content #calling-main {
+	padding: 0;
+	margin-bottom: 15px;
+    float: left;
+    min-height: 500px;
+    position: relative;
+    width: 70%;
+}
+.calling-content #calling-main .pmb-block .pmbb-header{
+	margin-bottom: 15px;
+}
+.calling-content #calling-main .pmb-block{
+	padding: 15px 20px 0 !important;
+}
+.calling-content .form-group{
+	margin-bottom: 5px !important;
+}
+.odd{
+	background-color: #70c0c1;
+}
+.even{
+	background-color: #5F9EA0;
+}
+#folder-list-right .listview a.lv-item:hover {
+	background: #9ACDD1;
+}
+.odd:hover,.even:hover{
+	background-color: #9ACDD1;
+}
+
+.tree ul {
+    list-style: outside none none;
+	padding: 0;
+	color: black;
+}
+.tree li a {
+    line-height: 25px;
+}
+.tree > ul > li > a {
+    color: black !important;
+    display: block;
+    font-weight: normal;
+    position: relative;
+    text-decoration: none;
+}
+.tree li.parent > a {
+    padding: 0 0 0 28px;
+}
+.tree li.parent > a::before {
+    background-image: url("img/icon.png");
+    background-position: 22px center;
+    content: "";
+    display: block;
+    height: 18px;
+    left: 0;
+    position: absolute;
+    top: 2px;
+    vertical-align: middle;
+    width: 22px;
+}
+.tree ul li.active > a::before {
+    background-position: 0 center;
+}
+.tree ul li ul {
+    border-left: 1px solid #d9dadb;
+    display: none;
+    margin: 0 0 0 12px;
+    overflow: hidden;
+    padding: 0 0 0 25px;
+}
+.tree ul li ul li {
+    position: relative;
+}
+.tree ul li ul li::before {
+    border-bottom: 1px dashed #e2e2e3;
+    content: "";
+    left: -20px;
+    position: absolute;
+    top: 12px;
+    width: 15px;
+}
+.parent{
+	padding: 5px;
+}
+body.sw-toggled .calling-content > .container{
+	width: calc(100% - 0px) !important;
+}
+
+.radialnav {
+	position: fixed;
+	bottom: 1%;
+	left: 54%;
+	/*right: 9%;*/
+	display: block;
+	width: 26em;
+	/*width: 64.3%;*/
+	height: 26em;
+	font: 500 14px/14px arial normal;
+	z-index: 3;
+}
+.radialnav .ellipsis {
+	position: absolute;
+	right: 40%;
+	bottom: 0;
+	z-index: 2;
+	width: 60px;
+	height: 60px;
+	border-radius: 100%;
+	background: #2980b9;
+	color: white;
+	text-align: center;
+	box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.44);
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.radialnav .ellipsis i {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -7px 0 0 -7px;
+}
+.radialnav .ellipsis:active, .radialnav .ellipsis:hover {
+	box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.44);
+	background: #2e8ece;
+}
+.radialnav a {
+	color: white;
+	text-decoration: none;
+}
+.radialnav.active .ellipsis {
+	box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.44);
+	background: #2e8ece;
+}
+.radialnav.active .radialmenu {
+	pointer-events: auto;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+
+.radialmenu, .subradialmenu {
+	position: absolute;
+	top: 50%;
+	right: 3%;
+	z-index: 0;
+	width: 300px;
+	height: 300px;
+	-webkit-transform: scale(0.1);
+	-ms-transform: scale(0.1);
+	-moz-transform: scale(0.1);
+	transform: scale(0.1);
+	pointer-events: none;
+	-webkit-transition: all .15s ease;
+	-moz-transition: all .15s ease;
+	transition: all .15s ease;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+.radialmenu > li:nth-of-type(1), .subradialmenu > li:nth-of-type(1) {
+	-moz-transform: rotate(0deg) skew(50deg);
+	-ms-transform: rotate(0deg) skew(50deg);
+	-webkit-transform: rotate(0deg) skew(50deg);
+	transform: rotate(0deg) skew(50deg);
+}
+.radialmenu > li:nth-of-type(2), .subradialmenu > li:nth-of-type(2) {
+	-moz-transform: rotate(35deg) skew(50deg);
+	-ms-transform: rotate(35deg) skew(50deg);
+	-webkit-transform: rotate(35deg) skew(50deg);
+	transform: rotate(35deg) skew(50deg);
+}
+.radialmenu > li:nth-of-type(2) > a, .subradialmenu > li:nth-of-type(2) > a {
+	background-color: #4aa3df;
+}
+.radialmenu > li:nth-of-type(3), .subradialmenu > li:nth-of-type(3) {
+	-moz-transform: rotate(70deg) skew(50deg);
+	-ms-transform: rotate(70deg) skew(50deg);
+	-webkit-transform: rotate(70deg) skew(50deg);
+	transform: rotate(70deg) skew(50deg);
+}
+.radialmenu > li:nth-of-type(4), .subradialmenu > li:nth-of-type(4) {
+	-moz-transform: rotate(105deg) skew(50deg);
+	-ms-transform: rotate(105deg) skew(50deg);
+	-webkit-transform: rotate(105deg) skew(50deg);
+	transform: rotate(105deg) skew(50deg);
+}
+.radialmenu > li:nth-of-type(4) > a, .subradialmenu > li:nth-of-type(4) > a {
+	background-color: #4aa3df;
+}
+.radialmenu > li:nth-of-type(5), .subradialmenu > li:nth-of-type(5) {
+	-moz-transform: rotate(140deg) skew(50deg);
+	-ms-transform: rotate(140deg) skew(50deg);
+	-webkit-transform: rotate(140deg) skew(50deg);
+	transform: rotate(140deg) skew(50deg);
+}
+.radialmenu > li, .subradialmenu > li {
+	position: absolute;
+	bottom: 50%;
+	right: 50%;
+	font-size: 1.5em;
+	width: 10em;
+	height: 10em;
+	-webkit-transform-origin: 100% 100%;
+	-moz-transform-origin: 100% 100%;
+	-ms-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+	overflow: hidden;
+	margin-top: -1.3em;
+	margin-left: -10em;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	transition: all 0.3s ease;
+}
+.radialmenu > li a, .subradialmenu > li a {
+	position: absolute;
+	bottom: -7.25em;
+	right: -7.25em;
+	display: block;
+	height: 14.5em;
+	width: 14.5em;
+	border-radius: 50%;
+	text-decoration: none;
+	color: #fff;
+	padding-top: 0em;
+	text-align: center;
+	font-size: 1.18em;
+	-webkit-transform: skew(-50deg) rotate(-70deg) scale(1);
+	-ms-transform: skew(-50deg) rotate(-70deg) scale(1);
+	-moz-transform: skew(-50deg) rotate(-70deg) scale(1);
+	transform: skew(-50deg) rotate(-70deg) scale(1);
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: opacity 0.3s, color 0.3s;
+	-moz-transition: opacity 0.3s, color 0.3s;
+	transition: opacity 0.3s, color 0.3s;
+	background-color: #3498db;
+}
+.radialmenu > li a i, .subradialmenu > li a i {
+	padding: 20px 15px 0 0;
+}
+.radialmenu > li a:active, .radialmenu > li a:hover, .subradialmenu > li a:active, .subradialmenu > li a:hover {
+	background-color: #8bc4ea;
+}
+
+/*TODO: Refactor this to have common styles with the regular radialmenu*/
+.subradialmenu {
+	position: absolute;
+	z-index: 1;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+.subradialmenu > li:nth-of-type(1) {
+	-moz-transform: rotate(0deg) skew(50deg);
+	-ms-transform: rotate(0deg) skew(50deg);
+	-webkit-transform: rotate(0deg) skew(50deg);
+	transform: rotate(0deg) skew(50deg);
+}
+.subradialmenu > li:nth-of-type(2) {
+	-moz-transform: rotate(35deg) skew(50deg);
+	-ms-transform: rotate(35deg) skew(50deg);
+	-webkit-transform: rotate(35deg) skew(50deg);
+	transform: rotate(35deg) skew(50deg);
+}
+.subradialmenu > li:nth-of-type(2) > a {
+	background-color: #2cc36b;
+}
+.subradialmenu > li:nth-of-type(3) {
+	-moz-transform: rotate(70deg) skew(50deg);
+	-ms-transform: rotate(70deg) skew(50deg);
+	-webkit-transform: rotate(70deg) skew(50deg);
+	transform: rotate(70deg) skew(50deg);
+}
+.subradialmenu > li:nth-of-type(4) {
+	-moz-transform: rotate(105deg) skew(50deg);
+	-ms-transform: rotate(105deg) skew(50deg);
+	-webkit-transform: rotate(105deg) skew(50deg);
+	transform: rotate(105deg) skew(50deg);
+}
+.subradialmenu > li:nth-of-type(4) > a {
+	background-color: #2cc36b;
+}
+.subradialmenu > li:nth-of-type(5) {
+	-moz-transform: rotate(140deg) skew(50deg);
+	-ms-transform: rotate(140deg) skew(50deg);
+	-webkit-transform: rotate(140deg) skew(50deg);
+	transform: rotate(140deg) skew(50deg);
+}
+.subradialmenu > li {
+	/*background: red;*/
+	width: 6.5em;
+	height: 4.1em;
+	border-top-left-radius: 100%;
+	border-top-right-radius: 0;
+}
+.subradialmenu > li a {
+	height: 13.5em;
+	width: 13em;
+	background-color: #27ae60;
+}
+.subradialmenu > li a i {
+	padding: 30px 0 0 0;
+}
+.subradialmenu > li a:active, .subradialmenu > li a:hover {
+	background-color: #60db94;
+}
+.subradialmenu.active {
+	pointer-events: auto;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+
+/* radial menu END */
+
+
+
+/*circle menu START*/
+
+.menu li:hover{
+	cursor: pointer;
+}
+.menu li{
+	box-shadow: 0 0 2px 1px #aaa;
+	font-size: 16px !important;
+}
+.menu li:first-child {
+    /*background: rgba(0, 0, 0, 0) url("http://i.imgur.com/3QGAU.png") repeat scroll 0 0;*/
+    border-color: #fff;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 0 0 2px 1px #aaa;
+    font-family: arial black;
+    font-size: 200%;
+    font-weight: bold;
+}
+.menu li {
+    background: #000 none repeat scroll 0 0;
+    color: #fff;
+    font-size: 25px;
+}
+.menu a {
+    color: #fff;
+    text-decoration: none;
+}
+#menu16 {
+    transform: rotate(180deg);
+    transform-origin: 17px 17px 0;
+    transition: all 0.5s ease 0s;
+}
+#menu16.circleMenu-open {
+    transform: rotate(360deg);
+}
+#menu16.circleMenu-open > li:first-child {
+    transform: rotate(45deg);
+}
+.circleMenu-open:not(#menu16) > li:first-child {
+    transform: rotate(315deg);
+}
+nav {
+    float: left;
+    width: 200px;
+}
+nav ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+nav a {
+    display: block;
+    text-decoration: none;
+}
+nav a.active {
+    background: blue none repeat scroll 0 0;
+    color: #fff;
+}
+#examples {
+    margin-left: 200px;
+}
+#examples > div {
+    border: 1px solid black;
+    display: none;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+}
+.menu {
+    position: absolute;
+	z-index: 4;
+}
+#menu2, #menu14, #menu15, #menu16 {
+    left: 135px;
+    top: 135px;
+}
+#menu3 {
+    bottom: 34px;
+    right: 4px;
+}
+#menu4 {
+    right: 4px;
+    top: 0;
+}
+#menu5 {
+    bottom: 34px;
+    left: 0;
+}
+#menu6, #menu10 {
+    left: 135px;
+    top: 0;
+}
+#menu7, #menu11 {
+    left: 0;
+    top: 135px;
+}
+#menu8, #menu12 {
+    bottom: 34px;
+    left: 135px;
+}
+#menu9, #menu13 {
+    right: 4px;
+    top: 260px;
+}
+
+span.circlemenu-text {
+    color: black;
+    display: block;
+    font-size: 12px;
+    white-space: nowrap;
+	margin-top: -17px;
+}
+.menu span.circlemenu-text {
+	display: none;
+}
+.menu.circleMenu-open span.circlemenu-text {
+	display: block;
+}
+.menu.circleMenu-closed span.circlemenu-text {
+	display: none;
+}
+/*circle menu END*/
+
+.active-c-name{
+	font-size: 16px;
+}
+
+.calling-script{
+	position: relative;
+	min-height: 2px;
+}
+
+.active-c-no{
+	/*font-size: 12px;*/
+}
+.notes-details{
+	max-height: 75px;
+	overflow-y: scroll;
+}
+.call-script-content.in {
+    margin-bottom: 5px;
+}
+.call-script-content {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16);
+    height: 60px;
+    max-height: 60px;
+    overflow-y: scroll;
+    padding: 5px 5px 5px 10px;
+    position: relative;
+}
+#call-script-vertical-text{
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+.call-script-header{
+	border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    cursor: pointer;
+    font-size: 14px;
+    left: 48%;
+    padding: 0 4px;
+    position: absolute;
+    top: -21px;
+    z-index: 12;
+	box-shadow: -4px -5px 4px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+#calling-callscript .btn-colors > .btn {
+	min-width: 90px;
+	font-size: 12px;
+	padding: 3px 10px;
+}
+
+#calling-callscript .tab-nav > li > a{
+	padding: 5px;
+}
+
+#callingscreen-main.f-toggled #calling-main{
+	width: 69.8%;
+	padding-right: 0.3%;
+}
+#callingscreen-main.f-toggled .calling-callscript.ui-scrollfix {
+	width: 69.5%;
+	padding-right: 0%;
+	background-color: white;
+}
+#callingscreen-main.f-toggled .calling-contacts,#callingscreen-main.f-toggled .calling-contacts #folder-list-left{
+    width: 15%;
+}
+
+#callingscreen-main .calling-callscript.ui-scrollfix {
+	width: 84.5%;
+	padding-right: 0.5%;
+}
+#callingscreen-main #calling-main {
+    padding-right: 0.3%;
+    width: 84.7%;
+}
+#callingscreen-main .calling-contacts,#callingscreen-main .calling-contacts #folder-list-left{
+    width: 15%;
+}
+#callingscreen-main .pmb-block .pmbb-header h2 {
+    font-size: 20px;
+    font-weight: 100;
+    margin: 0;
+}
+#calling-header img.sdlogo {
+    margin-top: 0 !important;
+}
+
+.login-content {
+    text-align: center;
+}
+.login-content::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width: 1px;
+}
+.login-content::before {
+    background: #00bcd4 none repeat scroll 0 0;
+    content: "";
+    height: 50%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+#l-login{
+	margin-top: 135px;
+}
+
+.folders-div .dndDragover .dndPlaceholder{
+	display: none;
+}
+
+/*.folders-div .dndDragover li.parent:hover{
+	background-color: red;
+}*/
+
+.create-appointment .form-group{
+	margin-bottom: 5px !important;
+}

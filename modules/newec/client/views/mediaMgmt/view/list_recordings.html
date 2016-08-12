@@ -1,0 +1,40 @@
+<div class="container" id="recordingDiv" data-ng-controller="mediaCtrl as mctrl" ng-init="getAllRecodings()">
+	<div class="block-header">
+		<h2>View Voice Recordings </h2>
+		<h2><small>This page lists all media uploaded by you.</small></h2>
+	</div>
+    <div class="card">
+        <div class="card-body">
+			<div class="card-header">
+				<button class="btn bgm-blue btn-icon waves-effect waves-circle pull-right" data-ui-sref="preference.addRecording"   title="Add Recording"><i class="zmdi zmdi-plus"></i></button>
+			</div>
+			<br/>
+            <div class="table-responsive">
+                <table ng-table="recordingEdit" class="table table-vmiddle table-hover">
+                    <tr ng-repeat="w in $data"  ng-class="{ 'active': w.$edit }">
+                        <td data-title="'Media Name'">
+                            <span ng-if="!w.$edit">{{ w.name}}</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.name" /></div>
+                        </td>
+                        <td data-title="'Uploaded On'">
+                            <span ng-if="!w.$edit">{{ w.uploaded_on}}</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="email" ng-model="w.uploaded_on" /></div>
+                        </td>
+						<td data-title="'Owner'">
+                            <span ng-if="!w.$edit">{{ w.owner}}</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.owner" /></div>
+                        </td>
+                        <td data-title="'Actions'">
+                            <button type="button" class="btn btn-default" title="Download" data-swal-download><i class="zmdi zmdi-download zmdi-hc-fw"></i></button>
+                            <button type="button" class="btn btn-default" title="Edit" data-ui-sref="preference.editrecording({mediaId: w.id})"><i class="zmdi zmdi-edit zmdi-hc-fw"></i></button>
+                            <button type="button" class="btn btn-default" title="Delete" data-swal-recording data-ng-click="deleteRecording(w.id)"><i class="zmdi zmdi-delete zmdi-hc-fw"></i></button>
+                            <button type="button" class="btn btn-default" title="Play" data-swal-download><i class="zmdi zmdi-caret-right-circle zmdi-hc-fw"></i></button>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>        
+</div>
+
+

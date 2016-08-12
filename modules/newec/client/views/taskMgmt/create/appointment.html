@@ -1,0 +1,120 @@
+<!--<header id="header" data-ng-include="'modules/newec/client/views/template/header.html'" data-ng-controller="headerCtrl as hctrl"></header>-->
+
+<section id="">
+    <!--<aside id="sidebar" data-ng-include="'modules/newec/client/views/template/sidebar-left.html'" data-ng-class="{ 'toggled': mactrl.sidebarToggle.left === true }"></aside>-->
+
+    <!--<aside id="chat" data-ng-include="'modules/newec/client/views/template/chat.html'" data-ng-class="{ 'toggled': mactrl.sidebarToggle.right === true }"></aside>-->
+
+    <section id="appointment" data-ng-controller="calendarCtrl as clctrl">
+        <div class="appointmentWidth" id="" data-ng-controller="ModalDemoCtrl">
+            <div class="block-header">
+                <h2>Appointment </h2>
+
+                <ul class="actions">
+                    <li>
+                        <a href="">
+                            <i class="zmdi zmdi-trending-up"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="zmdi zmdi-check-all"></i>
+                        </a>
+                    </li>
+                    <li class="dropdown" dropdown>
+                        <a href="" dropdown-toggle>
+                            <i class="zmdi zmdi-more-vert"></i>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li>
+                                <a href="">Refresh</a>
+                            </li>
+                            <li>
+                                <a href="">Manage Widgets</a>
+                            </li>
+                            <li>
+                                <a href="">Widgets Settings</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div id="calendar" data-calendar data-action-links="clctrl.actionMenu" data-select="clctrl.onSelect(start, end)"></div>
+
+            <!-- Add event -->
+            <script type="text/ng-template" id="addEvent.html">
+                <div class="modal-header">
+				<h4 class="modal-title">Add an Appointment</h4>
+                </div>
+                <div class="modal-body">
+				<form class="addEvent" role="form">
+				<div class="form-group" data-ng-class="{ 'has-error': calendarData.eventName === '' }">
+				<div class="fg-line">
+				<input type="text" class="input-sm form-control" data-ng-model="calendarData.eventName" placeholder="Name">
+				</div>
+				</div>
+				<div class="form-group" data-ng-class="{ 'has-error': calendarData.evenPhone === '' }">
+				<div class="fg-line">
+				<input type="text" class="input-sm form-control" data-ng-model="calendarData.evenPhone" placeholder="Phone">
+				</div>
+				</div>
+				<div class="form-group" data-ng-class="{ 'has-error': calendarData.eventEmail === '' }">
+				<div class="fg-line">
+				<input type="text" class="input-sm form-control" data-ng-model="calendarData.eventEmail" placeholder="Email">
+				</div>
+				</div>
+				
+				<div class="form-group">
+						<div class="ng-binding">
+							<timepicker-pop input-time="time1" class="input-group" disabled="disabled" 	show-meridian='showMeridian'> </timepicker-pop>
+							<input type="checkbox" name='showMeridian' ng-model='showMeridian' />	
+								Show meridian
+						</div>
+				</div>
+		
+				<div class="form-group" data-ng-class="{ 'has-error': calendarData.eventLocation === '' }">
+				<div class="fg-line">
+				<input type="text" class="input-sm form-control" data-ng-model="calendarData.eventLocation" placeholder="Location">
+				</div>
+				</div>
+		
+				<div class="form-group" data-ng-class="{ 'has-error': calendarData.eventNotes === '' }">
+				<div class="fg-line">
+				<textarea class="form-control" data-auto-size  data-ng-model="calendarData.eventNotes" placeholder="Notes" style="height:26px;"></textarea>
+				</div>	
+				</br></br></br>
+				<div class="form-group">
+				<label for="eventName">Tag Color</label>
+				<div class="event-tag" data-ng-class="{ 'active': activeState }">
+				<span data-ng-repeat="w in tags" data-tag="{{ w }}" class="{{ w }}" data-ng-class="{ 'selected': activeState === $index }" data-ng-click="onTagClick(w, $index)"></span>
+				</div>
+				</div>
+
+				<input type="hidden" data-ng-model="getStart" />
+				<input type="hidden" data-ng-model="getEnd" />
+
+				</form>
+                </div>
+
+                <div class="modal-footer">
+				<button type="button" class="btn btn-link" data-ng-click="addEvent()">Add Event</button>
+				<button type="button" class="btn btn-link" data-ng-click="eventDismiss()">Close</button>
+                </div>
+            </script>
+        </div>
+    </section>
+</section>
+<script type="text/javascript">
+			angular.module('materialAdmin', [ 'timepickerPop' ]).controller(
+			'DemoCtrl', function($scope) {
+			$scope.time1 = new Date();
+					$scope.time2 = new Date();
+					$scope.time2.setHours(7, 30);
+					$scope.showMeridian = true;
+					$scope.disabled = false;
+			});
+</script>
+<!--<footer id="footer" data-ng-include="'modules/newec/client/views/template/footer.html'"></footer>-->

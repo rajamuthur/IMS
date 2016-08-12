@@ -1,0 +1,199 @@
+<style>
+	label {
+		margin-top: 10px !important;
+	}
+	.form-control {
+		height: 30px;
+	}
+</style>
+<form data-ng-submit="pctrl.submit('profileInfo', 'Profile Information')" class="pmbb-edit">
+	<div class="pmb-block">
+		<div class="pmbb-header">
+			<h2><i class="zmdi zmdi-person m-r-5"></i> Basic Information</h2>
+		</div>
+		<div class="pmbb-body p-l-30">
+
+			<!--<form data-ng-submit="pctrl.submit('profileInfo', 'Profile Information')" class="pmbb-edit" data-ng-if="pctrl.editInfo === 1">-->
+			<div class="row">
+				<div class="form-group col-sm-12">
+					<label class="col-sm-2 control-label" for="hostname">Name</label>
+					<div class="col-sm-2">
+						<div class="select">
+							<select class="form-control">
+								<option>Mr</option>
+								<option>Ms</option>
+							</select>
+
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<input type="text" class="form-control input-sm" id="fname" placeholder="First Name">
+					</div>
+					<div class="col-sm-3">
+						<input type="text" class="form-control input-sm" id="lname" placeholder="Last Name">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group fg-line col-sm-6">
+					<label for="salutation" class="col-sm-4 control-label">Age</label>
+					<div class="col-sm-8">
+						<div class="fg-line ng-binding">
+							<input data-ng-model="pctrl.age" type="text" class="form-control input-sm" value="{{ pctrl.age}}" placeholder="Salutation">
+						</div>
+					</div>
+				</div>
+				<div class="form-group fg-line col-sm-6">
+					<label for="salutation" class="col-sm-4 control-label">Gender</label>
+					<div class="col-sm-4">
+						<div class="ng-binding select">
+							<select class="form-control">
+								<option >Female</option>
+								<option selected="selected">Male</option>
+								<option>Other</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="pmb-block">
+		<div class="pmbb-header">
+			<h2><i class="zmdi zmdi-person m-r-5"></i> Contact Information</h2>
+		</div>
+		<div class="pmbb-body p-l-30">
+			<div class="row">
+				<div class="form-group fg-line col-sm-6">
+					<label  class="col-sm-4 control-label">Primary Phone</label>
+					<div class="col-sm-8">
+						<div class="fg-line ng-binding">
+							<input data-ng-model="pctrl.primary" type="text" class="form-control input-sm" value="{{ pctrl.primary}}" placeholder="Primary">
+						</div>
+					</div>
+				</div>
+				<div class="form-group fg-line col-sm-6">
+					<label  class="col-sm-4 control-label">Alternate Phone</label>
+					<div class="col-sm-8">
+						<div class="fg-line ng-binding">
+							<input data-ng-model="pctrl.alternate" type="text" class="form-control" value="{{ pctrl.alternate}}" placeholder="Alternate Phone">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group fg-line col-sm-6">
+					<label  class="col-sm-4 control-label">Email</label>
+					<div class="col-sm-8">
+						<div class="fg-line ng-binding">
+							<input data-ng-model="pctrl.email" type="email" class="form-control" value="{{ pctrl.email}}" placeholder="Email">
+						</div>
+					</div>
+				</div>
+				<div class="form-group fg-line col-sm-6">
+					<label  class="col-sm-4 control-label">Extension</label>
+					<div class="col-sm-8">
+						<div class="fg-line ng-binding">
+							<input data-ng-model="pctrl.extension" type="text" class="form-control" value="{{ pctrl.extension}}" placeholder="Extension">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group fg-line col-sm-6">
+					<label  class="col-sm-4 control-label">Fax</label>
+					<div class="col-sm-8">
+						<div class="fg-line ng-binding">
+							<input data-ng-model="pctrl.fax" type="text" class="form-control" value="{{ pctrl.fax}}" placeholder="Fax">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="pmb-block">
+		<div class="pmbb-header">
+			<h2><i class="zmdi zmdi-person m-r-5"></i> Address Information</h2>
+		</div>
+		<div class="pmbb-body p-l-30">
+			<div class="row">
+				<div class="form-group fg-line col-sm-6">
+					<label  class="col-sm-4 control-label">Street</label>
+					<div class="col-sm-8">
+						<div class="fg-line ng-binding">
+							<input data-ng-model="pctrl.street" type="text" class="form-control" value="{{ pctrl.street}}" placeholder="Street">
+						</div>
+					</div>
+				</div>
+				<div class="form-group fg-line col-sm-6">
+					<label  class="col-sm-4 control-label">City</label>
+					<div class="col-sm-8">
+						<div class="fg-line ng-binding">
+							<input data-ng-model="pctrl.city" type="text" class="form-control" value="{{ pctrl.city}}" placeholder="City">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group fg-line col-sm-6">
+					<label  class="col-sm-4 control-label">State</label>
+					<div class="col-sm-8">
+						<div class="fg-line ng-binding">
+							<input data-ng-model="pctrl.state" type="text" class="form-control" value="{{ pctrl.state}}" placeholder="State">
+						</div>
+					</div>
+				</div>
+				<div class="form-group fg-line col-sm-6">
+					<label  class="col-sm-4 control-label">Country</label>
+					<div class="col-sm-8">
+						<div class="fg-line ng-binding">
+							<input data-ng-model="pctrl.country" type="text" class="form-control" value="{{ pctrl.country}}" placeholder="Country">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group fg-line col-sm-6">
+					<label  class="col-sm-4 control-label">Zip Code</label>
+					<div class="col-sm-8">
+						<div class="fg-line ng-binding">
+							<input data-ng-model="pctrl.zipcode" type="text" class="form-control" value="{{ pctrl.zipcode}}" placeholder="Zip Code">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="pmb-block">
+		<div class="pmbb-header">
+			<h2><i class="zmdi zmdi-person m-r-5"></i> Login Credentials</h2>
+
+		</div>
+		<div class="pmbb-body p-l-30">
+			<div class="row">
+				<div class="form-group fg-line col-sm-6">
+					<label  class="col-sm-4 control-label">Password</label>
+					<div class="col-sm-8">
+						<div class="fg-line ng-binding">
+							<input data-ng-model="pctrl.password" type="password" class="form-control" value="{{ pctrl.password}}" placeholder="Password">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group fg-line col-sm-6">
+					<label  class="col-sm-4 control-label">Confirm Password</label>
+					<div class="col-sm-8">
+						<div class="fg-line ng-binding">
+							<input data-ng-model="pctrl.password" type="password" class="form-control" value="{{ pctrl.password}}" placeholder="Confirm Password">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+	<div class="m-t-30 m-b-30">
+		<button class="btn btn-primary btn-sm" data-ui-sref="user.listUsersProfile" data-swal-update type="submit">Save</button>
+		<button class="btn btn-link btn-sm" data-ui-sref="user.listUsersProfile" >Cancel</button>
+	</div>
+</form>

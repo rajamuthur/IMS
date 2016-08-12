@@ -1,0 +1,189 @@
+<aside id="folder-list-left" class="ng-scope toggled" ng-init="viewContactInfo({cid: '1',pos: 0,css: '',cstatus: '',cno1: '9689785671',	cname: 'Contact Name 1',leadstatus: 'Hot Lead', show_disp: false, disp: false })">
+<!--	<div class="contact-list p-5 c-white" style="background-color: #98D350">
+		<div class="c-name">Contact Name 4</div>
+		<div class="c-number">1231231231</div>
+		<span class="contact-call-status">Dialing</span>
+		<button class="btn bgm-teal waves-effect contact-status">Hot Lead</button>
+	</div>
+	<div class="contact-list p-5 bgm-orange c-white">
+		<div class="c-name">Contact Name 5</div>
+		<div class="c-number">1231231231</div>
+		<span class="contact-call-status">On-hold</span>
+		<button class="btn bgm-teal waves-effect contact-status">Hot Lead</button>
+	</div>-->
+	
+	<div class="contact-list p-5" dnd-effect-allowed="move" dnd-draggable="contact" ng-repeat="contact in contactsList1" id="c-{{contact.cid}}"  ng-click="viewContactInfo(contact, $event)" ng-class="contact.css">
+		<span class="closeicon" ng-click="closeContact(contact, $event)" ng-show="contact.css == ''"><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">{{contact.cname}}</div>
+		<div class="c-number">{{contact.cno1}}</div>
+		<input name="cc" ng-model="contact.css" type="hidden">
+		<span class="contact-call-status" ng-bind="contact.cstatus"></span>
+		<button ng-show="contact.cstatus == 'Dialling' || contact.cstatus == 'On-Hold'" ng-click="disconnectIncompletedCall(contact.cid, $event)" class="btn bgm-red waves-effect waves-effect d-call"><i class="zmdi zmdi-phone-end zmdi-hc-fw"></i></button>
+		<!--<button class="btn bgm-teal waves-effect contact-status">{{contact.leadstatus}}</button>-->
+	</div>
+<!--	<div class="contact-list p-5" ng-repeat="contact in contactsList[0]  | orderBy: contact.cname" id="c-{{contact.cid}}"  ng-click="viewContactInfo(contact, $event)" ng-class="contact.css">
+		<span class="closeicon" ng-click="closeContact(contact, $event)" ng-show="contact.css == ''"><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">{{contact.cname}}</div>
+		<div class="c-number">{{contact.cno1}}</div>
+		<input name="cc" ng-model="contact.css" type="hidden">
+		<span class="contact-call-status" ng-bind="contact.cstatus"></span>
+		<button class="btn bgm-teal waves-effect contact-status">{{contact.leadstatus}}</button>
+	</div>-->
+	
+<!--	<div class="contact-list p-5" ng-repeat="contact in contactsList" id="c-{{contact.cid}}"  ng-click="viewContactInfo(contact, $event)" ng-class="contactclass[contact.cid]">
+		<span class="closeicon" ng-click="closeContact(contact, $event)"><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">{{contact.cname}}</div>
+		<div class="c-number">{{contact.cno1}}</div>
+		<input name="cc" ng-model="contactclass[contact.cid]" type="text">
+		<button class="btn bgm-teal waves-effect contact-status">{{contact.leadstatus}}</button>
+	</div>-->
+	
+<!--	<div class="contact-list p-5" id="c-1">
+		<span class="closeicon" ng-click="closeContact('c-1')"><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">Contact Name 1</div>
+		<div class="c-number">1231231231</div>
+		<span class="pinicon"><i class="zmdi zmdi-pin zmdi-hc-fw"></i></span>
+		<button class="btn bgm-teal waves-effect contact-status">Hot Lead</button>
+	</div>
+	<div class="contact-list p-5" id="c-2">
+		<span class="closeicon" ng-click="closeContact('c-2')" ><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">Contact Name 2</div>
+		<div class="c-number">1231231231</div>
+		<span class="pinicon "><i class="zmdi zmdi-pin zmdi-hc-fw"></i></span>
+		<button class="btn bgm-teal waves-effect contact-status">Hot Lead</button>
+	</div>
+	<div class="contact-list p-5 bgm-lightgreen c-white">
+		<div class="c-name">Contact Name 3</div>
+		<div class="c-number">1231231231</div>
+		<span class="contact-call-status">Talking</span>
+		<button class="btn bgm-teal waves-effect contact-status">Hot Lead</button>
+	</div>
+	<div class="contact-list p-5 c-white" style="background-color: #98D350">
+		<div class="c-name">Contact Name 4</div>
+		<div class="c-number">1231231231</div>
+		<span class="contact-call-status">Dialing</span>
+		<button class="btn bgm-teal waves-effect contact-status">Hot Lead</button>
+	</div>
+	<div class="contact-list p-5 bgm-orange c-white">
+		<div class="c-name">Contact Name 5</div>
+		<div class="c-number">1231231231</div>
+		<span class="contact-call-status">On-hold</span>
+		<button class="btn bgm-teal waves-effect contact-status">Hot Lead</button>
+	</div>
+	<div class="contact-list p-5 bgm-orange c-white">
+		<div class="c-name">Contact Name 6</div>
+		<div class="c-number">1231231231</div>
+		<span class="contact-call-status">On-hold</span>
+		<button class="btn bgm-teal waves-effect contact-status">Hot Lead</button>
+	</div>
+	<div class="contact-list p-5 pined c-white">
+		<span class="closeicon"><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">Contact Name 7</div>
+		<div class="c-number">1231231231</div>
+		<button class="btn bgm-teal waves-effect contact-status">Hot Lead</button>
+	</div>
+	<div class="contact-list p-5 pined c-white">
+		<span class="closeicon"><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">Contact Name 8</div>
+		<div class="c-number">1231231231</div>
+		<button class="btn bgm-teal waves-effect contact-status">Hot Lead</button>
+	</div>
+	<div class="contact-list p-5 pined c-white">
+		<span class="closeicon"><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">Contact Name 9</div>
+		<div class="c-number">1231231231</div>
+		<button class="btn bgm-teal waves-effect contact-status">Hot Lead</button>
+	</div>
+	<div class="contact-list p-5 pined c-white">
+		<span class="closeicon"><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">Contact Name 10</div>
+		<div class="c-number">1231231231</div>
+		<button class="btn bgm-teal waves-effect contact-status">Hot Lead</button>
+	</div>
+	<div class="contact-list p-5 pined c-white">
+		<span class="closeicon"><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">Contact Name 11</div>
+		<div class="c-number">1231231231</div>
+		<button class="btn bgm-teal waves-effect contact-status">Hot Lead</button>
+	</div>
+	<div class="contact-list p-5 pined c-white">
+		<span class="closeicon"><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">Contact Name 12</div>
+		<div class="c-number">1231231231</div>
+	</div>
+	<div class="contact-list p-5 pined c-white">
+		<span class="closeicon"><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">Contact Name 13</div>
+		<div class="c-number">1231231231</div>
+	</div>
+	<div class="contact-list p-5 pined c-white">
+		<span class="closeicon"><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">Contact Name 14</div>
+		<div class="c-number">1231231231</div>
+	</div>
+	<div class="contact-list p-5 pined c-white">
+		<span class="closeicon"><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">Contact Name 15</div>
+		<div class="c-number">1231231231</div>
+	</div>
+	<div class="contact-list p-5 pined c-white">
+		<span class="closeicon"><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">Contact Name 16</div>
+		<div class="c-number">1231231231</div>
+	</div>
+	<div class="contact-list p-5 pined c-white">
+		<span class="closeicon"><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">Contact Name 17</div>
+		<div class="c-number">1231231231</div>
+	</div>
+	<div class="contact-list p-5 pined c-white">
+		<span class="closeicon"><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">Contact Name 18</div>
+		<div class="c-number">1231231231</div>
+	</div>
+	<div class="contact-list p-5 pined c-white">
+		<span class="closeicon"><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">Contact Name 19</div>
+		<div class="c-number">1231231231</div>
+	</div>
+	<div class="contact-list p-5 pined c-white">
+		<span class="closeicon"><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">Contact Name 20</div>
+		<div class="c-number">1231231231</div>
+	</div>
+	<div class="contact-list p-5 pined c-white">
+		<span class="closeicon"><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">Contact Name 21</div>
+		<div class="c-number">1231231231</div>
+	</div>
+	<div class="contact-list p-5 pined c-white">
+		<span class="closeicon"><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">Contact Name 22</div>
+		<div class="c-number">1231231231</div>
+	</div>
+	<div class="contact-list p-5 pined c-white">
+		<span class="closeicon"><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">Contact Name 23</div>
+		<div class="c-number">1231231231</div>
+	</div>
+	<div class="contact-list p-5 pined c-white">
+		<span class="closeicon"><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">Contact Name 24</div>
+		<div class="c-number">1231231231</div>
+	</div>
+	<div class="contact-list p-5 pined c-white">
+		<span class="closeicon"><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">Contact Name 25</div>
+		<div class="c-number">1231231231</div>
+	</div>
+	<div class="contact-list p-5 pined c-white">
+		<span class="closeicon"><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">Contact Name 26</div>
+		<div class="c-number">1231231231</div>
+	</div>
+	<div class="contact-list p-5 pined c-white">
+		<span class="closeicon"><i class="zmdi zmdi-close zmdi-hc-fw"></i></span>
+		<div class="c-name">Contact Name 27</div>
+		<div class="c-number">1231231231</div>
+	</div>-->
+</aside>

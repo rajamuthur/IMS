@@ -1,0 +1,218 @@
+<?php
+print_r($_POST);
+?>
+<div class="container">
+    <div class="block-header">
+        <h2>Edit user</h2>
+
+        <ul class="actions">
+            <li>
+                <a href="">
+                    <i class="zmdi zmdi-trending-up"></i>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="zmdi zmdi-check-all"></i>
+                </a>
+            </li>
+            <li class="dropdown" dropdown>
+                <a href="" dropdown-toggle>
+                    <i class="zmdi zmdi-more-vert"></i>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li>
+                        <a href="">Refresh</a>
+                    </li>
+                    <li>
+                        <a href="">Manage Widgets</a>
+                    </li>
+                    <li>
+                        <a href="">Widgets Settings</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+	<form role="form" >
+		<div class="card">
+			<div class="card-header">
+				<h2>User Info<small>user details</small></h2>
+			</div>
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="firstname">
+							</div>
+							<label class="fg-label">First Name</label>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="lastname">
+							</div>
+							<label class="fg-label">Last Name</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="email1">
+							</div>
+							<label class="fg-label">Email address</label>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="callerid">
+							</div>
+							<label class="fg-label">Caller Id</label>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-header">
+				<h2>Select an user ID and password <small>Select an user ID and password</small></h2>
+			</div>
+
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="username">
+							</div>
+							<label class="fg-label">User Name</label>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="accountid">
+							</div>
+							<label class="fg-label">Account Id</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="password">
+							</div>
+							<label class="fg-label">Password</label>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="cpassword">
+							</div>
+							<label class="fg-label">Confirm Password</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="c-black f-500 m-t-20 m-b-20">Address</p>
+
+						<div class="form-group">
+							<div class="fg-line">
+								<textarea class="form-control" data-auto-size placeholder="Enter your address..."></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group">
+							<div class="fg-line">
+								<div class="select">
+									<select class="form-control">
+										<option>Select an Country</option>
+										<option>India</option>
+										<option>US</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+<!--					<div class="col-sm-3">
+						<div class="date-picker input-group dp-blue" ng-class="{ 'is-opened': opened2 == true }">
+							<span class="input-group-addon"><i class="zmdi zmdi-calendar ma-icon"></i></span>
+							<div class="fg-line" ng-class="{ 'fg-toggled': opened2 == true }">
+								<input ng-click="open($event, 'opened2')" type="text" class="form-control" datepicker-popup="" show-weeks="false" ng-model="dtPopup2" is-open="opened2" min-date="minDate" datepicker-options="dateOptions" ng-required="false" close-text="Close" placeholder="Select Date" />
+							</div>
+						</div>
+					</div>-->
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-header">
+				<h2>Bridge Details<small>Bridge Details</small></h2>
+			</div>
+
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="bridgenumber">
+							</div>
+							<label class="fg-label">Bridge Number</label>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="domain">
+							</div>
+							<label class="fg-label">Domain</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="userid">
+							</div>
+							<label class="fg-label">User ID</label>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group fg-float">
+							<div class="fg-line">
+								<input type="text" class="form-control fg-input" id="bpassword">
+							</div>
+							<label class="fg-label">Password</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--<button type="submit" class="btn btn-primary btn-sm m-t-5">Update User</button>-->
+		
+		<button class="btn btn-info" data-swal-update>Update</button>
+<!--		<button class="btn btn-info" data-swal-img-update>Update</button>
+		<button class="btn btn-info" data-growl-update data-type="inverse" data-from="top" data-align="center" data-icon="fa fa-comments">Update</button>-->
+		
+		<!--<a href="" class="btn btn-info" data-growl-update data-type="inverse"  data-from="top" data-align="center" data-icon="fa fa-comments">Update</a>-->
+	</form>
+</div>

@@ -1,0 +1,102 @@
+<!--<div class="container" data-ng-controller="campaignsettingsCtrl	as tctrl" id="campaignsettingsDiv">-->
+<div class="container" data-ng-controller="campaignsettingsCtrl	as tctrl" ng-init="getAllCampaignSettings()">
+	<div class="block-header">
+		<h2>View Campaign Settings </h2>
+		<h2><small>Here by default, you can view the campaign settings created in last 90 days. <br/>
+				You can use the date filter to view campaign settings older than 90 days.</small></h2>
+	</div>
+    <div class="card">
+        <div class="card-header">
+			<button class="btn bgm-blue btn-icon waves-effect waves-circle pull-right"  data-ui-sref="preference.addcampaignsetting" title="Add Settings"><i class="zmdi zmdi-plus"></i></button>
+			
+        </div>
+		<br/><br/>
+        <div class="card-body">
+			<div class="card-body card-padding p-t-0 ng-scope" data-ng-controller="CollapseDemoCtrl">
+				<button ng-click="isCollapsed = !isCollapsed" class="btn bgm-blue btn-icon waves-effect waves-circle"><i class="zmdi zmdi-search"></i></button>
+				<div class="filter-container filter-container-multi" title="">
+				<ul class="filter-choices">
+					<li class="search-choice">
+						<span class="f-500">Setting Name: </span> 
+						<span>Settings2</span>
+						<a class="search-choice-close" data-option-array-index="0"></a>
+					</li>
+				</ul>
+			</div>
+				<div style="height: 0px;" class="collapse" collapse="isCollapsed">
+					<div class="card">
+						<div class="card-header z-depth-2-top">
+							<div class="row">
+								<div class="col-sm-3">
+									<div class="form-group fg-float">
+										<div class="fg-line">
+											<input date-range-picker id="daterange3" name="daterange3" class="form-control date-picker" type="text" ng-model="date" options="opts" required/>
+										</div>
+										<!--<label class="fg-label">Select Date</label>-->
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="form-group fg-float">
+										<div class="fg-line">
+											<input type="text" class="form-control fg-input" id="street">
+										</div>
+										<label class="fg-label">Settings Name</label>
+									</div>
+								</div>
+
+								<div class="col-sm-3">
+									<div class="form-group fg-float">
+										<div class="fg-line">
+											<input type="text" class="form-control fg-input" id="street">
+										</div>
+										<label class="fg-label">Owner</label>
+									</div>
+								</div>
+							</div>
+							<button class="btn btn-primary btn-sm m-t-10 waves-effect" ng-click="isCollapsed = !isCollapsed">Search</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--<div style="padding-left: 10px">-->
+
+			<!--<button class="btn bgm-blue" data-ui-sref="preference.addcampaignsetting" title="Add Appointment">Create Appointment</button>-->
+			<!--</div>-->
+			<br/>
+            <div class="table-responsive">
+                <table ng-table="settingsEdit" class="table table-vmiddle table-hover">
+                    <tr ng-repeat="w in $data"  ng-class="{ 'active': w.$edit }">
+                        <td data-title="'Settings Name'">
+                            <span ng-if="!w.$edit">{{ w.name}}</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.name" /></div>
+                        </td>
+                        <td data-title="'Owner'">
+                            <span ng-if="!w.$edit">{{ w.owner}}</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="email" ng-model="w.owner" /></div>
+                        </td>
+						<td data-title="'Auto Pause'">
+                            <span ng-if="!w.$edit">Yes</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="text" value="Yes" /></div>
+                        </td>
+                        <td data-title="'Recording'">
+                            <span ng-if="!w.$edit">Yes</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="text" value="Yes" /></div>
+                        </td>
+                        <td data-title="'Lines'">
+                            <span ng-if="!w.$edit">{{ w.lines}}</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.lines" /></div>
+                        </td>
+
+                        <td data-title="'Actions'">
+                            <button type="button" class="btn btn-default" data-ui-sref="preference.editcampaignsetting({campaignPreferenceId: w.id})"><i class="zmdi zmdi-edit zmdi-hc-fw"></i></button>
+                            <!--<button type="button" class="btn btn-default" data-ui-sref="leads.editLead({leadId: w.id})"><i class="zmdi zmdi-edit"></i></button>-->
+                            <button type="button" class="btn btn-default" data-swal-preference data-ng-click="deleteCampaignSetting(w.id)"><i class="zmdi zmdi-delete zmdi-hc-fw"></i></button>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>        
+</div>
+
+

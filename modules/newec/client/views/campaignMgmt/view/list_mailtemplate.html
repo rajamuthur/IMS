@@ -1,0 +1,47 @@
+<div class="container" data-ng-controller="mailTemplateCtrl	as tctrl" id="mailTemplateDiv" ng-init="getAllTemplates()">
+	<div class="block-header">
+		<h2>View Mail Templates </h2>
+		<h2><small>Please make sure that you have configured SMTP, otherwise emails will not be delivered.</small></h2>
+	</div>
+    <div class="card">
+        <div class="card-header">
+			<button class="btn bgm-blue btn-icon waves-effect waves-circle pull-right"  data-ui-sref="preference.addmailtemplate" title="Add Template"><i class="zmdi zmdi-plus"></i></button>
+        </div>
+		<br/><br/>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table ng-table="settingsEdit" class="table table-vmiddle table-hover">
+                    <tr ng-repeat="w in $data"  ng-class="{ 'active': w.$edit }">
+                        <td data-title="'Template Name'">
+                            <span ng-if="!w.$edit">{{ w.name}}</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.name" /></div>
+                        </td>
+                        <td data-title="'Created By'">
+                            <span ng-if="!w.$edit">{{ w.owner}}</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="email" ng-model="w.owner" /></div>
+                        </td>
+						<td data-title="'Created on'">
+                            <span ng-if="!w.$edit">{{ w.created_on}}</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.created_on" /></div>
+                        </td>
+                        <td data-title="'Modified on'">
+                            <span ng-if="!w.$edit">{{ w.updated_on}}</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.updated_on" /></div>
+                        </td>
+                        <td data-title="'Preview'">
+                            <span ng-if="!w.$edit">{{ w.mailid}}</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.mailid" /></div>
+                        </td>
+
+                        <td data-title="'Actions'">
+                            <button type="button" class="btn btn-default" data-ui-sref="preference.editmailtemplate({templateId: w.id})"><i class="zmdi zmdi-edit zmdi-hc-fw"></i></button>
+                            <button type="button" class="btn btn-default" data-swal-preference data-ng-click="deleteEmailTemplate(w.id)"><i class="zmdi zmdi-delete zmdi-hc-fw"></i></button>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>        
+</div>
+
+

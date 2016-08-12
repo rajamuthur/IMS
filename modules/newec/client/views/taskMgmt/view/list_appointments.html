@@ -1,0 +1,170 @@
+<div id="appitmentsDiv" class="container" data-ng-controller="appointmentTableCtrl as apCtrl">
+	<div class="block-header">
+		<h2>View Appointments</h2>
+	</div>
+	<div class="card"  data-ng-controller="appointmentModalCtrl as amctrl">
+		<button class="btn bgm-blue btn-icon waves-effect waves-circle pull-right" title="Add Appointment" style="margin: 10px;"><i class="zmdi zmdi-download zmdi-hc-fw"></i></button>
+		<div class="card-body card-padding p-t-0 ng-scope" data-ng-controller="CollapseDemoCtrl">
+			<button ng-click="isCollapsed = !isCollapsed" class="btn btn-primary btn-icon waves-effect waves-circle" style="margin: 10px 10px 10px -3px;"><i class="zmdi zmdi-search"></i></button>
+            <div class="filter-container filter-container-multi" title="">
+				<ul class="filter-choices">
+					<li class="search-choice">
+						<span class="f-500">Name: </span> 
+						<span>Shyam</span>
+						<a class="search-choice-close" data-option-array-index="0"></a>
+					</li>
+					<li class="search-choice">
+						<span class="f-500">Phone Number: </span>
+						<span>8056147256</span>
+						<a class="search-choice-close" data-option-array-index="4"></a>
+					</li>
+				</ul>
+			</div>
+			<div style="height: 0px;" class="collapse" collapse="!isCollapsed">
+				<div class="card">
+					<div class="card-header z-depth-2-top">
+						<div class="row">
+							<div class="col-sm-4">
+								<div class="form-group fg-float">
+									<div class="fg-line">
+										<input date-range-picker id="daterange3" name="daterange3" class="form-control date-picker" type="text" ng-model="date" options="opts" required/>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="form-group fg-float">
+									<div class="fg-line">
+										<input type="text" class="form-control fg-input" id="name">
+									</div>
+									<label class="fg-label">Name</label>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="form-group fg-float">
+									<div class="fg-line">
+										<input type="text" class="form-control fg-input" id="number">
+									</div>
+									<label class="fg-label">Phone Number</label>
+								</div>
+							</div>
+						</div>
+						<button class="btn btn-primary btn-sm m-t-10 waves-effect" ng-click="isCollapsed = !isCollapsed">Search</button>
+					</div>
+				</div>
+            </div>
+        </div>
+		<div class="card-body card-padding">
+			<script type="text/ng-template" id="myModalContent.html">
+                <div class="modal-header">
+				<h4 class="modal-title">Create Appointment</h4>
+                </div>
+                <div class="modal-body create-appointment">
+				<div>
+				<p>Fields marked with <font color="red">*</font> are required.</p>
+				</div>
+				<div class="form-group fg-line">
+				<div>
+				<div class="fg-line ng-binding">
+				<span style="font-size: 20px;"><i class="zmdi zmdi-account"></i></span><input type="text" placeholder="Name" id="name" class="form-control input-sm">
+				</div>
+				</div>
+				</div>
+				<div class="form-group fg-line">
+				<div>
+				<span style="font-size: 20px;"><i class="zmdi zmdi-phone"></i></span>
+				<div class="fg-line ng-binding">
+				<input type="text" placeholder="Phone" id="phome" class="form-control input-sm">
+				</div>
+				</div>
+				</div>
+				<div class="form-group fg-line">
+				<div>
+				<span style="font-size: 20px;"><i class="zmdi zmdi-email"></i></span>
+				<div class="fg-line ng-binding">
+				<input type="text" placeholder="Email" id="email" class="form-control">
+				</div>
+				</div>
+				</div>
+		
+				<div class="form-group">
+					<div>
+						<span style="font-size: 20px;"><i class="zmdi zmdi-time"></i></span>
+						<div class="ng-binding">
+							<timepicker-pop input-time="time1" class="input-group" disabled="disabled" 	show-meridian='showMeridian'> </timepicker-pop>
+							<input type="checkbox" name='showMeridian' ng-model='showMeridian' />	
+								Show meridian
+						</div>
+					</div>
+				</div>
+		
+			
+		
+				<div class="form-group">
+				<span style="font-size: 20px;"><i class="zmdi zmdi-calendar ma-icon"></i></span>
+				<div class="dropdown">
+				<a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" data-target="#" href="">    
+				<div>
+				<input type="text" class="form-control" data-ng-model="data.date" placeholder="Date & Time">
+				</div>    
+				</a>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+				<datetimepicker data-ng-model="data.date" data-datetimepicker-config="{ dropdownSelector: '#dropdown2' }">
+				</datetimepicker>
+				</ul>
+				</div>
+				</div>
+
+				<div class="form-group">
+				<div>
+				<span style="font-size: 20px;"><i class="zmdi zmdi-calendar-note"></i></span>
+				<div class="fg-line ng-binding">
+				<textarea class="form-control" data-auto-size  placeholder="Notes...." style="height:26px;"></textarea>
+				</div>
+				</div>
+				</div>
+
+                </div>
+                <div class="modal-footer">
+				<button class="btn btn-link" ng-click="ok()">OK</button>
+				<button class="btn btn-link" ng-click="cancel()">Cancel</button>
+                </div>
+            </script>
+
+            <div class="btn-demo">
+				<button class="btn bgm-blue" btn-icon waves-effect waves-circle pull-right ng-click="openAppointment()" title="Add Appointment">Make Appointment</button>
+				
+				<!--<p><i class="zmdi zmdi-download zmdi-hc-fw"></i> <span>download</span></p>-->
+				<!--<button class="btn bgm-blue btn-icon waves-effect waves-circle" ng-click="openAppointment()" title="Add Appointment"><i class="zmdi zmdi-plus"></i></button>-->
+            </div>
+
+			<div class="table-responsive">
+                <table ng-table="apCtrl.appointmentsEdit" class="table table-vmiddle table-hover">
+					<!--					<tr>
+											<th ng-repeat="w in $data" colspan="4">{{w.date}}</th>
+										</tr>-->
+					<tr ng-repeat="w in $data"  ng-class="{ 'active': w.$edit }">
+						<td>
+							<span ng-if="!w.$edit">{{ w.date +' '+ w.time}}</span>
+							<div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.time" /></div>
+						</td>
+						<td>
+							<span ng-if="!w.$edit">{{ w.name}}<br>Campaign: {{w.campaign}}</span>
+							<div ng-if="w.$edit"><input class="form-control" type="email" ng-model="w.name" /></div>
+
+						</td>
+						<td>
+							<span ng-if="!w.$edit">{{ w.phone1}}</span>
+							<div ng-if="w.$edit"><input class="form-control" type="email" ng-model="w.phone1" /></div>
+						</td>
+						<td>
+							<!--<button type="button" class="btn btn-default" data-ui-sref="preference.editAppointment({appointmentId: w.id})"><i class="zmdi zmdi-edit zmdi-hc-fw"></i></button>-->
+							<button type="button" class="btn btn-default" data-ui-sref="contact.viewcontact.viewcontact-about({targetId: w.id})"><i class="zmdi zmdi-edit zmdi-hc-fw"></i></button>
+							<button type="button" class="btn btn-default" data-swal-appointment><i class="zmdi zmdi-delete zmdi-hc-fw"></i></button>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

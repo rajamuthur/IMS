@@ -1,0 +1,152 @@
+<div class="container" data-ng-controller="campCtrl as cctrl" ng-init="getCampaigns()">
+    <div class="card">
+        <div class="card-header">
+            <h2>Campaigns <small>List of Campaign</small></h2>
+			<ul class="actions">
+				<li>
+					<a href="">
+						<i class="zmdi zmdi-download zmdi-hc-fw"></i>
+					</a>
+				</li>
+			</ul>
+        </div>
+        <div class="card-body card-padding p-t-0 ng-scope" data-ng-controller="CollapseDemoCtrl">
+            <button ng-click="isCollapsed = !isCollapsed" class="btn btn-primary btn-icon waves-effect waves-circle"><i class="zmdi zmdi-search"></i></button>
+			<button data-ui-sref="campaign.uploadcontact.uploadcontact-step1"  class="btn bgm-cyan btn-icon waves-effect waves-circle waves-effect waves-circle pull-right"><i class="zmdi zmdi-plus"></i></button>
+			<div class="filter-container filter-container-multi" title="">
+				<ul class="filter-choices">
+					<li class="search-choice">
+						<span class="f-500">List per page: </span> 
+						<span>25</span>
+						<a class="search-choice-close" data-option-array-index="0"></a>
+					</li>
+					<li class="search-choice">
+						<span class="f-500">Campaign Name: </span> 
+						<span>New_2016</span>
+						<a class="search-choice-close" data-option-array-index="0"></a>
+					</li>
+					<li class="search-choice">
+						<span class="f-500">Status: </span>
+						<span>All</span>
+						<a class="search-choice-close" data-option-array-index="4"></a>
+					</li>
+				</ul>
+			</div>
+            <br>
+            <div style="height: 0px;" class="collapse" collapse="isCollapsed">
+				<div class="card">
+					<div class="card-header z-depth-2-top" data-ng-controller="ModalDemoCtrl">
+						<div class="row">
+							<div class="col-sm-4">
+								<div class="form-group fg-float">
+									<div class="fg-line">
+										<input type="text" class="form-control fg-input" id="street">
+									</div>
+									<label class="fg-label">Name</label>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="form-group fg-float">
+									<div class="select">
+										<select class="form-control">
+											<option>Select Campaign Status</option>
+											<option selected="">All</option>
+											<option>Started</option>
+											<option>Paused</option>
+											<option>Stopped</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="form-group fg-float">
+									<div class="select">
+										<select class="form-control">
+											<option>Select Lines</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option selected="">4</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button class="btn btn-primary btn-sm m-t-10 waves-effect" ng-click="isCollapsed = !isCollapsed">Search</button>
+						<!--<button  ng-click="open('lg')" class="btn btn-primary btn-sm m-t-10 waves-effect waves-effect pull-right"><i class="zmdi zmdi-settings zmdi-hc-fw"></i> Search Setting</button>-->
+<!--						<script type="text/ng-template" id="myModalContent.html">
+							<div class="modal-header">
+							<h4 class="modal-title">Search Settings</h4>
+							</div>
+							<div class="modal-body">
+								<div class="fg-float form-group m-b-0">
+									<div class="fg-line">
+										<input type="text" class="input-sm form-control fg-input">
+									</div>
+									<label class="fg-label">Search From 120 Fields (Max 8 Fields)</label>
+								</div>
+								<div title="" class="filter-container filter-container-multi m-t-10">
+									<ul class="filter-choices">
+										<li class="search-choice">
+											<span class="f-500">List per page: </span> 
+											<span>25</span>
+											<a data-option-array-index="0" class="search-choice-close"></a>
+										</li>
+										<li class="search-choice">
+											<span class="f-500">Camapign Name: </span> 
+											<span>New_2016</span>
+											<a data-option-array-index="0" class="search-choice-close"></a>
+										</li>
+										<li class="search-choice">
+											<span class="f-500">Status: </span>
+											<span>All</span>
+											<a data-option-array-index="4" class="search-choice-close"></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="modal-footer">
+							<button class="btn btn-link" ng-click="ok()">OK</button>
+							<button class="btn btn-link" ng-click="cancel()">Cancel</button>
+							</div>
+						</script>-->
+					</div>
+				</div>
+            </div>
+        </div>        
+        <div class="card-body">
+            <div class="table-responsive">
+				<p class="m-l-25"><strong>Total Count:</strong> {{totalcount}}</p>
+                <table ng-table="aEdit" class="table table-vmiddle table-hover">
+                    <tr ng-repeat="w in $data"  ng-class="{ 'active': w.$edit }">
+                        <td data-title="'Campaign Name'">
+                            <span ng-if="!w.$edit">{{ w.name}}</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.name" /></div>
+                        </td>
+                        <td data-title="'Leads'">
+                            <span ng-if="!w.$edit">{{ w.leads}}</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="email" ng-model="w.leads" /></div>
+                        </td>
+                        <td data-title="'Contacts'">
+                            <span ng-if="!w.$edit">{{ w.contacts}}</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.contacts" /></div>
+                        </td>
+                        <td data-title="'Lines'">
+                            <span ng-if="!w.$edit">{{ w.lines}}</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.lines" /></div>
+                        </td>
+                        <td data-title="'Status'">
+                            <span ng-if="!w.$edit">{{ w.status}}</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.status" /></div>
+                        </td>
+                        <td data-title="'Actions'">
+                            <button type="button" class="btn btn-default" data-ui-sref="calling.info"><i class="zmdi zmdi-caret-right-circle zmdi-hc-fw"></i></button>
+                            <button type="button" class="btn btn-default" data-ui-sref="campaign.editcampaign({cId: w.id})"><i class="zmdi zmdi-edit"></i></button>
+                            <button type="button" class="btn btn-default" data-ui-sref="campaign.listcampaign" data-swal-warning><i class="zmdi zmdi-delete zmdi-hc-fw"></i></button>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>        
+</div>

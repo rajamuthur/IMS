@@ -1,0 +1,190 @@
+<div class="pmb-block" id="subscriptionDiv">
+	<div>
+		<div class="pmbb-header">
+			<button class="btn bgm-blue btn-float waves-effect waves-circle" data-swal-addproduct title="Add Single Agent Unlimited User"><i class="zmdi zmdi-account-add zmdi-hc-fw"></i></button>
+			<h2><i class="zmdi zmdi-person m-r-5"></i> Single-agent Unlimited Usage Subscriptions</h2>
+		</div>
+		<div class="pmbb-body">
+			<div class="pmbb-view alert alert-info">
+				<div class="row">
+					<div class="form-group fg-line col-sm-5">
+						<label for="Manager" class="col-sm-4">Manager</label>
+						<div class="col-sm-6">
+							<span class="ng-binding">
+								{{ pctrl.manager}} ({{ pctrl.manager_id}})
+							</span>
+						</div>
+					</div>
+					<div class="form-group fg-line col-sm-3">
+						<label for="ta" class="col-sm-6">Total Agents</label>
+						<div class="col-sm-2">
+							<span class="ng-binding subscriptionHeader">
+								{{ pctrl.total_agents}}
+							</span>
+						</div>
+					</div>
+					<div class="form-group fg-line col-sm-3">
+						<label for="tca" class="col-sm-7">Total Closer Agents</label>
+						<div class="col-sm-2">
+							<span class="ng-binding subscriptionHeader">
+								{{ pctrl.total_closer}}
+							</span>
+						</div>
+					</div>
+				</div>
+				<br/>
+			</div>
+		</div>
+		<div data-ng-controller="userCtrl as tctrl">
+			<div class="table-responsive">
+				<table ng-table="tctrl.userEdit" class="table table-vmiddle table-hover">
+					<tr ng-repeat="w in $data"  ng-class="{ 'active': w.$edit }">
+						<td data-title="'Role'">
+							<span>{{ w.role}}</span>
+							<div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.role" /></div>
+						</td>
+						<td data-title="'Profile'">
+							<span ng-if="!w.$edit"><i class="zmdi zmdi-account zmdi-hc-fw"></i>{{ w.name}} ({{ w.id}})<br><i class="zmdi zmdi-email zmdi-hc-fw"></i> {{ w.email}}<br><i class="zmdi zmdi-phone zmdi-hc-fw"></i> {{ w.phone}}</span>
+							<div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.name" /></div>
+						</td>
+						<td data-title="'Product'">
+							<span ng-if="!w.$edit">Product: {{ w.product_name}} <br> Starts on: {{ w.sub_start_date}} <br> Expires on: {{ w.sub_end_date}}</span>
+							<div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.product_name" /></div>
+						</td>
+						<td data-title="'Actions'">
+							<button type="button" class="btn btn-default" title="Reset Call Status" data-swal-reset><i class="zmdi zmdi-lock-open zmdi-hc-fw"></i></button>
+							<button type="button" class="btn btn-default" title="View" data-ui-sref="user.viewuserprofile.viewuserprofile-basic({userId: w.id})"><i class="zmdi zmdi-eye zmdi-hc-fw"></i></button>
+							<button type="button" class="btn btn-default" title="Disable" data-swal-disable><i class="zmdi zmdi-power zmdi-hc-fw"></i></button>
+							<button type="button" class="btn btn-default" title="Renew" data-swal-renew><i class="zmdi zmdi-file-plus zmdi-hc-fw"></i></button>
+							<button type="button" class="btn btn-default" title="Delete" data-swal-warning><i class="zmdi zmdi-delete zmdi-hc-fw"></i></button>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<br><br><br>
+	<div>
+		<div class="pmbb-header">
+			<button class="btn bgm-blue btn-float waves-effect waves-effect waves-circle" data-ui-sref="users.adduser" title="Add PPU User"><i class="zmdi zmdi-account-add zmdi-hc-fw"></i></button>
+			<h2><i class="zmdi zmdi-person m-r-5"></i> Single-agent Pay-per-use Subscriptions</h2>
+		</div>
+		<div class="pmbb-body">
+			<div class="pmbb-view alert alert-info">
+				<div class="row">
+					<div class="form-group fg-line col-sm-5">
+						<label for="hostname" class="col-sm-4">Manager</label>
+						<div class="col-sm-6">
+							<span class="fg-line ng-binding">
+								{{ pctrl.manager}} ({{ pctrl.manager_id}})
+							</span>
+						</div>
+					</div>
+					<div class="form-group fg-line col-sm-3">
+						<label for="ssl" class="col-sm-6">Total Agents</label>
+						<div class="col-sm-2">
+							<span class="subscriptionHeader ng-binding">
+								{{ pctrl.total_agents}}
+							</span>
+						</div>
+					</div>
+				</div>
+				<br/>
+			</div>
+		</div>
+		<div data-ng-controller="userCtrll as tctrl">
+			<div class="table-responsive">
+				<table ng-table="tctrl.userEdit" class="table table-vmiddle table-hover">
+					<tr ng-repeat="w in $data"  ng-class="{ 'active': w.$edit }">
+						<td data-title="'Role'">
+							<span ng-if="!w.$edit">{{ w.role}}</span>
+							<div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.role" /></div>
+						</td>
+						<td data-title="'Profile'">
+							<span ng-if="!w.$edit"><i class="zmdi zmdi-account zmdi-hc-fw"></i>{{ w.name}} ({{ w.id}})<br><i class="zmdi zmdi-email zmdi-hc-fw"></i>{{ w.email}}<br><i class="zmdi zmdi-phone zmdi-hc-fw"></i>{{ w.phone}}</span>
+							<div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.name" /></div>
+						</td>
+						<td data-title="'Product'">
+							<span ng-if="!w.$edit">Product: {{ w.product_name}} <br> Starts on: {{ w.sub_start_date}} <br> Expires on: {{ w.sub_end_date}}</span>
+							<div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.product_name" /></div>
+						</td>
+						<td data-title="'Actions'">
+							<button type="button" class="btn btn-default" title="Reset Call Status" data-swal-reset><i class="zmdi zmdi-lock-open zmdi-hc-fw"></i></button>
+							<button type="button" class="btn btn-default" title="View" data-ui-sref="user.viewuserprofile.viewuserprofile-basic({userId: w.id})"><i class="zmdi zmdi-eye zmdi-hc-fw"></i></button>
+							<button type="button" class="btn btn-default" title="Disable" data-swal-disable><i class="zmdi zmdi-power zmdi-hc-fw"></i></button>
+							<button type="button" class="btn btn-default" title="Renew" data-swal-renew><i class="zmdi zmdi-file-plus zmdi-hc-fw"></i></button>
+							<button type="button" class="btn btn-default" title="Delete" data-swal-warning><i class="zmdi zmdi-delete zmdi-hc-fw"></i></button>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	</br><br><br>
+	<div>
+		<div class="pmbb-header">
+			<button class="btn bgm-blue btn-float waves-effect waves-effect waves-circle" data-ui-sref="users.adduser" title="Add Unlimited User"><i class="zmdi zmdi-account-add zmdi-hc-fw"></i></button>
+			<h2><i class="zmdi zmdi-person m-r-5"></i>Multi-agent Unlimited Usage Subscriptions</h2>
+		</div>
+		<div class="pmbb-body">
+			<div class="pmbb-view alert alert-info">
+				<div class="row">
+					<div class="form-group fg-line col-sm-5">
+						<label for="hostname" class="col-sm-4">Manager</label>
+						<div class="col-sm-6">
+							<span class="ng-binding">
+								{{ pctrl.manager}} ({{ pctrl.manager_id}})
+							</span>
+						</div>
+					</div>
+					<div class="form-group fg-line col-sm-3">
+						<label for="ssl" class="col-sm-6">Total Agents</label>
+						<div class="col-sm-2">
+							<span class="subscriptionHeader ng-binding">
+								{{ pctrl.total_agents}}
+							</span>
+						</div>
+					</div>
+					<div class="form-group fg-line col-sm-3">
+						<label for="ssl" class="col-sm-6">Total Closer Agents</label>
+						<div class="col-sm-2">
+							<span class="subscriptionHeader ng-binding">
+								{{ pctrl.total_closer}}
+							</span>
+						</div>
+					</div>
+				</div>
+				<br/>
+			</div>
+		</div>
+		<div data-ng-controller="userCtrl as tctrl">
+			<div class="table-responsive">
+				<table ng-table="tctrl.userEdit" class="table table-vmiddle table-hover">
+					<tr ng-repeat="w in $data"  ng-class="{ 'active': w.$edit }">
+						<td data-title="'Role'">
+							<span ng-if="!w.$edit">{{ w.role}}</span>
+							<div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.role" /></div>
+						</td>
+						<td data-title="'Profile'">
+							<span ng-if="!w.$edit"><i class="zmdi zmdi-account zmdi-hc-fw"></i>{{ w.name}} ({{ w.id}})<br><i class="zmdi zmdi-email zmdi-hc-fw"></i> {{ w.email}}<br><i class="zmdi zmdi-phone zmdi-hc-fw"></i> {{ w.phone}}</span>
+							<div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.name" /></div>
+						</td>
+						<td data-title="'Product'">
+							<span ng-if="!w.$edit">Product: {{ w.product_name}} <br> Starts on: {{ w.sub_start_date}} <br> Expires on: {{ w.sub_end_date}}</span>
+							<div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.product_name" /></div>
+						</td>
+						<td data-title="'Actions'">
+							<button type="button" class="btn btn-default" title="Reset Call Status" data-swal-reset><i class="zmdi zmdi-lock-open zmdi-hc-fw"></i></button>
+							<button type="button" class="btn btn-default" title="View" data-ui-sref="user.viewuserprofile.viewuserprofile-basic({userId: w.id})"><i class="zmdi zmdi-eye zmdi-hc-fw"></i></button>
+							<button type="button" class="btn btn-default" title="Disable" data-swal-disable><i class="zmdi zmdi-power zmdi-hc-fw"></i></button>
+							<button type="button" class="btn btn-default" title="Renew" data-swal-renew><i class="zmdi zmdi-file-plus zmdi-hc-fw"></i></button>
+							<button type="button" class="btn btn-default" title="Delete" data-swal-warning><i class="zmdi zmdi-delete zmdi-hc-fw"></i></button>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

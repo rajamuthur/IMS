@@ -1,0 +1,72 @@
+<style>
+	.form-control {
+		height: 30px;
+	}
+</style>
+
+<div id="addScheduleDiv" class="container" data-ng-controller="followupEmailsCtrl as tctrl" ng-init="getAllTemplates()">
+	<form class="form-horizontal" role="form" >
+		<div class="block-header">
+			<h2>Create Follow-up Email Templates</h2>
+			<h2><small>Here, you can create an automatic follow-up email templates. Once you have a schedule set up, you can send up to 7 follow-up emails with upto 30 days between emails. This is only a schedule of the follow-up emails. To actually create the emails, please use Create Template.</small></h2>
+		</div>
+		<div class="card">
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="form-group fg-line col-sm-5">
+						<label for="ssl" class="control-label col-sm-3">Schedule name</label>
+						<div class="col-sm-8">
+							<div class="fg-line ng-binding">
+								<input type="text" placeholder="Name" id="fname" ng-model="name" class="form-control input-sm">
+							</div>
+						</div>
+					</div>
+					<div class="form-group col-sm-5">
+						<label for="template" class="control-label col-sm-3">Email Template</label>
+						<div class="col-sm-8">
+							<div class="select col-sm-8 pull-left">
+								<select class="form-control" ng-options="emailTemplate.id as emailTemplate.name for emailTemplate in emailTemplates" ng-model="template">
+								<option value="Template">-- Select Template --</option>
+							</select>
+							</div>
+							<a href="#" onclick="openPreview(1);return false;" class="pull-right">Preview</a>
+						</div>
+					</div>
+					<div class="form-group col-sm-2">
+						<button class="btn bgm-blue btn-icon waves-effect waves-circle pull-right"  id="addMore" data-ui-sref="email.addschedule" title="More"><i class="zmdi zmdi-plus"></i></button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="addMoreDiv">
+		</div>
+		<div>
+			<button class="btn btn-primary btn-sm m-t-5 btnMargin" data-swal-update data-ui-sref="email.listfollowupemails">Create</button>
+			<button class="btn bgm-red btnMargin" data-ui-sref="email.listfollowupemails">Cancel</button>
+		</div>
+	</form>
+</div>
+<script>
+	$(document).ready(function () {
+		var i = 1;
+		$('#addMore').bind("click", function () {
+				angular.element(document.getElementById('addMoreDiv')).append('<div class="card"><div class="card-body card-padding"><div class="row"><div class="form-group col-sm-5"><label for="ssl" class="control-label col-sm-3">Then After</label><div class="col-sm-8"><div class="select"><select class="form-control"><option>1</option><option>2</option><option>3</option><option>4</option></select></div></div></div><div class="form-group col-sm-5"><label for="template" class="control-label col-sm-3">Email Template</label><div class="col-sm-8"><div class="select  col-sm-10 pull-left"><select class="form-control"><option>Template 1</option><option>Template 2</option><option>Template 3</option><option>Template 4</option></select></div><a href="#" onclick="openPreview();return false;" class="pull-right">Preview</a></div></div></div></div></div>');
+				i++;
+		});
+	})
+
+//	materialAdmin.directive("addMore", function(){
+//	return function(scope, element){
+//		element.bind("click", function(){
+//			angular.element(document.getElementById('addMoreDiv')).append(('<div class="row"><div class="form-group fg-line col-sm-5"><label for="ssl" class="control-label col-sm-3">Then After</label><div class="col-sm-8"><div class="select"><select class="form-control"><option>1</option><option>2</option><option>3</option><option>4</option></select></div></div></div><div class="form-group col-sm-5"><label for="template" class="control-label col-sm-3">Email Template</label><div class="col-sm-8"><div class="select"><select class="form-control"><option>Template 1</option><option>Template 2</option><option>Template 3</option><option>Template 4</option></select></div></div></div></div>')(scope));
+//		});
+//		
+//	};
+//});
+
+function openPreview(id)
+{
+    window.open('index.php?module=campaignManagement&actions=mailPreview&default[]=no_js&default[]=no_css&default[]=no_header&default[]=no_left&default[]=no_right&default[]=no_center&default[]=no_footer'+id,'Mail_preview','status=1,scrollbars=1,width=800,height=600');
+    return false;
+}
+</script>

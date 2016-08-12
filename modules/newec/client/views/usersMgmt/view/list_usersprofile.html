@@ -1,0 +1,122 @@
+<div class="container" data-ng-controller="userCtrl as tctrl">
+	<div class="block-header"> 
+		<h2>View Users</h2>
+		<h2><small>On entering "Username or Email" in the text-box, it will display all users matching the username or email.</small></h2>
+	</div>
+
+    <div class="card">
+        <div class="card-header">
+        </div>
+		<div class="card-body card-padding p-t-0 ng-scope" data-ng-controller="CollapseDemoCtrl">
+			<button ng-click="isCollapsed = !isCollapsed" class="btn btn-primary btn-icon waves-effect waves-circle"><i class="zmdi zmdi-search"></i></button>
+            <div class="filter-container filter-container-multi" title="">
+				<ul class="filter-choices">
+					<li class="search-choice">
+						<span class="f-500">State: </span> 
+						<span>United States</span>
+						<a class="search-choice-close" data-option-array-index="0"></a>
+					</li>
+					<li class="search-choice">
+						<span class="f-500">Phone Number: </span>
+						<span>123123123</span>
+						<a class="search-choice-close" data-option-array-index="4"></a>
+					</li>
+					<li class="search-choice">
+						<span class="f-500">Email: </span>
+						<span>salesdialers@sd.com</span>
+						<a class="search-choice-close" data-option-array-index="5"></a>
+					</li>
+				</ul>
+			</div>
+			<div style="height: 0px;" class="collapse" collapse="isCollapsed">
+				<div class="card">
+					<div class="card-header z-depth-2-top">
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="form-group fg-float">
+									<div class="fg-line">
+										<input type="text" class="form-control fg-input" id="street">
+									</div>
+									<label class="fg-label">Username</label>
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="form-group fg-float">
+									<div class="fg-line">
+										<input type="text" class="form-control fg-input" id="city">
+									</div>
+									<label class="fg-label">Email</label>
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="form-group fg-float">
+									<div class="fg-line">
+										<input type="text" class="form-control fg-input" id="street">
+									</div>
+									<label class="fg-label">Name</label>
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="form-group fg-float">
+									<div class="fg-line">
+										<input type="text" class="form-control fg-input" id="street">
+									</div>
+									<label class="fg-label">Phone Number</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="form-group fg-float">
+									<div class="fg-line">
+										<input type="text" class="form-control fg-input" id="city">
+									</div>
+									<label class="fg-label">Zip Code</label>
+								</div>
+							</div>
+						</div>
+						<button class="btn btn-primary btn-sm m-t-10 waves-effect" ng-click="isCollapsed = !isCollapsed">Search</button>
+					</div>
+				</div>
+            </div>
+        </div>
+
+
+        <div class="card-body">
+            <div class="table-responsive">
+                <table ng-table="tctrl.userEdit" class="table table-vmiddle table-hover">
+                    <tr ng-repeat="w in $data"  ng-class="{ 'active': w.$edit }">
+						<!--                        <td data-title="'ID'">
+													<span ng-if="!w.$edit">{{ w.id }}</span>
+													<div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.id" /></div>
+												</td>-->
+                        <td data-title="'Name'">
+                            <span ng-if="!w.$edit">{{ w.name}}</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.name" /></div>
+                        </td>
+                        <td data-title="'Email'">
+                            <span ng-if="!w.$edit">{{ w.email}}</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="email" ng-model="w.email" /></div>
+                        </td>
+						<!--                        <td data-title="'Username'">
+													<span ng-if="!w.$edit">{{ w.username }}</span>
+													<div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.username" /></div>
+												</td>-->
+                        <td data-title="'Phone Number'">
+                            <span ng-if="!w.$edit">{{ w.phone}}</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.contact" /></div>
+                        </td>
+                        <td data-title="'Actions'">
+                            <button type="button" class="btn btn-default" data-ui-sref="user.viewuserprofile.viewuserprofile-basic({userId: w.id})"><i class="zmdi zmdi-eye zmdi-hc-fw"></i></button>
+                            <!--<button type="button" class="btn btn-default" data-ui-sref="users.editUser({userId: w.id})"><i class="zmdi zmdi-edit"></i></button>-->
+                            <!--<button type="button" class="btn btn-default" data-ui-sref="users.editUser"><i class="zmdi zmdi-download zmdi-hc-fw"></i></button>-->
+                            <button type="button" class="btn btn-default" data-swal-warning><i class="zmdi zmdi-delete zmdi-hc-fw"></i></button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>        
+</div>
+
+

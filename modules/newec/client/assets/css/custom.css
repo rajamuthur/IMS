@@ -1,0 +1,147 @@
+/* 
+    Created on : Dec 21, 2015, 7:33:16 PM
+    Author     : dhilip.james
+*/
+
+/*commom*/
+.logo.hidden-xs img {
+    margin-top: -17px;
+}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding: 12px !important;
+}
+
+.paginationnobg .ng-table-pager {
+    background: #fff none repeat scroll 0 0;
+}
+
+.input-group .input-group-addon {
+	vertical-align: middle !important;
+}
+
+.btnMargin {
+    margin-bottom: 10px;
+	margin-left: 20px;
+}
+
+.label-row{
+	font-weight: 700;
+}
+
+.paginationnobg i {
+	padding-right:8px;
+}
+
+.form-horizontal .radio, .form-horizontal .checkbox, .form-horizontal .radio-inline, .form-horizontal .checkbox-inline {
+    padding-top: 1px;
+}
+
+//Label is equal to input type
+label {
+    margin-top: 7px !important;
+}
+
+.form-horizontal .control-label {
+	text-align: left;
+}
+
+.smtpcheckbox .checkbox {
+    margin-bottom: 29px;
+    margin-top: 10px;
+}
+
+
+/*users*/
+#profile-main .pm-overview {
+    width: 250px;
+}
+
+.pmb-block {
+    padding: 50px!important;
+}
+
+#profile-main .btn-float:not(.m-btn) {
+    float: right;
+    position: relative !important;
+	right: 10px;
+    top: 60px;
+}
+
+#profile-main .pmb-block {
+    padding: 40px 10px 0;
+}
+
+#profile-main .alert {
+    border-radius: 5px;
+}
+
+#subscriptionDiv .form-group {
+    margin-bottom: 0px;
+}
+
+.subscriptionHeader{
+	font-size: 30px;
+	margin-top: -15px;
+}
+
+/*Voice Recordings*/
+#recordingDiv .btn-float:not(.m-btn) {
+    right: 13px;
+    top: 10px;
+}
+
+/*Campaign Settings*/
+//Toggle makes equal in column
+#addCampaignSettingDiv .ts-label {
+    width: 240px !important;
+}
+
+#addCampaignSettingDiv .radio, #addCampaignSettingDiv .checkbox, #addCampaignSettingDiv .checkbox-inline {
+    padding-top: 0 !important;
+}
+
+#addCampaignSettingDiv .toggle-switch{
+	display: block;
+}
+
+#editCampaignSettingDiv .radio, #editCampaignSettingDiv .checkbox, #editCampaignSettingDiv .checkbox-inline {
+    padding-top: 0 !important;
+}
+
+//Date Range Picker
+#campaignsettingsDiv .dropdown-menu {
+    font-size: 10px !important;
+}
+
+/*Appoinment full width*/
+
+#calendar .fc-toolbar .fc-center {
+    margin-top: 0;
+}
+#calendar .fc-toolbar {
+    height: 50px;
+	background-image: none;
+	background-color: #6c816d;
+}
+.fc-toolbar {
+    padding: 8px 7px 19px;
+}
+
+.appointmentWidth {
+	padding-left: 40px;
+    padding-right: 40px;
+}
+
+.appointmentButton {
+    bottom: 14px !important;
+    right: 30px;
+}
+
+.fc-row.fc-week.ui-widget-content {
+    /*height: 190px !important;*/
+}
+
+/*Email Template*/
+.ta-toolbar {
+    padding: 45px 1px 5px 15px;
+}

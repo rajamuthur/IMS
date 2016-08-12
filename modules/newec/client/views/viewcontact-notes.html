@@ -1,0 +1,212 @@
+<div class="pmb-block">
+	<div class="pmbb-header">
+		<h2><i class="zmdi zmdi-person m-r-5"></i> Lead Status</h2>
+	</div>
+	<div class="pmbb-body p-l-30">
+		<div class="row">
+			<div class="form-group col-sm-6">
+				<label class="col-sm-4 control-label" for="status">Lead Status</label>
+				<div class="col-sm-8">
+					<div class="select">
+						<select class="form-control" ng-model="status">
+							<option>Hot Lead</option>
+							<option>Warm Lead</option>
+							<option>Cold Lead</option>
+							<option>Call Back</option>
+							<option>Schedule CallBack</option>
+							<option>Schedule On Appointment</option>
+						</select>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-sm-6">
+				<label  class="col-sm-4 control-label">Appointment On (Date)* </label>
+				<div class="col-sm-8">
+					<!--<span style="font-size: 20px;"><i class="zmdi zmdi-calendar ma-icon"></i></span>-->
+					<!--<a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" data-target="#" href="">-->    
+						<div class="fg-line">
+							<input type="text" class="form-control" data-ng-model="date" placeholder="Date & Time">
+						</div>    
+					<!--</a>-->
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+						<datetimepicker data-ng-model="date" data-datetimepicker-config="{dropdownSelector:'#dropdown2'}">
+						</datetimepicker>
+					</ul>
+				</div>
+			</div>
+		</div>	
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				<label  class="col-sm-4 control-label">Location </label>
+				<div class="col-sm-8">
+					<div class="fg-line ng-binding">
+						<input data-ng-model="pctrl.location" type="text" class="form-control input-sm" value="{{ pctrl.location}}" placeholder="CA">
+					</div>
+				</div>
+			</div>
+		</div>			
+	</div>
+</div>
+<div class="pmb-block">
+    <div class="block-header">
+        <h2>Notes Activity Logs<small>Details</small></h2>
+    </div>
+
+    <div class="card">
+        <div class="lv-header-alt clearfix m-b-5">
+            <h2 class="lvh-label hidden-xs">8 Records</h2>
+
+            <div class="lvh-search" data-ng-if="mactrl.listviewSearchStat" data-ng-click="mactrl.listviewSearchStat">
+                <input type="text" placeholder="Start typing..." class="lvhs-input">
+
+                <i class="lvh-search-close" data-ng-click="mactrl.listviewSearchStat = false">&times;</i>
+            </div>
+
+            <ul class="lv-actions actions">
+                <li>
+                    <a href="" data-ng-click="mactrl.listviewSearchStat = true">
+                        <i class="zmdi zmdi-search"></i>
+                    </a>
+                </li>
+
+                <li class="dropdown" dropdown="">
+                    <a href="" dropdown-toggle="" aria-expanded="false" aria-haspopup="true">
+                        <i class="zmdi zmdi-sort"></i>
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li>
+                            <a href="">Last Added</a>
+                        </li>
+                        <li>
+                            <a href="">Campaign Name</a>
+                        </li>
+                        <li>
+                            <a href="">Date</a>
+                        </li>
+                    </ul>
+                </li>
+			</ul>
+        </div>
+
+        <div class="card-body card-padding">                     
+            <div class="p-timeline">
+                <div class="pt-line c-gray text-right">
+                    <span class="d-block">Dec 12</span>
+                    09:40 AM<br /><br />tomvokars
+                </div>  
+
+                <div class="pt-body" style="padding-left: 15px;">
+                    <h2 class="ptb-title">Reap007 Dec 16, 2015 (camrm-la-03 12/16/2015)</h2>
+					<p>Updated to Answering machine</p>
+                </div>
+
+            </div>
+
+            <div class="p-timeline">
+                <div class="pt-line c-gray text-right">
+                    <span class="d-block">Dec 10</span>
+                    01:40 AM <br /><br />tomvokas1
+
+                </div>  
+
+                <div class="pt-body" style="padding-left: 15px;">
+                    <h2 class="ptb-title">Reap007 Dec 16, 2015 (camrm-la-02 12/16/2015)</h2>
+					<p>Updated to Answering machine</p>
+                </div>
+            </div>
+
+            <div class="p-timeline">
+                <div class="pt-line c-gray text-right">
+                    <span class="d-block">Dec 10</span>
+                    01:40 AM <br /><br />tomvokas1
+
+                </div>  
+
+                <div class="pt-body" style="padding-left: 15px;">
+                    <h2 class="ptb-title">Reap007 Dec 16, 2015 (camrm-la-02 12/16/2015)</h2>
+					<p>Updated to Answering machine</p>
+                </div>
+            </div>
+
+			<div class="p-timeline">
+				<div class="pt-line c-gray text-right">
+					<span class="d-block">Nov 26</span>
+					09:40 AM<br /><br />tomvokas2
+				</div>  
+
+				<div class="pt-body" style="padding-left: 15px;">
+					<h2 class="ptb-title"> Landvoice Dec 16, 2015 (landvoice expired) </h2>
+					<p>Played answering machine</p>
+				</div>
+
+			</div>
+
+			<div class="p-timeline">
+				<div class="pt-line c-gray text-right">
+					<span class="d-block">Nov 07</span>
+					01:40 AM<br /><br />tomvokas3
+				</div>  
+
+				<div class="pt-body" style="padding-left: 15px;">
+					<h2 class="ptb-title"> Landvoice Dec 16, 2015 (landvoice expired)</h2>
+					<p>Played answering machine.</p>
+				</div>
+			</div>
+
+			<div class="p-timeline">
+				<div class="pt-line c-gray text-right">
+					<span class="d-block">Oct 16</span>
+					12:40 AM<br /><br />tomvokas4
+				</div>  
+
+				<div class="pt-body" style="padding-left: 15px;">
+					<h2 class="ptb-title">RENO 89501 65-99 NEVADA </h2>
+					<p>Updated to Callback</p>
+				</div>
+
+			</div>
+
+			<div class="p-timeline">
+				<div class="pt-line c-gray text-right">
+					<span class="d-block">Oct 01</span>
+					01:40 AM<br /><br />tomvokas5
+				</div>  
+
+				<div class="pt-body" style="padding-left: 15px;">
+					<h2 class="ptb-title">CCDecember.15AL</h2>
+					<p>Updated to Callback</p>
+				</div>
+			</div>
+
+			<div class="p-timeline">
+				<div class="pt-line c-gray text-right">
+					<span class="d-block">Apr 12</span>
+					09:40 AM<br /><br />tomvokas6
+				</div>  
+
+				<div class="pt-body" style="padding-left: 15px;">
+					<h2 class="ptb-title">CCDecember.17AL </h2>
+					<p>Updated to Callback</p>
+				</div>
+
+			</div>
+
+			<div class="p-timeline">
+				<div class="pt-line c-gray text-right">
+					<span class="d-block">Apr 02</span>
+					01:40 AM<br />tomvokas7
+				</div>  
+
+				<div class="pt-body" style="padding-left: 15px;">
+					<h2 class="ptb-title">CCDecember.16AL</h2>
+					<p>Updated to Callback</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

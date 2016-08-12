@@ -1,0 +1,16 @@
+<ul class="dfields" dnd-list="list.people" 
+    dnd-allowed-types="list.allowedTypes"
+    dnd-disable-if="list.people.length >= list.max">
+    <li class="symbol target col-sm-12"  ng-repeat="person in list.people"
+        dnd-draggable="person"
+        dnd-type="person.type"
+        dnd-disable-if="person.type == 'unknown'"
+        dnd-moved="list.people.splice($index, 1)"
+        dnd-effect-allowed="move"
+        class="background-{{person.type}}"
+        >
+        <span class="col-sm-3">:::</span>
+        <span class="col-sm-8 p-0 ellipsis">{{person.name}}</span>
+        <!--<span class="col-lg-2 close closefield">x</span>-->
+    </li>
+</ul>

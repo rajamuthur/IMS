@@ -1,0 +1,181 @@
+<div class="container" data-ng-controller="listLeadCtrl as tctrl" ng-init="getLeads()">
+    <div class="card">
+        <div class="card-header">
+			<button class="btn bgm-blue btn-float waves-effect waves-effect waves-circle" data-ui-sref="contact.addcontact"><i class="zmdi zmdi-plus"></i></button>
+            <h2>Leads <small>List of Leads</small></h2>
+			<ul class="actions">
+				<li>
+					<a href="">
+						<i class="zmdi zmdi-download zmdi-hc-fw"></i>
+					</a>
+				</li>
+			</ul>
+        </div>
+		
+        <div class="card-body card-padding p-t-0 ng-scope" data-ng-controller="CollapseDemoCtrl">
+            <button ng-click="isCollapsed = !isCollapsed" class="btn bgm-blue btn-icon waves-effect waves-circle waves-effect waves-circle"><i class="zmdi zmdi-search"></i></button>
+			<div class="filter-container filter-container-multi" title="">
+				<ul class="filter-choices">
+					<li class="search-choice">
+						<span class="f-500">List per page: </span> 
+						<span>25</span>
+						<a class="search-choice-close" data-option-array-index="0"></a>
+					</li>
+					<li class="search-choice">
+						<span class="f-500">State: </span> 
+						<span>United States</span>
+						<a class="search-choice-close" data-option-array-index="0"></a>
+					</li>
+					<li class="search-choice">
+						<span class="f-500">Phone Number: </span>
+						<span>123123123</span>
+						<a class="search-choice-close" data-option-array-index="4"></a>
+					</li>
+					<li class="search-choice">
+						<span class="f-500">Email: </span>
+						<span>salesdialers@sd.com</span>
+						<a class="search-choice-close" data-option-array-index="5"></a>
+					</li>
+				</ul>
+			</div>
+            <br>
+            <div style="height: 0px;" class="collapse" collapse="isCollapsed">
+				<div class="card">
+					<div class="card-header z-depth-2-top">
+					
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="form-group fg-float">
+									<div class="fg-line">
+										<input type="text" class="form-control fg-input" id="street">
+									</div>
+									<label class="fg-label">Phone Number</label>
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="form-group fg-float">
+									<div class="fg-line">
+										<input type="text" class="form-control fg-input" id="street">
+									</div>
+									<label class="fg-label">Name</label>
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="form-group fg-float">
+									<div class="fg-line">
+										<input type="text" class="form-control fg-input" id="city">
+									</div>
+									<label class="fg-label">Email</label>
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="form-group fg-float">
+									<div class="fg-line">
+										<input type="text" class="form-control fg-input" id="city">
+									</div>
+									<label class="fg-label">Tag</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="form-group fg-float">
+									<div class="fg-line">
+										<input type="text" class="form-control fg-input" id="state">
+									</div>
+									<label class="fg-label">State</label>
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="form-group">
+									<div class="fg-line">
+										<div class="select">
+											<select class="form-control">
+												<option>Select an Country</option>
+												<option>India</option>
+												<option>US</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="form-group">
+									<div class="fg-line">
+										<div class="select">
+											<select class="form-control">
+												<option>Select an Group</option>
+												<option>AAAA</option>
+												<option>BBBB</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="form-group">
+									<div class="fg-line">
+										<div class="select">
+											<select class="form-control">
+												<option>List per Page</option>
+												<option selected="">25</option>
+												<option>50</option>
+												<option>100</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button class="btn btn-primary btn-sm m-t-10 waves-effect" ng-click="isCollapsed = !isCollapsed">Search</button>
+						<!--<button class="btn btn-primary btn-sm m-t-10 waves-effect" type="submit">Submit</button>-->
+					</div>
+				</div>
+				<!--                <div type="info" class="alert ng-isolate-scope alert-info" ng-class="['alert-' + (type || 'warning'), closeable ? 'alert-dismissable' : null]" role="alert">
+									<button ng-show="closeable" type="button" class="close ng-hide" ng-click="close()">
+										<span aria-hidden="true">×</span>
+										<span class="sr-only">Close</span>
+									</button>
+									<div ng-transclude=""><span class="ng-scope">Nunc nec porta felis. Curabitur non fringilla ipsum, quis mollis metus. Etiam mauris elit, iaculis quis dapibus et, luctus id erat. Sed ac rutrum est, a bibendum nibh. Phasellus rhoncus imperdiet neque in tincidunt. Fusce nibh tellus, laoreet a orci in, auctor semper leo. Sed turpis odio, lobortis in orci et, finibus placerat nulla. Maecenas vehicula ante sit amet lacus placerat, non congue nibh tristique.</span></div>
+								</div>-->
+            </div>
+
+        </div>        
+        <div class="card-body">
+            <div class="table-responsive">
+				<p class="m-l-25"><strong>Total Count:</strong> {{totalcount}}</p>
+                <table ng-table="leadEdit" class="table table-vmiddle table-hover">
+                    <tr ng-repeat="w in $data"  ng-class="{ 'active': w.$edit }">
+						<!--                        <td data-title="'ID'">
+													<span ng-if="!w.$edit">{{ w.id}}</span>
+													<div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.id" /></div>
+												</td>-->
+                        <td data-title="'Name'">
+                            <span ng-if="!w.$edit">{{ w.name}}</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.name" /></div>
+                        </td>
+                        <td data-title="'Email'">
+                            <span ng-if="!w.$edit">{{ w.email}}</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="email" ng-model="w.email" /></div>
+                        </td>
+						<!--                        <td data-title="'Username'">
+													<span ng-if="!w.$edit">{{ w.username}}</span>
+													<div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.username" /></div>
+												</td>-->
+                        <td data-title="'Phone Number'">
+                            <span ng-if="!w.$edit">{{ w.contact}}</span>
+                            <div ng-if="w.$edit"><input class="form-control" type="text" ng-model="w.contact" /></div>
+                        </td>
+                        <td data-title="'Actions'">
+                            <button type="button" class="btn btn-default" data-ui-sref="contact.viewcontact.viewcontact-about({userId: w.id})"><i class="zmdi zmdi-eye zmdi-hc-fw"></i></button>
+                            <button type="button" class="btn btn-default" data-ui-sref="contact.editcontact({userId: w.id})"><i class="zmdi zmdi-edit"></i></button>
+                            <button type="button" class="btn btn-default" data-ui-sref="contact.listcontact" data-swal-warning data-ng-click="deleteLeadById(w.id)"><i class="zmdi zmdi-delete zmdi-hc-fw"></i></button>
+							<!--                            <button type="button" class="btn btn-default" ng-if="!w.$edit" ng-click="w.$edit = true"><i class="zmdi zmdi-edit"></i></button>
+														<button type="button" class="btn btn-success" ng-if="w.$edit" ng-click="w.$edit = false"><i class="zmdi zmdi-check"></i></button>!-->
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>        
+</div>

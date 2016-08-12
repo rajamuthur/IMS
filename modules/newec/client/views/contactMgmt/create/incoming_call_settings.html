@@ -1,0 +1,46 @@
+<div id="incomingCallSettingsDiv" class="container">
+	<div class="block-header">
+		<h2>Incoming Call Settings</h2>
+		<h2><small>By default, all incoming calls will be connected to the dail-in bridge. <br/>
+				Below settings will be applicable only if you are not available in the dail-in bridge.</small></h2>
+	</div>
+	<div class="card">
+		<div class="card-body card-padding">
+			<div>
+				<p>Fields marked with <font color="red">*</font> are required.</p>
+			</div>
+			<form class="form-horizontal">
+				<div class="row">
+					<div class="form-group fg-line col-sm-6">
+						<label for="Number" class="col-sm-4 control-label">Primary Phone Number <font color="red">*</font></label>
+						<!--Phone numbers must be entered without country code (eg.4696540050)-->
+						<div class="col-sm-6">
+							<div class="fg-line ng-binding">
+								<input type="text" placeholder="Number" id="fname" value="" class="form-control input-sm">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="country" class="control-label col-sm-4">Country <font color="red">*</font></label>
+						<div class="col-sm-6">
+							<div class="select">
+								<select class="form-control">
+									<option>United States</option>
+									<option selected="selected">India</option>
+									<option>Australia</option>
+									<option>United Kingdom</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<button class="btn btn-info" data-swal-update>Save</button>
+					<button class="btn bgm-red" data-ui-sref="echome">Cancel</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

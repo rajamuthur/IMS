@@ -1,0 +1,93 @@
+<div class="container">
+
+	<!--    <div class="block-header">
+			<h2>Dhilip James <small>Chennai, India</small></h2>
+	
+			<ul class="actions m-t-20 hidden-xs">
+				<li class="dropdown" dropdown>
+					<a href="" dropdown-toggle>
+						<i class="zmdi zmdi-more-vert"></i>
+					</a>
+	
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li>
+							<a href="">Privacy Settings</a>
+						</li>
+						<li>
+							<a href="">Account Settings</a>
+						</li>
+						<li>
+							<a href="">Other Settings</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>-->
+
+	<div class="block-header"> 
+		<h2>Editing User</h2>
+		<h2><small>This page provides you with an "easy-form" to edit existing users of the system. </small></h2>
+	</div>
+    <div class="card" id="profile-main" data-ng-controller="userprofileCtrl as pctrl">
+        <div class="pm-overview c-overflow">
+            <div class="pmo-pic">
+                <div class="p-relative">
+                    <a href="">
+                        <img class="img-responsive" src="modules/newec/client/assets/img/profile-pics/dhilip.jpg" alt="">
+                    </a>
+
+					<!--                    <div class="dropdown pmop-message" dropdown>
+											<button dropdown-toggle class="btn bgm-white btn-float">
+												<i class="zmdi zmdi-comment-text-alt"></i>
+											</button>-->
+
+					<!--                        <div class="dropdown-menu stop-propagate">
+												<textarea placeholder="Write something..."></textarea>
+					
+												<button class="btn bgm-green btn-icon"><i class="zmdi zmdi-mail-send"></i></button>
+											</div>-->
+                    <!--</div>-->
+
+					<!--					<div class="fileinput fileinput-new btn bgm-white btn-float" data-provides="fileinput">
+											<span class="btn btn-primary btn-file m-r-10">
+												<span class="fileinput-new">Update Profile Picture</span>
+												<span class="fileinput-exists">Change</span>
+												<input type="file" name="...">
+											</span>
+											<span class="fileinput-filename"></span>
+											<a href="#" class="close fileinput-exists" data-dismiss="fileinput"><i class="zmdi zmdi-camera"></i> <span class="hidden-xs">Update Profile Picture</span></a>
+											<a href="#" class="close fileinput-exists" data-dismiss="fileinput">&times;</a>
+										</div>-->
+
+                    <a href="" class="pmop-edit">
+                        <i class="zmdi zmdi-camera"></i><span class="hidden-xs">Update Profile Picture</span>
+                    </a>
+                </div>
+            </div>
+            <div class="pmo-block pmo-contact hidden-xs">
+                <h2>Contact</h2>
+                <ul>
+                    <li><i class="zmdi zmdi-account zmdi-hc-fw"></i>{{pctrl.firstName + ' ' + pctrl.lastName}}</li>
+                    <li><i class="zmdi zmdi-run zmdi-hc-fw"></i> {{pctrl.age}}</li>
+                    <li><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> {{pctrl.gender}}</li>
+					<li><i class="zmdi zmdi-phone"></i> {{ pctrl.primary}}<br>{{ pctrl.alternate}}</li>
+                    <li><i class="zmdi zmdi-email"></i> {{ pctrl.email}}</li>
+					<li>
+                        <i class="zmdi zmdi-pin"></i>
+                        <address class="m-b-0">
+                            {{ pctrl.street}}, <br/>
+                            {{ pctrl.city}}, <br/>
+                            {{ pctrl.state}}, <br/>
+                            {{ pctrl.country}}, <br/>
+                            {{ pctrl.zipcode}}
+                        </address>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pm-body clearfix">
+            <ul class="tab-nav tn-justified" data-ng-include="'modules/newec/client/views/template/viewuserprofile-menu.html'"></ul>
+            <data ui-view></data>
+        </div>
+    </div>
+</div>

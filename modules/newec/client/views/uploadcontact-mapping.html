@@ -1,0 +1,56 @@
+<div class="pmb-block">
+    <div class="block-header">
+        <h2>Map Contact Fields<small>Details</small></h2>
+    </div>
+<!--	<div class="col-sm-12 m-b-20">
+		<div class="toggle-switch" data-ts-color="cyan">
+			<label for="ts2" class="ts-label">Auto Map</label>
+			<input id="ts2" type="checkbox" hidden="hidden">
+			<label for="ts2" class="ts-helper"></label>
+		</div>
+	</div>-->
+	<div class="col-sm-9">
+		<div class="card">
+			<div class="card-header bgm-cyan">
+				<h2>Default Fields <small>List of default fields</small></h2>
+			</div>
+			<div class="panel-body ">
+				<div ng-repeat="list in cfields">
+					<div class="col-sm-3" ng-include="'modules/newec/client/views/types1.html'"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-3" >
+		 <!--ui-scrollfix="+200"-->
+		 <div class="card dfieldslistscroll"  ui-scrollfix="+10">
+			<div class="card-header bgm-bluegray">
+				<h2>Uploaded Fields <small>List of default fields</small></h2>
+
+			</div>
+			<div class="dfieldslist" ng-repeat="list in dfields">
+				<div class="panel-body" ng-include="'modules/newec/client/views/types2.html'"></div>
+			</div>
+		</div> 
+	</div>
+	<!--	<div class="card-body card-padding"> 
+			<div class="row col-sm-6">
+				<p class="f-500">Your Fields</p>
+				<div ng-repeat="list in cfields">
+					<div ng-include="'modules/newec/client/views/types1.html'"></div>
+				</div>
+			</div>
+			<div class="row col-sm-6">
+				<p class="f-500">Default Fields</p>
+				<div ng-repeat="list in dfields">
+					<div class="panel-body" ng-include="'modules/newec/client/views/types2.html'"></div>
+				</div>
+			</div>
+		</div>-->
+	<div class="form-group">
+		<div class="m-10 col-sm-10">
+			<button class="btn btn-info btnMargin" data-added-success data-ui-sref="{{uploadcontactMappingSref}}">Done</button>
+		</div>
+	</div>
+</div>
+

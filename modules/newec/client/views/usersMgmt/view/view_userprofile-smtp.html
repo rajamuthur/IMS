@@ -1,0 +1,84 @@
+<style>
+	label {
+		margin-top: 7px !important;
+	}
+	.form-control {
+		height: 30px;
+	}
+</style>
+<div class="pmb-block">
+    <div class="pmbb-header">
+        <h2><i class="zmdi zmdi-person m-r-5"></i> SMTP Details</h2>
+    </div>
+    <div class="pmbb-body p-l-30">
+		<form class="pmbb-edit">
+			<div class="row">
+				<div class="form-group fg-line col-sm-12">
+					<label for="hostname" class="col-sm-1">Hostname</label>
+					<div class="col-sm-4">
+						<div class="fg-line ng-binding">
+							<input data-ng-model="pctrl.hostname" type="text" class="form-control input-sm" value="{{ pctrl.hostname}}" placeholder="Hostname">
+						</div>
+					</div>
+				</div>
+				<div class="form-group fg-line col-sm-12">
+					<label for="port" class="col-sm-1">Port</label>
+					<div class="col-sm-4">
+						<div class="fg-line ng-binding">
+							<input data-ng-model="pctrl.port" type="text" class="form-control input-sm" value="{{ pctrl.port}}" placeholder="Port">
+						</div>
+					</div>
+				</div>
+				<div class="form-group col-sm-12">
+					<label for="ssl" class="col-sm-1">SSL</label>
+					<div class="col-sm-4">
+						<div class="select">
+							<select class="form-control">
+								<option>SSL</option>
+								<option>TLS</option>
+								<option>STARTTLS</option>
+							</select>
+
+						</div>
+					</div>
+				</div>
+				<div class="form-group fg-line col-sm-12">
+					<label for="auth" class="col-sm-4"></label>
+					<div class="col-sm-12">
+						<div class="fg-line ng-binding">
+							<label class="checkbox checkbox-inline m-r-20">
+								Use SMTP Auth?
+								<small>If checked, you must Provide the SMTP username and password</small>
+								<input type="checkbox" name="access_level" value="option1">
+								<i class="input-helper"></i>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-group fg-line col-sm-12">
+					<label for="smtpusername" class="col-sm-1">SMTP Username</label>
+					<div class="col-sm-4">
+						<div class="fg-line ng-binding">
+							<input data-ng-model="pctrl.smtpusername" type="text" class="form-control input-sm" value="{{ pctrl.smtpusername}}" placeholder="SMTP Username">
+						</div>
+					</div>
+				</div>
+				<div class="form-group fg-line col-sm-12">
+					<label for="smtppassword" class="col-sm-1">SMTP Password</label>
+					<div class="col-sm-4">
+						<div class="fg-line ng-binding">
+							<input data-ng-model="pctrl.smtppassword1" type="text" class="form-control input-sm" value="{{ pctrl.smtppassword1}}" placeholder="SMTP Password">
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="m-t-30">
+				<button class="btn btn-primary btn-sm" type="submit">Save</button>
+				<button class="btn btn-link btn-sm " data-ui-sref="user.listUsersProfile">Cancel</button>
+			</div>
+
+		</form>
+	</div>
+</div>
+

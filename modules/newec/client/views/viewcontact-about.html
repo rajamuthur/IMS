@@ -1,0 +1,644 @@
+<div class="pmb-block">
+    <div class="pmbb-header">
+		<h2><i class="zmdi zmdi-phone m-r-5"></i> Basic Information</h2>
+		<ul class="actions" data-ng-if="cctrl.basicInformation === 0">
+            <li class="dropdown" dropdown>
+                <a data-ng-click="cctrl.basicInformation = 1" href=""dropdown-toggle>
+                    <i class="zmdi zmdi-edit"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="pmbb-body p-l-30">
+		<dl class="dl-horizontal">
+			<div class="pmbb-view" data-ng-if="cctrl.basicInformation === 0">
+				<div class="row">
+					<div class="form-group fg-line col-sm-6">
+						<label class="col-sm-3" for="">Lead Source</label>
+						<div class="col-sm-9">
+							<div class="fg-line">
+								{{data.leadSource}}
+							</div>
+						</div>
+					</div>
+					<div class="form-group fg-line col-sm-6">
+						<label class="col-sm-3" for="">Company</label>
+						<div class="col-sm-9">
+							<div class="fg-line">
+								{{ data.company}}
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group fg-line col-sm-6">
+						<label class="col-sm-3" for="">Title</label>
+						<div class="col-sm-9">
+							<div class="fg-line">
+								{{ data.title}}
+							</div>
+						</div>
+					</div>
+					<div class="form-group fg-line col-sm-6">
+						<label class="col-sm-3" for="">Name</label>
+						<div class="col-sm-9">
+							<div class="fg-line">
+								{{ data.name}}
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group fg-line col-sm-6">
+						<label class="col-sm-3" for="">Gender</label>
+						<div class="col-sm-9">
+							<div class="fg-line">
+								{{ data.gender}}
+							</div>
+						</div>
+					</div>
+					<div class="form-group fg-line col-sm-6">
+						<label class="col-sm-3" for="">Age</label>
+						<div class="col-sm-9">
+							<div class="fg-line">
+								{{ data.age}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</dl>
+    </div>
+	<form data-ng-submit="cctrl.submit('basicInformation', 'Basic Information')" class="pmbb-edit form-horizontal">
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="inputEmail3">Lead Source</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="data.leadSource" type="text" class="form-control input-sm" value="{{ data.leadSource}}" placeholder="eg. Impiger">
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="company">Company</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="data.company" type="text" class="form-control input-sm" value="{{ data.company}}" placeholder="eg. Impiger">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="title">Title</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<select name="title" ng-model="data.title" class="form-control">
+							<option value="Mr">Mr</option>
+							<option value="miss" selected>Miss</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="name">Name</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="data.name" type="text" class="form-control input-sm" value="{{ data.name}}" placeholder="eg. Impiger">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="gender">Gender</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<select name="gender" ng-model="data.gender" class="form-control">
+							<option value="male">Male</option>
+							<option value="female">Female</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="age">Age</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="data.age" type="text" class="form-control input-sm" value="{{ data.age}}" placeholder="eg. 25">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="m-t-30 m-l-20">
+			<button class="btn btn-primary btn-sm" type="submit" data-swal-update>Save</button>
+			<!--<button class="btn btn-link btn-sm" data-ng-click="cctrl.basicInformation = 0" >Cancel</button>-->
+		</div>
+	</form>
+</div>
+
+<div class="pmb-block" style="clear: both">
+    <div class="pmbb-header">
+		<h2><i class="zmdi zmdi-phone m-r-5"></i> Contact Information</h2>
+		<ul class="actions" data-ng-if="cctrl.contactInformation === 0">
+            <li class="dropdown" dropdown>
+               <a data-ng-click="cctrl.contactInformation = 1" href=""dropdown-toggle>
+                    <i class="zmdi zmdi-edit"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="pmbb-body p-l-30">
+        <div class="pmbb-view" data-ng-if="cctrl.contactInformation === 0">
+			<div class="row">
+				<div class="form-group fg-line col-sm-6">
+					<label class="col-sm-4" for="primaryPhone">Primary Phone</label>
+					<div class="col-sm-8">
+						<div class="fg-line">
+							{{ data.primaryPhone}}
+						</div>
+					</div>
+				</div>
+				<div class="form-group fg-line col-sm-6">
+					<label class="col-sm-4" for="secondaryPhone">Secondary Phone</label>
+					<div class="col-sm-8">
+						<div class="fg-line">
+							{{ data.secondaryPhone}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group fg-line col-sm-6">
+					<label class="col-sm-4" for="extension">Extension</label>
+					<div class="col-sm-8">
+						<div class="fg-line">
+							{{ data.extension}}
+						</div>
+					</div>
+				</div>
+				<div class="form-group fg-line col-sm-6">
+					<label class="col-sm-4" for="email">Email</label>
+					<div class="col-sm-8">
+						<div class="fg-line">
+							{{ data.email}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group fg-line col-sm-6">
+					<label class="col-sm-4" for="fax">Fax</label>
+					<div class="col-sm-8">
+						<div class="fg-line">
+							{{ data.fax}}
+						</div>
+					</div>
+				</div>
+				<div class="form-group fg-line col-sm-6">
+					<label class="col-sm-4" for="website">Website</label>
+					<div class="col-sm-8">
+						<div class="fg-line">
+							{{ data.website}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<form data-ng-submit="cctrl.submit('contactInformation', 'Contact Information')" class="pmbb-edit form-horizontal">
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="primaryPhone">Primary Phone</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="data.primaryPhone" type="text" class="form-control input-sm" value="{{ data.primaryPhone}}" placeholder="eg. 123123123123">
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="secondaryPhone">Secondary Phone</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="data.secondaryPhone" type="text" class="form-control input-sm" value="{{ data.secondaryPhone}}" placeholder="eg. 123123123123">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Extension</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="data.extension" type="text" class="form-control input-sm" value="{{ data.extension}}" placeholder="eg. 123">
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="email">Email</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="data.email" type="text" class="form-control input-sm" value="{{ data.email}}" placeholder="eg. letsdance@arthurmurraymemorial.com">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="fax">Fax</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="data.fax" type="text" class="form-control input-sm" value="{{ data.fax}}" placeholder="eg. 123123">
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="website">Website</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="data.website" type="text" class="form-control input-sm" value="{{ data.website}}" placeholder="eg. http://www.arthurmurraymemorial.com/">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="m-t-30">
+			<button class="btn btn-primary btn-sm" type="submit" data-swal-update>Save</button>
+			<!--<button class="btn btn-link btn-sm" data-ng-click="cctrl.contactInformation = 0" >Cancel</button>-->
+		</div>
+	</form>
+</div>
+
+<div class="pmb-block">
+	<div class="pmbb-header">
+		<h2><i class="zmdi zmdi-phone m-r-5"></i> Address Information</h2>
+		<ul class="actions" data-ng-if="cctrl.addressInformation === 0">
+            <li class="dropdown" dropdown>
+               <a data-ng-click="cctrl.addressInformation = 1" href=""dropdown-toggle>
+                    <i class="zmdi zmdi-edit"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="pmbb-body p-l-30">
+        <div class="pmbb-view" data-ng-if="cctrl.addressInformation === 0">
+			<div class="row">
+				<div class="form-group fg-line col-sm-6">
+					<label class="col-sm-4" for="street">Street</label>
+					<div class="col-sm-8">
+						<div class="fg-line">
+							{{ data.street}}
+						</div>
+					</div>
+				</div>
+				<div class="form-group fg-line col-sm-6">
+					<label class="col-sm-4" for="city">City</label>
+					<div class="col-sm-8">
+						<div class="fg-line">
+							{{ data.city}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group fg-line col-sm-6">
+					<label class="col-sm-4" for="state">State</label>
+					<div class="col-sm-8">
+						<div class="fg-line">
+							{{ data.state}}
+						</div>
+					</div>
+				</div>
+				<div class="form-group fg-line col-sm-6">
+					<label class="col-sm-4" for="country">Country</label>
+					<div class="col-sm-8">
+						<div class="fg-line">
+							{{ data.country}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group fg-line col-sm-6">
+					<label class="col-sm-4" for="zipCode">Zip Code</label>
+					<div class="col-sm-8">
+						<div class="fg-line">
+							{{ data.zipCode}}
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+	<form data-ng-submit="cctrl.submit('addressInformation', 'Address Information')" class="pmbb-edit form-horizontal" >
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="street">Street</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="data.street" type="text" class="form-control input-sm" value="{{ data.street}}" placeholder="eg. 9746 Katy Fwy">
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="city">City</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="data.city" type="text" class="form-control input-sm" value="{{ data.city}}" placeholder="eg. Hacienda Heights">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="state">State</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="data.state" type="text" class="form-control input-sm" value="{{ data.state}}" placeholder="eg. Ca">
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="country">Country</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="data.country" type="text" class="form-control" value="{{ data.country}}" placeholder="eg. United States">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="zipCode">Zip Code</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="data.zipCode" type="text" class="form-control input-sm" value="{{ data.zipCode}}" placeholder="eg. 123123">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="m-t-30">
+			<button class="btn btn-primary btn-sm" type="submit" data-swal-update>Save</button>
+			<!--<button class="btn btn-link btn-sm" data-ng-click="cctrl.addressInformation = 0" >Cancel</button>-->
+		</div>
+	</form>
+</div>
+
+<div class="pmb-block">
+    <div class="pmbb-header">
+        <h2><i class="zmdi zmdi-phone m-r-5"></i> Other Information</h2>
+		<ul class="actions" data-ng-if="cctrl.otherInformation === 0">
+            <li class="dropdown" dropdown>
+               <a data-ng-click="cctrl.otherInformation = 1" href=""dropdown-toggle>
+                    <i class="zmdi zmdi-edit"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="pmbb-body p-l-30">
+        <div class="pmbb-view" data-ng-if="cctrl.otherInformation === 0">
+			<div class="row">
+				<div class="form-group fg-line col-sm-6">
+					<label class="col-sm-4" for="listed">Listed</label>
+					<div class="col-sm-8">
+						<div class="fg-line">
+							{{ data.listed}}
+						</div>
+					</div>
+				</div>
+				<div class="form-group fg-line col-sm-6">
+					<label class="col-sm-4" for="dom">DOM</label>
+					<div class="col-sm-8">
+						<div class="fg-line">
+							{{ data.dom}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group fg-line col-sm-6">
+					<label class="col-sm-4" for="areaName">Area Name</label>
+					<div class="col-sm-8">
+						<div class="fg-line">
+							{{ data.areaName}}
+						</div>
+					</div>
+				</div>
+				<div class="form-group fg-line col-sm-6">
+					<label class="col-sm-4" for="propertyType">Property Type</label>
+					<div class="col-sm-8">
+						<div class="fg-line">
+							{{ data.propertyType}}
+						</div>
+					</div>
+				</div>
+			</div>		
+			<div class="row">
+				<div class="form-group fg-line col-sm-6">
+					<label class="col-sm-4" for="office">Office</label>
+					<div class="col-sm-8">
+						<div class="fg-line">
+							{{ data.office}}
+						</div>
+					</div>
+				</div>
+				<div class="form-group fg-line col-sm-6">
+					<label class="col-sm-4" for="listAgent">List Agent</label>
+					<div class="col-sm-8">
+						<div class="fg-line">
+							{{ data.listAgent}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group fg-line col-sm-6">
+					<label class="col-sm-4" for="offMarket">Off Market</label>
+					<div class="col-sm-8">
+						<div class="fg-line">
+							{{ data.offMarket}}
+						</div>
+					</div>
+				</div>
+				<div class="form-group fg-line col-sm-6">
+					<label class="col-sm-4" for="listPrice">List Price</label>
+					<div class="col-sm-8">
+						<div class="fg-line">
+							{{ data.listPrice}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group fg-line col-sm-6">
+					<label class="col-sm-4" for="status">Status</label>
+					<div class="col-sm-8">
+						<div class="fg-line">
+							{{ data.status}}
+						</div>
+					</div>
+				</div>
+				<div class="form-group fg-line col-sm-6">
+					<label class="col-sm-4" for="mlslistingID">MLSListingID</label>
+					<div class="col-sm-8">
+						<div class="fg-line">
+							{{ data.mlslistingID}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group fg-line col-sm-6">
+					<label class="col-sm-4" for="prevStatusDate">PrevStatusDate</label>
+					<div class="col-sm-8">
+						<div class="fg-line">
+							{{ data.prevStatusDate}}
+						</div>
+					</div>
+				</div>
+				<div class="form-group fg-line col-sm-6">
+					<label class="col-sm-4" for="prevStatus">PrevStatus</label>
+					<div class="col-sm-8">
+						<div class="fg-line">
+							{{ data.prevStatus}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group fg-line col-sm-6">
+					<label class="col-sm-4" for="mlsid">MLSID</label>
+					<div class="col-sm-8">
+						<div class="fg-line">
+							{{ data.mlsid}}
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+	<form data-ng-submit="cctrl.submit('otherInformation', 'Other Information')" class="pmbb-edit form-horizontal">
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Listed</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="listed" type="text" class="form-control input-sm" value="{{ listed}}" placeholder="eg. 06/16/15">
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">DOM</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="dom" type="text" class="form-control input-sm" value="{{ dom}}" placeholder="eg. 183">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Area Name</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="areaName" type="text" class="form-control input-sm" value="{{ areaName}}" placeholder="eg. Hacienda Heights">
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Property Type</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="propertyType" type="text" class="form-control input-sm" value="{{ propertyType}}" placeholder="eg. Single Family Residence">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Office</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="office" type="text" class="form-control input-sm" value="{{ office}}" placeholder="eg. IRN Realty">
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">List Agent</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="listAgent" type="text" class="form-control input-sm" value="{{ listAgent}}" placeholder="eg. Lazar Chang">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Off Market</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="offMarket" type="text" class="form-control input-sm" value="{{ offMarket}}" placeholder="eg. 12/15/15">
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				<label class="col-sm-3 control-label" for="">List Price</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="listPrice" type="text" class="form-control input-sm" value="{{ listPrice}}" placeholder="eg. $932,558">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Status</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="status" type="text" class="form-control input-sm" value="{{ status}}" placeholder="eg. Expired">
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				<label class="col-sm-3 control-label" for="">MLS Listing ID</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="mlslistingID" type="text" class="form-control input-sm" value="{{ mlslistingID}}" placeholder="eg. TR15131807">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Previous Status Date</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="prevStatusDate" type="text" class="form-control input-sm" value="{{ prevStatusDate}}" placeholder="eg. 06/18/15">
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				<label class="col-sm-3 control-label" for="">PrevStatus</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="prevStatus" type="text" class="form-control input-sm" value="{{ prevStatus}}" placeholder="eg. Active">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">MLSID</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="mlsid" type="text" class="form-control input-sm" value="{{ mlsid}}" placeholder="eg. 8241-002-042">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="m-t-30">
+			<button class="btn btn-primary btn-sm" type="submit" data-swal-update>Save</button>
+<!--			<button class="btn btn-link btn-sm" data-ng-click="cctrl.addressInformation = 0" >Cancel</button>-->
+		</div>
+	</form>
+</div>

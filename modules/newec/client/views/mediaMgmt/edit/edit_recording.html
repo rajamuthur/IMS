@@ -1,0 +1,41 @@
+<div id="editCampaignSettingDiv" class="container" data-ng-controller="mediaCtrl as pctrl" ng-init="getRecodingDetailById()">
+	<div class="block-header">
+				<h2>Edit Voice Recording</h2>
+			</div>
+	<form class="form-horizontal" role="form" >
+		<div class="card">
+			
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="form-group fg-line col-sm-4">
+						<label for="ssl" class="col-sm-5 control-label">Media Name</label>
+						<div class="col-sm-7">
+							<div class="fg-line ng-binding">
+								<input type="text" placeholder="Name" id="fname" class="form-control input-sm" data-ng-model="data.name">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group fg-line col-sm-4">
+						<label for="ssl" class="col-sm-5 control-label">Upload Media</label>
+						<div class="col-sm-7 fileinput fileinput-new" data-provides="fileinput">
+							<span class="btn btn-primary btn-file m-r-10">
+								<span class="fileinput-new">Select file</span>
+								<span class="fileinput-exists">Change</span>
+								<input type="file" name="..." data-ng-model="data.fileName">
+							</span>
+							<span class="fileinput-filename"></span>
+							<a href="#" class="close fileinput-exists" data-dismiss="fileinput">&times;</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<button class="btn btn-primary btn-sm btnMargin" data-swal-recordingUpdate data-ui-sref="preference.listrecordings" data-ng-click="updateRecording()">Save</button>
+				<button class="btn bgm-red btn-sm btnMargin" data-ui-sref="preference.listrecordings">Cancel</button>
+				<!--<button class="btn btn-primary btn-sm btnMargin" data-swal-update data-ui-sref="preference.listrecordings" > Save </button>-->
+			</div>
+		</div>
+	</form>
+</div>

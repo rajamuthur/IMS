@@ -1,0 +1,94 @@
+<style>
+	.form-control {
+		height: 30px;
+	}
+</style>
+<div id="addMailTemplateDiv" class="container" data-ng-controller="mailTemplateCtrl as tctrl">
+	<form class="form-horizontal" role="form" >
+		<div class="block-header">
+			<h2>Create Mail Template</h2>
+		</div>
+		<div class="card">
+			<div class="card-body card-padding">
+				<div class="row">
+					<div class="form-group fg-line col-sm-6">
+						<label for="ssl" class="control-label col-sm-4">Template Name</label>
+						<div class="col-sm-6">
+							<div class="fg-line ng-binding">
+								<input type="text" placeholder="Name" id="fname" class="form-control input-sm">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group fg-line col-sm-6">
+						<label for="ssl" class="control-label col-sm-4">Subject</label>
+						<div class="col-sm-6">
+							<div class="fg-line ng-binding">
+								<input type="text" placeholder="Subject" id="fname" class="form-control input-sm">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<label for="ssl" class="control-label col-sm-2">Upload Attachment</label>
+					<div class="fileinput fileinput-new" data-provides="fileinput">
+                        <span class="btn btn-primary btn-file m-r-10">
+                            <span class="fileinput-new">Select file</span>
+                            <span class="fileinput-exists">Change</span>
+                            <input type="file" name="...">
+                        </span>
+                        <span class="fileinput-filename"></span>
+                        <a href="#" class="close fileinput-exists" data-dismiss="fileinput">&times;</a>
+                    </div>
+				</div>
+				<br/>
+				
+				<div class="row">
+					<div class="col-sm-12" style="border: 1px solid #eee;padding: 9px 1px 9px 3px;">
+						<div class="col-sm-2" >
+							<select class="form-control col-sm-1" ng-model="target">
+								<option value="">[Target Details]</option>
+								<option value="~~salutation~~">Salutation</option>
+								<option value="~~name~~">Name</option>
+								<option value="~~firstname~~">First Name</option>
+								<option value="~~lastname~~">Last Name</option>
+								<option value="~~company~~">Company</option>
+								<option value="~~phone~~">Phone</option>
+								<option value="~~email~~">Email</option>
+								<option value="~~city~~">City</option>
+								<option value="~~state~~">State</option>
+								<option value="~~address1~~">Address1</option>
+								<option value="~~address2~~">Address2</option>
+								<option value="~~web~~">Web</option>
+								<option value="~~postalcode~~">Postal Code</option>
+								<option value="~~extension~~">Extension</option>
+								<option value="~~fax~~">Fax</option>
+							</select>
+						</div>
+						<div class="col-sm-2">
+							<!--<button  style="top: 1px;" class="btn btn-primary btn-sm waves-effect" onmousedown="insertTargetDetail( & quot; targetblock_rte1 & quot; )">Insert</button>-->
+							<button  style="top: 1px;" class="btn btn-primary btn-sm waves-effect" data-ng-click="insert()">Insert</button>
+						</div>
+					</div>
+					<div>
+<!--						<div ng-controller="demoController" class="ng-scope" id="htmlText">
+							<div class="">
+								<div text-angular ng-model="htmlContent" name="demo-editor" ta-text-editor-class="border-around" ta-html-editor-class="border-around"></div>
+							</div>
+							<br>
+						</div>-->
+<!--<div text-angular="" name="editor" ng-model="content"></div>-->
+<div text-angular="" name="editor" ng-model="content" placeholder="Name"></div>
+<!--<text-angular name="editor" ng-model="editor" placeholder="Name"></text-angular>-->
+
+					<!--</div>-->
+				</div>
+			</div>
+		</div>
+		<div>
+			<button class="btn btn-info btnMargin" data-swal-update data-ui-sref="preference.mailtemplate">Create</button>
+			<button class="btn bgm-red btnMargin" data-ui-sref="preference.mailtemplate">Cancel</button>
+		</div>
+	</form>
+</div>

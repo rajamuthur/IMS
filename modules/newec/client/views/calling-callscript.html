@@ -1,0 +1,124 @@
+
+<div class="ng-scope calling-script bgm-white" data-ng-controller="CollapseDemoCtrl">
+		
+	<div style="height: 0px;"class="call-script-content" class="collapse" collapse="isCollapsed">
+		Sample Text Sample Text Sample Text Sample Text <span style="text-decoration: underline">{{active_call_name}}</span> Text Sample Text Sample Text Sample Text Sample Text Sample Text <span style="text-decoration: underline">{{active_call_number}}</span> Sample Text Sample Text Sample Text. 		Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text 	  		Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text.	Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text	</div>
+	<div ng-click="isCollapsed = !isCollapsed" class="call-script-header bgm-cyan c-white"><i class="zmdi zmdi-caret-down-circle zmdi-hc-fw"></i><span id="call-script-vertical-text">Script</span></div>
+</div> 
+
+<div class="bgm-white p-10"> 
+	<div class="active-c-name" data-ng-model="name">{{name}} <button class="btn bgm-teal waves-effect contact-status">{{leadstatus}}</button> <span class="active-c-no p-l-20">{{primaryPhone}}</span></div>
+	<div class="form-group">
+		<div class="fg-line">
+			<textarea class="form-control notes-details" data-auto-size placeholder="Enter your notes details here...." data-ng-model="notes">{{notes}}</textarea>
+			<!--<textarea placeholder="Enter your notes details here...." rows="4" class="form-control"></textarea>-->
+		</div>
+	</div>
+	
+	<div class="btn-colors btn-demo calling-disposition m-t-10 bgm-white" ng-show="calling_disp" id="{{calling_disp_css}}" ng-class="calling_disp_css"> 
+		<button class="btn bgm-cyan waves-effect" ng-click="makeDisposition('Call Back', $event)">Call Back</button>
+		<button class="btn bgm-blue waves-effect" ng-click="makeDisposition('Got Sale', $event)">Got Sale</button>
+		<button class="btn bgm-teal waves-effect" ng-click="makeDisposition('Hot Lead', $event)">Hot Lead</button>
+		<button class="btn bgm-orange waves-effect" ng-click="makeDisposition('Appointment', $event)">Appointment</button>
+		<button class="btn bgm-pink waves-effect" ng-click="makeDisposition('Schedule Call', $event)">Schedule Call</button>
+		<button class="btn bgm-lightgreen waves-effect" ng-click="makeDisposition('Send Mail', $event)">Send Mail</button>
+		<button class="btn bgm-red waves-effect" ng-click="makeDisposition('DNC', $event)">DNC</button>
+		<button class="btn bgm-deeporange waves-effect" ng-click="makeDisposition('New', $event)">New</button>
+		<button class="btn bgm-black waves-effect" ng-click="makeDisposition('Wrong Number', $event)">Wrong Number</button>
+	</div>
+	
+<!--	<nav class="radialnav">
+		<a href="#" class="ellipsis"><i class="fa fa-bars"></i></a>
+		<ul class="radialmenu">
+			<li data-subradialmenu="home"><a href="#" class="bgm-cyan"><i class="fa fa-home"></i></a></li>
+			<li><a href="#" class="bgm-teal"><i class="fa fa-database"></i></a></li>
+			<li><a href="#" class="bgm-orange"><i class="fa fa-desktop"></i></a></li>
+			<li><a href="#" class=" bgm-red"><i class="fa fa-cubes"></i></a></li>
+			<li><a href="#" class="bgm-lightgreen"><i class="fa fa-envelope"></i></a></li>
+		</ul>
+		<ul data-subradialmenuId="home" class="subradialmenu">
+			<li><a href="#" class="bgm-pink"><i class="fa fa-user"></i></a></li>
+			<li><a href="#" class="bgm-lightgreen"><i class="fa fa-users"></i></a></li>
+			<li><a href="#" class="bgm-blue"><i class="fa fa-car"></i></a></li>
+			<li><a href="#" class="bgm-black"><i class="fa fa-plus"></i></a></li>
+			<li><a href="#" class="bgm-deeporange"><i class="fa fa-save"></i></a></li>
+		</ul>
+		<ul data-subradialmenuId="database" class="subradialmenu">
+			<li><a href="#" class=""><i class="fa fa-user"></i></a></li>
+			<li><a href="#" class=""><i class="fa fa-users"></i></a></li>
+			<li><a href="#" class=""><i class="fa fa-car"></i></a></li>
+			<li><a href="#" class=""><i class="fa fa-save"></i></a></li>
+			<li><a href="#" class=""><i class="fa fa-plus"></i></a></li>
+		</ul>
+	</nav>-->
+<!--	<div class="circlediv">
+		<ul class="menu circleMenu-open" id="menu9" style="background-color: blue ! important; color: red; width: 40px; height: auto; list-style: outside none none; margin: 0px; padding: 0px;">
+			<li style="display: block; width: 40px; height: 40px; text-align: center; line-height: 40px; position: absolute; z-index: 1000; border-radius: 40px; transition: all 500ms ease 0s;" class="bgm-blue"><a href="#"><i class="zmdi zmdi-plus zmdi-hc-fw"></i></a></li>
+			<li style="display: block; width: 40px; height: 40px; text-align: center; line-height: 40px; position: absolute; z-index: 1; top: -100px; left: 0px; border-radius: 40px; transform: scale(1); transition: all 500ms ease 0s;" class="bgm-blue"><a title="Item 1" alt="Item 1" href="#">CB</a><span class="circlemenu-text">Call Back</span></li>
+			<li style="display: block; width: 40px; height: 40px; text-align: center; line-height: 40px; position: absolute; z-index: 1; top: -71px; left: -71px; border-radius: 40px; transform: scale(1); transition: all 500ms ease 0s;" class="bgm-green"><a title="Item 2" alt="Item 2" href="#">AP</a><span class="circlemenu-text">Appointment</span></li>
+			<li style="display: block; width: 40px; height: 40px; text-align: center; line-height: 40px; position: absolute; z-index: 1; top: 0px; left: -100px; border-radius: 40px; transform: scale(1); transition: all 500ms ease 0s;"><a title="Item 3" alt="Item 3" href="#">AP</a><span class="circlemenu-text">Warm Lead</span></li>
+			<li style="display: block; width: 40px; height: 40px; text-align: center; line-height: 40px; position: absolute; z-index: 1; top: 71px; left: -71px; border-radius: 40px; transform: scale(1); transition: all 500ms ease 0s;" class="bgm-orange"><a title="Item 4" alt="Item 4" href="#">SD</a><span class="circlemenu-text">Schedule Call</span></li>
+			<li style="display: block; width: 40px; height: 40px; text-align: center; line-height: 40px; position: absolute; z-index: 1; top: 100px; left: 0px; border-radius: 40px; transform: scale(1); transition: all 500ms ease 0s;" class="bgm-deeporange"><a title="Item 5" alt="Item 5" href="#">OO</a><span class="circlemenu-text">Lead</span></li>
+			<li style="display: block; width: 40px; height: 40px; text-align: center; line-height: 40px; position: absolute; z-index: 1; top: -71px; left: -71px; border-radius: 40px; transform: scale(1); transition: all 500ms ease 0s;" class="bgm-green"><a title="Item 2" alt="Item 2" href="#">AP</a><span class="circlemenu-text">Lead1</span></li>
+			<li style="display: block; width: 40px; height: 40px; text-align: center; line-height: 40px; position: absolute; z-index: 1; top: 0px; left: -100px; border-radius: 40px; transform: scale(1); transition: all 500ms ease 0s;" class="bgm-pink"><a title="Item 3" alt="Item 3" href="#">AP</a><span class="circlemenu-text">Lead2</span></li>
+			<li style="display: block; width: 40px; height: 40px; text-align: center; line-height: 40px; position: absolute; z-index: 1; top: 71px; left: -71px; border-radius: 40px; transform: scale(1); transition: all 500ms ease 0s;" class="bgm-orange"><a title="Item 4" alt="Item 4" href="#">LD</a><span class="circlemenu-text">Lead3</span></li>
+			<li style="display: block; width: 40px; height: 40px; text-align: center; line-height: 40px; position: absolute; z-index: 1; top: 100px; left: 0px; border-radius: 40px; transform: scale(1); transition: all 500ms ease 0s;" class="bgm-red"><a title="Item 5" alt="Item 5" href="#">LL</a><span class="circlemenu-text">Lead4</span></li>
+		</ul>
+	</div>-->
+	<script>
+		$(document).ready(function ( ) {
+			$('ul.menu').circleMenu({
+				item_diameter: 45,
+				circle_radius: 100,
+				direction: 'full'
+			});
+		});
+		var thisButton,
+				thisMenuItem,
+				thisSubmenuItem,
+				pieMenu = $('.radialnav'),
+				menuItems = $('.radialmenu li'),
+				subradialmenuItems = $('.subradialmenu'),
+				subradialmenuId = '';
+
+		function openMenu(thisButton) {
+			if (!thisButton.hasClass('active'))
+				thisButton.addClass('active');
+			else
+				$('.radialnav, .subradialmenu').removeClass('active');
+		}
+		$(document).ready(function ( ) {
+			/* On click of the ellipsis */
+			$('.ellipsis').on('click', function (event) {
+				event.preventDefault();
+
+				openMenu($('.radialnav'));
+			});
+		});
+
+		menuItems.find('a').each(function (index) {
+			thisMenuItem = $(this);
+
+			thisMenuItem.hover(function () {
+				// Hover over
+				subradialmenuId = menuItems.eq(index).attr('data-subradialmenu');
+				$('.subradialmenu[data-subradialmenuId="' + subradialmenuId + '"]').addClass('active');
+			}, function () {
+				// Hover out
+				// subradialmenuItem.removeClass('active');
+			});
+		});
+
+		subradialmenuItems.find('a').hover(function () {
+			console.log(1);
+		}, function () {
+			console.log(0);
+			subradialmenuItems.hover(function () {
+				console.log(2);
+			}, function () {
+				console.log(3);
+			})
+		})
+	</script>
+</div>
+	<ul class="clearfix tab-nav tn-justified bgm-white" data-ng-include="'modules/newec/client/views/template/calling-menu.html'"></ul>

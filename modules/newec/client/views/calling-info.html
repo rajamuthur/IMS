@@ -1,0 +1,331 @@
+<div class="pmb-block">
+    <div class="pmbb-header">
+		<h2><i class="zmdi zmdi-phone m-r-5"></i> Basic Information</h2>
+    </div>
+	<form data-ng-submit="submit('basicInformation', 'Basic Information')" class="pmbb-edit form-horizontal" data-ng-if="basicInformation === 1">
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="inputEmail3">Lead Source</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="leadSource" type="text" class="form-control input-sm" value="{{ leadSource}}" placeholder="eg. Impiger">
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Company</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="company" type="text" class="form-control input-sm" value="{{ company}}" placeholder="eg. Impiger">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Title</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<select class="form-control input-sm">
+							<option>Mr</option>
+							<option>Miss</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Name</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="name" type="text" class="form-control input-sm" value="{{ name}}" placeholder="eg. Impiger">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Gender</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<select class="form-control input-sm">
+							<option>Male</option>
+							<option>Female</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Age</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="age" type="text" class="form-control input-sm" value="{{ age}}" placeholder="eg. 25">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="m-t-10 m-l-20">
+			<button class="btn btn-primary btn-sm" type="submit">Save</button>
+			<!--<button class="btn btn-link btn-sm" data-ng-click="basicInformation = 1" >Cancel</button>-->
+		</div>
+	</form>
+</div>
+
+<div class="pmb-block" style="clear: both">
+    <div class="pmbb-header">
+		<h2><i class="zmdi zmdi-phone m-r-5"></i> Contact Information</h2>
+    </div>
+    
+	<form data-ng-submit="submit('contactInformation', 'Contact Information')" class="pmbb-edit form-horizontal" data-ng-if="contactInformation === 1">
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Primary Phone</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="primaryPhone" type="text" class="form-control input-sm" value="{{ primaryPhone}}" placeholder="eg. 123123123123">
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Secondary Phone</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="secondaryPhone" type="text" class="form-control input-sm" value="{{ secondaryPhone}}" placeholder="eg. 123123123123">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Extension</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="extension" type="text" class="form-control input-sm" value="{{ extension}}" placeholder="eg. 123">
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Email</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="email" type="text" class="form-control input-sm" value="{{ email}}" placeholder="eg. letsdance@arthurmurraymemorial.com">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Fax</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="fax" type="text" class="form-control input-sm" value="{{ fax}}" placeholder="eg. 123123">
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Website</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="website" type="text" class="form-control input-sm" value="{{ website}}" placeholder="eg. http://www.arthurmurraymemorial.com/">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="m-t-10 m-l-20">
+			<button class="btn btn-primary btn-sm" type="submit">Save</button>
+			<!--<button class="btn btn-link btn-sm" data-ng-click="contactInformation = 1" >Cancel</button>-->
+		</div>
+	</form>
+</div>
+
+<div class="pmb-block">
+	<div class="pmbb-header">
+		<h2><i class="zmdi zmdi-phone m-r-5"></i> Address Information</h2>
+    </div>
+	<form data-ng-submit="submit('addressInformation', 'Address Information')" class="pmbb-edit form-horizontal" data-ng-if="addressInformation === 1">
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Street</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="street" type="text" class="form-control input-sm" value="{{ street}}" placeholder="eg. 9746 Katy Fwy">
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">City</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="city" type="text" class="form-control input-sm" value="{{ city}}" placeholder="eg. Hacienda Heights">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">State</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="state" type="text" class="form-control input-sm" value="{{ state}}" placeholder="eg. Ca">
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Country</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<select class="form-control input-sm">
+							<option>US</option>
+							<option>Select an Country</option>
+							<option>India</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Zip Code</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="zipCode" type="text" class="form-control input-sm" value="{{ zipCode}}" placeholder="eg. 123123">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="m-t-10 m-l-20">
+			<button class="btn btn-primary btn-sm" type="submit">Save</button>
+			<!--<button class="btn btn-link btn-sm" data-ng-click="addressInformation = 1" >Cancel</button>-->
+		</div>
+	</form>
+</div>
+
+<div class="pmb-block">
+    <div class="pmbb-header">
+        <h2><i class="zmdi zmdi-phone m-r-5"></i> Other Information</h2>
+    </div>
+	<form data-ng-submit="submit('otherInformation', 'Other Information')" class="pmbb-edit form-horizontal" data-ng-if="otherInformation === 1">
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Listed</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="listed" type="text" class="form-control input-sm" value="{{ listed}}" placeholder="eg. 06/16/15">
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">DOM</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="dom" type="text" class="form-control input-sm" value="{{ dom}}" placeholder="eg. 183">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Area Name</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="areaName" type="text" class="form-control input-sm" value="{{ areaName}}" placeholder="eg. Hacienda Heights">
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Property Type</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="propertyType" type="text" class="form-control input-sm" value="{{ propertyType}}" placeholder="eg. Single Family Residence">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Office</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="office" type="text" class="form-control input-sm" value="{{ office}}" placeholder="eg. IRN Realty">
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">List Agent</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="listAgent" type="text" class="form-control input-sm" value="{{ listAgent}}" placeholder="eg. Lazar Chang">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Off Market</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="offMarket" type="text" class="form-control input-sm" value="{{ offMarket}}" placeholder="eg. 12/15/15">
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				<label class="col-sm-3 control-label" for="">List Price</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="listPrice" type="text" class="form-control input-sm" value="{{ listPrice}}" placeholder="eg. $932,558">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Status</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="status" type="text" class="form-control input-sm" value="{{ status}}" placeholder="eg. Expired">
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				<label class="col-sm-3 control-label" for="">MLS Listing ID</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="mlslistingID" type="text" class="form-control input-sm" value="{{ mlslistingID}}" placeholder="eg. TR15131807">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">Previous Status Date</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="prevStatusDate" type="text" class="form-control input-sm" value="{{ prevStatusDate}}" placeholder="eg. 06/18/15">
+					</div>
+				</div>
+			</div>
+			<div class="form-group fg-line col-sm-6">
+				<label class="col-sm-3 control-label" for="">PrevStatus</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="prevStatus" type="text" class="form-control input-sm" value="{{ prevStatus}}" placeholder="eg. Active">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group fg-line col-sm-6">
+				 <label class="col-sm-3 control-label" for="">MLSID</label>
+				<div class="col-sm-9">
+					<div class="fg-line">
+						<input data-ng-model="mlsid" type="text" class="form-control input-sm" value="{{ mlsid}}" placeholder="eg. 8241-002-042">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="m-t-10 m-l-20">
+			<button class="btn btn-primary btn-sm" type="submit">Save</button>
+			<!--<button class="btn btn-link btn-sm" data-ng-click="addressInformation = 1" >Cancel</button>-->
+		</div>
+	</form>
+</div>

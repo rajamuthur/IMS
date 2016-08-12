@@ -1,0 +1,27 @@
+<div id="callingscreen-main" data-ng-controller="callingCtrl as cctrl" data-ng-class="{'f-toggled': cctrl.sidebarFolderToggle.right === true }">
+	<header id="calling-header" data-ng-include="'modules/newec/client/views/template/calling-header.html'" class="calling-header" data-ng-controller="headerCtrl as hctrl"></header>
+	<section id="content" class="calling-content">
+
+		<div class="">
+
+			<div class="" id="calling-main">
+
+				<div class="clearfix">
+					<!--<div class="calling-callscript" ng-class="{'col-sm-8':boolChangeClass}" id="calling-callscript" ui-scrollfix="+10"  data-ng-include="'modules/newec/client/views/calling-callscript.html'"></div>-->
+					<div class="calling-callscript" id="calling-callscript" ui-scrollfix="+10"  data-ng-include="'modules/newec/client/views/calling-callscript.html'"></div>
+					<!--<div class="calling-disposition" id="calling-disposition" ui-scrollfix="+10"  data-ng-include="'modules/newec/client/views/calling-disposition.html'"></div>-->
+					<!--					<div class="calling-callscript"  id="calling-callscript"  data-spy="affix" data-offset-top="197" data-ng-include="'modules/newec/client/views/calling-callscript.html'"></div>-->
+					<!--<div class="calling-callscript" id="calling-disposition" data-ng-include="'modules/newec/client/views/calling-disposition.html'"></div>-->
+					<div class="bgm-white p-b-5"><data ui-view>
+						</data>
+					</div>
+				</div>
+			</div>
+			<div class="calling-contacts" id="calling-contacts" data-ng-include="'modules/newec/client/views/template/calling-contact.html'">
+			</div>
+			<aside class="folders-div" id="folder-list-right" data-ng-include src="'modules/newec/client/views/template/calling-folder.html'" data-ng-class="{ 'toggled': cctrl.sidebarFolderToggle.right === true }"></aside>
+		</div>
+
+	</section>
+</div>
+<!--<footer id="footer" data-ng-include="'modules/newec/client/views/template/footer.html'"></footer>-->
